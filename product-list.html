@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="product-list.css" />
   </head>
   <body>
-    <div id="title-row">
+    <div class="title-row">
       <h1 class="title">Your Search Results</h1>
       <div id="sort">
         <p id="sort-by">Sort By</p>
@@ -35,39 +35,74 @@
     <div class="main-content">
       <!-- leftside filterbar -->
       <div class="leftside-filter">
-        <h4>Gender</h4>
-        <hr />
-        <p>Women (115177)</p>
-        <p>Men (60834)</p>
-        <p>Girls (16418)</p>
-        <p>Boys (14799)</p>
+        <!-- Gender filter -->
+        <button class="leftside-filter-header">Gender</button>
+        <div class="gender-dropdown">
+          <p>Women (115177)</p>
+          <p>Men (60834)</p>
+          <p>Girls (16418)</p>
+          <p>Boys (14799)</p>
+        </div>
 
-        <h4>Product Type</h4>
-        <hr />
-        <p>Clothing (115177)</p>
-        <p>Shoes (60834)</p>
-        <p>Bags (16418)</p>
-        <p>Accessories ((14799)</p>
-        <p>Jewelry (4609)</p>
-        <p>Eyewear (2364)</p>
-        <p>Home (1273)</p>
-        <p>Watches (1099)</p>
-        <p>Pet Shop (797)</p>
+        <!-- Product Type filter -->
+        <button class="leftside-filter-header">Product Type</button>
+        <input
+          type="text"
+          id="product-type-input"
+          placeholder="Serach Product Type"
+        />
+        <div class="gender-dropdown">
+          <p>Clothing (115177)</p>
+          <p>Shoes (60834)</p>
+          <p>Bags (16418)</p>
+          <p>Accessories ((14799)</p>
+          <p>Jewelry (4609)</p>
+          <p>Eyewear (2364)</p>
+          <p>Home (1273)</p>
+          <p>Watches (1099)</p>
+          <p>Pet Shop (797)</p>
+        </div>
 
-        <h4>Gender</h4>
-        <hr />
-        <p>Women (115177)</p>
-        <p>Men (60834)</p>
-        <p>Girls (16418)</p>
-        <p>Boys (14799)</p>
+        <!-- Brand filter -->
+        <button class="leftside-filter-header">Brand</button>
+        <input type="text" id="product-type-input" placeholder="Serach Brand" />
+        <div class="gender-dropdown">
+          <p>Clothing (115177)</p>
+          <p>Shoes (60834)</p>
+          <p>Bags (16418)</p>
+          <p>Accessories ((14799)</p>
+          <p>Jewelry (4609)</p>
+          <p>Eyewear (2364)</p>
+          <p>Home (1273)</p>
+          <p>Watches (1099)</p>
+          <p>Pet Shop (797)</p>
+        </div>
 
-        <h4>Gender</h4>
-        <hr />
-        <p>Women (115177)</p>
-        <p>Men (60834)</p>
-        <p>Girls (16418)</p>
-        <p>Boys (14799)</p>
+        <!-- Price filter -->
+        <button class="leftside-filter-header">Price</button>
+        <div class="gender-dropdown">
+          <p>Women (115177)</p>
+          <p>Men (60834)</p>
+          <p>Girls (16418)</p>
+          <p>Boys (14799)</p>
+        </div>
+
+        <!-- Color filter -->
+        <button class="leftside-filter-header">Color</button>
+        <input type="text" id="product-type-input" placeholder="Serach Color" />
+        <div class="gender-dropdown">
+          <p>Clothing (115177)</p>
+          <p>Shoes (60834)</p>
+          <p>Bags (16418)</p>
+          <p>Accessories ((14799)</p>
+          <p>Jewelry (4609)</p>
+          <p>Eyewear (2364)</p>
+          <p>Home (1273)</p>
+          <p>Watches (1099)</p>
+          <p>Pet Shop (797)</p>
+        </div>
       </div>
+
       <div class="display-product">
         <h3>Your Selections</h3>
 
