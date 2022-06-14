@@ -52,11 +52,50 @@
         vertical-align: middle;
         display: inline-block;
       }
+      .sort-bar {
+        display: flex;
+      }
+      .sort-bar > div {
+        height: 25px;
+        width: 60px;
+        margin: 0;
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: 700 14px Open Sans, sans-serif;
+        text-decoration: none;
+        padding: 5px 5px;
+        position: relative;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 35px;
+        color: #003953;
+      }
+      .cards {
+        /* display: flex; */
+        flex-direction: inherit;
+        /* position: absolute; */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        /* text-indent: -999999px; */
+        overflow: hidden;
+      }
+      #star {
+        width: 20px;
+        margin-left: -4px;
+      }
+      #main-img {
+        background-color: #f5f5f5;
+      }
     </style>
   </head>
   <body>
     <div id="title-row">
-      <h1 class="title">Sneakers & Athletic Shoes</h1>
+      <h1 class="title">Your Search Results</h1>
       <div id="sort">
         <p id="sort-by">Sort By</p>
         <select name="" id="">
@@ -70,7 +109,7 @@
         </select>
       </div>
     </div>
-    <p class="item-found">10658 items found</p>
+    <p class="item-found">189267 items found</p>
     <p class="feedback">
       Have Feedback?
       <img
@@ -79,6 +118,66 @@
         alt="feedback-icon"
       />
     </p>
+    <div class="main-content">
+      <div class="filter"></div>
+      <div class="display-product">
+        <h3>Your Selections</h3>
+        <div class="sort-bar">
+          <div>Men</div>
+          <div>Black</div>
+          <div>white</div>
+          <div>Brown</div>
+          <div>Blue</div>
+          <div>Gray</div>
+          <div>Beige</div>
+          <div>Nike</div>
+          <div>Navy</div>
+          <div>On</div>
+          <div>Tan</div>
+        </div>
+        <div class="product-table">
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="product-list.js"></script>
 </html>
