@@ -67,6 +67,7 @@ body {
 }
 .leftside-filter {
   width: 620px;
+  position: relative;
 }
 .sort-bar {
   display: flex;
@@ -85,8 +86,31 @@ body {
   position: relative;
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 35px;
+  border-radius: 30px;
   color: #003953;
+}
+.sort-bar> div:hover{
+  cursor: pointer;  
+  border-color: #003953;
+}
+.sort-bar> .select{
+    /* display: inline-block; */    
+    background: #e5f1f8;
+    color: #0076bd;
+    border: 1px solid transparent;
+    padding: 5px 15px 5px 0px;  
+}
+.sort-bar> .select::after{
+  background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-position: -80px -5px;
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .product-table {
   display: flex;
@@ -120,6 +144,9 @@ body {
   width: 100%;
   margin-top: 15px;
 }
+.no-border{
+  border: none;
+}
 .gender-dropdown>p{
   color: #003953;
   line-height: 2px;
@@ -131,6 +158,35 @@ body {
   border: 0;    
   font-size: 13px;
   font-family: Verdana,Arial,sans;
+}
+.gender-dropdown-gap>p{
+  color: #003953;
+  line-height: 4px;
+  transition: max-height,padding .25s ease;
+  display: block;
+  max-height: 175px;
+  padding-top: 7px;
+  padding-bottom: 0;
+  border: 0;    
+  font-size: 13px;
+  font-family: Verdana,Arial,sans;
+  padding-left: 20px;
+  position: relative;  
+}
+.gender-dropdown-gap>p::before{
+  display: inline-block;
+    content: "";
+    vertical-align: middle;
+    margin-right: 2px;    
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    background-position: -5px -160px;
+    top: 2px;
 }
 .gender-dropdown>p:hover{
   color: #2d87b0;
