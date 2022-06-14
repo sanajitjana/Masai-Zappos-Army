@@ -61,13 +61,11 @@ body {
   display: inline-block;
 }
 .main-content {
-  display: inline-flex;
-  gap: 50px;
   width: 100%;
-}
-.leftside-filter {
-  width: 620px;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 13% 83%);
+  grid-template-rows: auto;
+  gap: 50px;
 }
 .sort-bar {
   display: flex;
@@ -112,23 +110,78 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
-.product-table {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-  /* grid-template-columns: repeat(4 1fr); */
-}
-.cards {
-  background-color: #f5f5f5;
+.product-table {  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  
+  gap: 15px;  
+  margin-top: 30px;
 }
 #star {
   width: 20px;
   margin-left: -4px;
 }
-#main-img {
-  width: 100%;
-  background-color: #f5f5f5;
+.rating{
+  background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 18px;
+    background-position: -2px -252px;
+    transform: scale(1.04);
+}
+.text-content>h4{      
+    font-weight: 700;
+    color: #003953;    
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;    
+    margin-bottom: -22px;
+}
+.cards:hover{
+  cursor: pointer;
+}
+.cards:hover h4{
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0076BD;
+}
+.cards:hover h5{
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0076BD;
+}
+a{
+  text-decoration: none;
+}
+.text-content .sub-name{
+  color: #1f1f1f;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: -10px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+.text-content .sub-name:hover{
+  color: #0076BD;
+  text-decoration: underline;
+}
+.text-content .price{
+  margin-bottom: 2px;
+  color: #035d59;
+}
+.main-img {
+  position: relative;
+  display: flex;
+  max-width: calc(100% - 16px);
+  max-height: 100%;
+  transition: opacity .5s ease;
+  align-items: center;  
+  padding: 15px;
+  z-index: -1;
+  opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .leftside-filter-header {
   line-height: 20px;
@@ -220,4 +273,196 @@ body {
     cursor: text;
     margin: 0em;
     margin-bottom: 5px;
+}
+
+
+/* extra css */
+.Jl-z {
+  background-color: transparent;
+  font-size: 100%;
+  padding: 0;
+  text-decoration: none;
+  font: 400 14px Open Sans,sans-serif;
+  display: inline;
+  color: #003953;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 0;
+  width: calc(25% - 12px);
+  margin: 6px;
+}
+.Mk-z {
+  display: flex;
+  flex-direction: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  text-indent: -999999px;
+  overflow: hidden;
+}
+.Vl-z, .Vl-z figure {
+  position: relative;
+}
+.Vl-z:not(.Zl-z):before {
+  content: "";
+  background-color: rgba(0,0,0,.04);
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  z-index: auto;
+}
+.Ik-z {
+  top: 0;
+}
+.Hk-z, .Ik-z {
+  width: 100%;
+  height: 20%;
+}
+.Hk-z, .Ik-z, p.Il-z {
+  position: absolute;
+  left: 0;
+}
+.Lk-z {
+  color: #fff;
+  background: #2c5987;
+  text-transform: uppercase;
+}
+.Jk-z, .Kk-z, .Lk-z {
+  color: #1f1f1f;
+  line-height: 1.5;
+  font: 400 12px Open Sans,sans-serif;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 2px 6px;
+  font-weight: 700;
+  z-index: 0;
+}
+.Kl-z, .Kl-z:before {
+  position: absolute;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.Kl-z {
+  right: 0;
+  top: 4px;
+  background: #fff;
+}
+
+.Kl-z:before {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  content: "";
+  pointer-events: none;
+  background: rgba(0,0,0,.04);
+}
+.Kl-z, .Kl-z:before {
+  position: absolute;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.Ll-z {
+  top: 0;
+}
+.Ll-z:before {
+  height: auto;
+}
+.Nl-z {
+  display: block;
+  background: transparent;
+  height: 44px;
+  min-width: 44px;
+  width: 100%;
+  max-width: 100px;
+  text-align: left;
+  border: none;
+  padding: 0;
+  z-index: 2;
+  cursor: pointer;
+  color: #707070;
+  font-size: 16px;
+  overflow: hidden;
+  position: relative;
+  text-indent: 22px;
+}
+
+.Nl-z:before {
+  background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 14px;
+  background-position: -4px -140px;
+  display: block;
+  border: none;
+  cursor: pointer;
+  content: "";
+  top: calc(50% - 6px);
+  position: absolute;
+}
+button.Rl-z {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 4px;
+  border-bottom-left-radius: 8px;
+  background-color: #fff;
+  z-index: 4;
+}
+.Hk-z {
+  bottom: 0;
+}
+
+.Hk-z, .Ik-z {
+  width: 100%;
+  height: 20%;
+}
+.Hk-z, .Ik-z, p.Il-z {
+  position: absolute;
+  left: 0;
+}
+.Nk-z {
+  position: relative;
+}
+.Ok-z {
+  width: calc(100% - 32px);
+  font-weight: 700;
+}
+
+.Ok-z, .Pk-z {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.7;
+}
+.Pk-z {
+  color: #1f1f1f;
+}
+
+.Ok-z, .Pk-z {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.7;
+}
+.Nk-z .Qk-z, .Nk-z dt {
+  text-indent: -9999px;
+  overflow: hidden;
+  position: absolute;
+}
+.Tl-z {
+  line-height: 1.7;
+  color: #035d59;
 }
