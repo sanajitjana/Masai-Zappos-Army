@@ -52,6 +52,14 @@
         vertical-align: middle;
         display: inline-block;
       }
+      .main-content {
+        display: inline-flex;
+        gap: 50px;
+        width: 100%;
+      }
+      .leftside-filter {
+        width: 620px;
+      }
       .sort-bar {
         display: flex;
       }
@@ -72,23 +80,22 @@
         border-radius: 35px;
         color: #003953;
       }
+      .product-table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        /* grid-template-columns: repeat(4 1fr); */
+      }
       .cards {
-        /* display: flex; */
-        flex-direction: inherit;
-        /* position: absolute; */
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        /* text-indent: -999999px; */
-        overflow: hidden;
+        background-color: #f5f5f5;
       }
       #star {
         width: 20px;
         margin-left: -4px;
       }
       #main-img {
+        width: 100%;
         background-color: #f5f5f5;
       }
     </style>
@@ -119,9 +126,45 @@
       />
     </p>
     <div class="main-content">
-      <div class="filter"></div>
+      <!-- leftside filterbar -->
+      <div class="leftside-filter">
+        <h4>Gender</h4>
+        <hr />
+        <p>Women (115177)</p>
+        <p>Men (60834)</p>
+        <p>Girls (16418)</p>
+        <p>Boys (14799)</p>
+
+        <h4>Product Type</h4>
+        <hr />
+        <p>Clothing (115177)</p>
+        <p>Shoes (60834)</p>
+        <p>Bags (16418)</p>
+        <p>Accessories ((14799)</p>
+        <p>Jewelry (4609)</p>
+        <p>Eyewear (2364)</p>
+        <p>Home (1273)</p>
+        <p>Watches (1099)</p>
+        <p>Pet Shop (797)</p>
+
+        <h4>Gender</h4>
+        <hr />
+        <p>Women (115177)</p>
+        <p>Men (60834)</p>
+        <p>Girls (16418)</p>
+        <p>Boys (14799)</p>
+
+        <h4>Gender</h4>
+        <hr />
+        <p>Women (115177)</p>
+        <p>Men (60834)</p>
+        <p>Girls (16418)</p>
+        <p>Boys (14799)</p>
+      </div>
       <div class="display-product">
         <h3>Your Selections</h3>
+
+        <!-- Above Sort Bar on product table -->
         <div class="sort-bar">
           <div>Men</div>
           <div>Black</div>
@@ -135,7 +178,516 @@
           <div>On</div>
           <div>Tan</div>
         </div>
+
+        <!-- product table -->
         <div class="product-table">
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              id="main-img"
+              src="https://m.media-amazon.com/images/I/51I3QLV6fvL._AC_SR255,340_.jpg"
+              alt="Crocs"
+            />
+            <div class="text-content">
+              <h4>Crocs</h4>
+              <p class="sub-name">Classic Flip-Flop</p>
+              <p class="price">$29.9</p>
+              <div class="rating">
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/color/344/filled-star--v1.png"
+                  alt=""
+                />
+                <img
+                  id="star"
+                  src="https://img.icons8.com/ultraviolet/344/filled-star--v1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
           <div class="cards">
             <img
               id="main-img"
