@@ -12,7 +12,7 @@ let productList = [
     rating: "5",
     favorite: "102",
     gender: "Women",
-    type: "Clothing",
+    type: "Clothings",
     brand: "Angel Maternity",
     color: "Black",
     tag: "Best Seller",
@@ -26,9 +26,9 @@ let productList = [
     rating: "4",
     favorite: "14",
     gender: "Women",
-    type: "Clothing",
+    type: "Clothings",
     brand: "LAUREN",
-    color: "Desert Rose",
+    color: "Pink",
     tag: "New",
   },
   {
@@ -41,9 +41,9 @@ let productList = [
     rating: "3",
     favorite: "1",
     gender: "Women",
-    type: "Clothing",
+    type: "Clothings",
     brand: "adidas",
-    color: "Shock Yellow",
+    color: "Yellow",
     tag: "Style Room",
   },
   {
@@ -56,9 +56,9 @@ let productList = [
     rating: "5",
     favorite: "0",
     gender: "Women",
-    type: "Clothing",
+    type: "Clothings",
     brand: "Lilly Pulitzer",
-    color: "Bondi Blue",
+    color: "Blue",
     tag: "Style Room",
   },
   // men clothing
@@ -71,9 +71,9 @@ let productList = [
     rating: "4",
     favorite: "767",
     gender: "Men",
-    type: "Clothing",
+    type: "Clothings",
     brand: "Under Armour",
-    color: "Black/Graphite",
+    color: "Black",
     tag: "New",
   },
   {
@@ -86,9 +86,9 @@ let productList = [
     rating: "2",
     favorite: "74",
     gender: "Men",
-    type: "Clothing",
+    type: "Clothings",
     brand: "adidas",
-    color: "Black/White",
+    color: "Black",
     tag: "Style Room",
   },
   {
@@ -101,9 +101,9 @@ let productList = [
     rating: "4",
     favorite: "281",
     gender: "Men",
-    type: "Clothing",
+    type: "Clothings",
     brand: "Polo Ralph Lauren",
-    color: "Black/RL2000 Red Pony Print",
+    color: "Black",
     tag: "New",
   },
   {
@@ -115,7 +115,7 @@ let productList = [
     rating: "5",
     favorite: "79",
     gender: "Men",
-    type: "Clothing",
+    type: "Clothings",
     brand: "Bulwark FR",
     color: "Navy",
     tag: "Best Seller",
@@ -130,9 +130,9 @@ let productList = [
     rating: "0",
     favorite: "270",
     gender: "Men",
-    type: "Clothing",
+    type: "Clothings",
     brand: "Lacoste",
-    color: "Bordeaux",
+    color: "Red",
     tag: "New",
   },
   // men shoes
@@ -163,7 +163,7 @@ let productList = [
     gender: "Men",
     type: "Shoes",
     brand: "Bed Stu",
-    color: "Teak Lux",
+    color: "Grey",
     tag: "Low Stock",
   },
   //women shoes
@@ -181,6 +181,65 @@ let productList = [
     brand: "Crocs",
     color: "White",
     tag: "New",
+  },
+  //girls clothing
+  {
+    img_url:
+      "https://m.media-amazon.com/images/I/812-6bagyqL._AC_SR255,340_.jpg",
+    name: "Mad Engine Kids",
+    sub_name: "Spider-Man Tee Shirt (Little Kids/Big Kids)",
+    price: "11.95",
+    mrp: "14.00",
+    rating: "0",
+    favorite: "57",
+    gender: "Girls",
+    type: "Clothings",
+    brand: "Mad Engine Kids",
+    color: "Red",
+  },
+  //boys clothing
+  {
+    img_url:
+      "https://m.media-amazon.com/images/I/61YDUh3cLtL._AC_SR255,340_.jpg",
+    name: "The North Face Kids",
+    sub_name: "Short Sleeve Never Stop Tee (Little Kids/Big Kids)",
+    price: "24.95",
+    rating: "5",
+    favorite: "0",
+    gender: "Boys",
+    type: "Clothings",
+    brand: "The North Face Kids",
+    color: "Green",
+    tag: "New",
+  },
+  //bags
+  {
+    img_url:
+      "https://m.media-amazon.com/images/I/71Kk7-+LUxL._AC_SR255,340_.jpg",
+    name: "Fjällräven",
+    sub_name: "Kanken 15",
+    price: "119.95",
+    rating: "4",
+    favorite: "89",
+    gender: "Boys",
+    type: "Bags",
+    brand: "Fjällräven",
+    color: "Red",
+  },
+  // Accessories
+  {
+    img_url:
+      "https://m.media-amazon.com/images/I/71wKQtIf+rS._AC_SR255,340_.jpg",
+    name: "New Era",
+    sub_name: "NFL Basic Snap 9FIFTY® Snapback Cap - Las Vegas Raiders",
+    price: "29.99",
+    mrp: "34.00",
+    rating: "4",
+    favorite: "26",
+    gender: "Boys",
+    type: "Accessories",
+    brand: "New Era",
+    color: "Black",
   },
 ];
 
@@ -310,4 +369,354 @@ function sortByPriceHighToLow(newArray) {
     return +b.price - +a.price;
   });
   return highToLow;
+}
+
+// leftside AllGenderfilter
+let allFilter = document.querySelector("#GenderAll");
+allFilter.addEventListener("click", function (e) {
+  allFilterFunction(productList);
+});
+function allFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (allFilter.innerText == "All") {
+      return item;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside WomenGenderfilter
+let womenFilter = document.querySelector("#Women");
+womenFilter.addEventListener("click", function (e) {
+  womenFilterFunction(productList);
+});
+function womenFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (womenFilter.innerText == item.gender) {
+      return item.gender;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside MenGenderfilter
+let menFilter = document.querySelector("#Men");
+menFilter.addEventListener("click", function (e) {
+  menFilterFunction(productList);
+});
+function menFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (menFilter.innerText == item.gender) {
+      return item.gender;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside GirlsGenderfilter
+let girlsFilter = document.querySelector("#Girls");
+girlsFilter.addEventListener("click", function (e) {
+  girlsFilterFunction(productList);
+});
+function girlsFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (girlsFilter.innerText == item.gender) {
+      return item.gender;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside BoysGenderfilter
+let boysFilter = document.querySelector("#Boys");
+boysFilter.addEventListener("click", function (e) {
+  boysFilterFunction(productList);
+});
+function boysFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (boysFilter.innerText == item.gender) {
+      return item.gender;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside AllProductTypefilter
+let clothingsAllFilter = document.querySelector("#ClothingsAll");
+clothingsAllFilter.addEventListener("click", function (e) {
+  clothingsAllFilterFunction(productList);
+});
+function clothingsAllFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (clothingsAllFilter.innerText == "All") {
+      return item;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside ClothingsProductTypefilter
+let clothingsFilter = document.querySelector("#Clothings");
+clothingsFilter.addEventListener("click", function (e) {
+  clothingsFilterFunction(productList);
+});
+function clothingsFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (clothingsFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside ShoesProductTypefilter
+let shoesFilter = document.querySelector("#Shoes");
+shoesFilter.addEventListener("click", function (e) {
+  shoesFilterFunction(productList);
+});
+function shoesFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (shoesFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside BagsProductTypefilter
+let bagsFilter = document.querySelector("#Bags");
+bagsFilter.addEventListener("click", function (e) {
+  bagsFilterFunction(productList);
+});
+function bagsFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (bagsFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside AccessoriesProductTypefilter
+let accessoriesFilter = document.querySelector("#Accessories");
+accessoriesFilter.addEventListener("click", function (e) {
+  accessoriesFilterFunction(productList);
+});
+function accessoriesFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (accessoriesFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside JewelryProductTypefilter
+let jewelryFilter = document.querySelector("#Jewelry");
+jewelryFilter.addEventListener("click", function (e) {
+  jewelryFilterFunction(productList);
+});
+function jewelryFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (jewelryFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside EyewearProductTypefilter
+let eyewearFilter = document.querySelector("#Eyewear");
+eyewearFilter.addEventListener("click", function (e) {
+  eyewearFilterFunction(productList);
+});
+function eyewearFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (eyewearFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside HomeProductTypefilter
+let homeFilter = document.querySelector("#Home");
+homeFilter.addEventListener("click", function (e) {
+  homeFilterFunction(productList);
+});
+function homeFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (homeFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside WatchesProductTypefilter
+let watchesFilter = document.querySelector("#Watches");
+watchesFilter.addEventListener("click", function (e) {
+  watchesFilterFunction(productList);
+});
+function watchesFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (watchesFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside WatchesProductTypefilter
+let petShopFilter = document.querySelector("#PetShop");
+petShopFilter.addEventListener("click", function (e) {
+  petShopFilterFunction(productList);
+});
+function petShopFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (petShopFilter.innerText == item.type) {
+      return item.type;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside AllColorProductTypefilter
+let allColorFilter = document.querySelector("#AllColor");
+allColorFilter.addEventListener("click", function (e) {
+  allColorFilterFunction(productList);
+});
+function allColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (allColorFilter.innerText == "All") {
+      return item;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside RedColorProductTypefilter
+let redColorFilter = document.querySelector("#Red");
+redColorFilter.addEventListener("click", function (e) {
+  redColorFilterFunction(productList);
+});
+function redColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (redColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside WhiteColorProductTypefilter
+let whiteColorFilter = document.querySelector("#White");
+whiteColorFilter.addEventListener("click", function (e) {
+  whiteColorFilterFunction(productList);
+});
+function whiteColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (whiteColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside BlackColorProductTypefilter
+let blackColorFilter = document.querySelector("#Black");
+blackColorFilter.addEventListener("click", function (e) {
+  blackColorFilterFunction(productList);
+});
+function blackColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (blackColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside GreyColorProductTypefilter
+let greyColorFilter = document.querySelector("#Grey");
+greyColorFilter.addEventListener("click", function (e) {
+  greyColorFilterFunction(productList);
+});
+function greyColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (greyColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside BlueColorProductTypefilter
+let blueColorFilter = document.querySelector("#Blue");
+blueColorFilter.addEventListener("click", function (e) {
+  blueColorFilterFunction(productList);
+});
+function blueColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (blueColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside GreenColorProductTypefilter
+let greenColorFilter = document.querySelector("#Green");
+greenColorFilter.addEventListener("click", function (e) {
+  greenColorFilterFunction(productList);
+});
+function greenColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (greenColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside PinkColorProductTypefilter
+let pinkColorFilter = document.querySelector("#Pink");
+pinkColorFilter.addEventListener("click", function (e) {
+  pinkColorFilterFunction(productList);
+});
+function pinkColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (pinkColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside NavyColorProductTypefilter
+let navyColorFilter = document.querySelector("#Navy");
+navyColorFilter.addEventListener("click", function (e) {
+  navyColorFilterFunction(productList);
+});
+function navyColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (navyColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside RedColorProductTypefilter
+let yellowColorFilter = document.querySelector("#Yellow");
+yellowColorFilter.addEventListener("click", function (e) {
+  yellowColorFilterFunction(productList);
+});
+function yellowColorFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (yellowColorFilter.innerText == item.color) {
+      return item.color;
+    }
+  });
+  displayData(newArr);
 }
