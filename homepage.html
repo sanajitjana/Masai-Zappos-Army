@@ -7,7 +7,6 @@
     <title>ZAPPOS Home Page</title>
     <style>
         #mainPhoto{
-           
             height: 600px;
             width: 100%;
         }
@@ -17,50 +16,81 @@
         }
         #productCategories{
             border: 2px solid red;
-            height: 330px;
+            height: 400px;
             width: 100%;
             margin-top: 50px;
-           
-        }
-        #product{
-            border: 2px solid rgb(68, 196, 57);
-            height: 75%;
-            width: 100%;
-            grid-template-columns: repeat(6,1fr);
-            grid-template-rows: 100%;
-            display: grid;
-            gap:20px
         }
         #productCategories>p{
             font-family: "Open Sans", sans-serif;
             font-size: 24px;
             color:#1f1f1f;
             font-weight: 600;
+        } 
+        #product{
+            border: 2px solid rgb(68, 196, 57);
+            height: 80%;
+            width: 100%;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: 100%;
+            display: grid;
+            gap:20px
         }
-        #product>div{
-            border: 2px solid rgb(17, 1, 1);
+        .productPic{
+            border: 2px solid rgb(10, 23, 204);
+            height: 100%;
+            width: 100%;
+        }
+        .productPic>div{
+            border: 2px solid rgb(196, 11, 11);
+            height: 80%;
+            width: 100%;
             justify-content: center;
             align-items: center;
             display: flex;
-            background-color: #f5f5f5;
-            
+            background-color: #f5f5f5; 
         }
-        #product>div>img{
+        .productPic>div>img{
             height: 40%;
             width: 85%;
-            background-color:#f5f5f5 ;
+            
+        }
+        .productPic>button{
+            margin-top: 10px ;
+            margin-left: 30px;
+           border: white;
+           background-color: white;
            
         }
-        #product>div:nth-child(3)>img{
+        button:hover{
+            color:blue;
+            text-decoration: underline;
+        }
+        .piccc{
             height: 95%;
             width: 50%;
-            background-color:#f5f5f5 ;
+
         }
-        #product>div:nth-child(5)>img{
-            height: 95%;
-            width: 50%;
-            background-color:#f5f5f5 ;
+        #lifeStyle{
+            border: 2px solid red;
+            height: 500px;
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            
         }
+        #lifeStyle>div{
+            border: 2px solid rgb(29, 15, 218);
+            height: 100%;
+            width: 31%;
+        }
+        #lifeStyle>div>img{
+            height: 70%;
+            width: 100%;
+        }
+       
+      
+       
 
 
     </style>
@@ -69,32 +99,70 @@
     <div id="mainPhoto">
         <img src="https://m.media-amazon.com/images/G/01/2022/homepage6.13/COOP-ASICS-GEL-CUMULUS-24-JUNE-HERO-1440x700.png" alt="image not avaliable">
     </div>
+
     <div id="productCategories">
         <p>Shop Popular Categories</p>
         <div id="product">
-            <div>
-                <img src="https://m.media-amazon.com/images/I/71U7e7IRHSL._AC_SX255_.jpg" alt="">
-              
-                
+            <div class="productPic">
+                <div>
+                    <img src="https://m.media-amazon.com/images/I/71U7e7IRHSL._AC_SX255_.jpg" alt="">
+                </div>
+                <button>Sneakers & Athletic Shoes</button>
             </div>
-            <div>
-                <img src="https://m.media-amazon.com/images/I/71H1zKI3q5L._AC_SX255_.jpg" alt="">
+            <div class="productPic">
+                <div>
+                    <img src="https://m.media-amazon.com/images/I/71H1zKI3q5L._AC_SX255_.jpg" alt="">
+                </div>
+                <button>Sandals</button>
             </div>
-            <div>
-                <img src="https://m.media-amazon.com/images/I/71gw6D5NE+L._AC_SX255_.jpg" alt="">
+            <div class="productPic ">
+                <div >
+                    <img src="https://m.media-amazon.com/images/I/71gw6D5NE+L._AC_SX255_.jpg" alt="" style="height:95%; width: 55%;" >
+                </div>
+                <button>Dresses</button>
             </div>
-            <div>
-                <img src="https://m.media-amazon.com/images/I/71NI4oqYMuL._AC_SX255_.jpg" alt="">
+            <div class="productPic">
+                <div>
+                    <img src="https://m.media-amazon.com/images/I/71NI4oqYMuL._AC_SX255_.jpg" alt="">
+                </div>
+                <button>Lofers</button>
             </div>
-            <div>
-                <img src="https://m.media-amazon.com/images/I/51lEd4lr0KL._AC_SX255_.jpg" alt="">
+            <div class="productPic">
+                <div>
+                    <img src="https://m.media-amazon.com/images/I/51lEd4lr0KL._AC_SX255_.jpg" alt="" style="height:95%; width: 55%;">
+                </div>
+                <button>Swimwear</button>
             </div>
-            <div>
-                <img src="https://m.media-amazon.com/images/I/71F2QuFXVIL._AC_SX255_.jpg" alt="">
+            <div class="productPic">
+                <div>
+                    <img src="https://m.media-amazon.com/images/I/71F2QuFXVIL._AC_SX255_.jpg" alt="">
+                </div>
+                <button>Clogs</button>
             </div>
+
+            
         </div>
-      
 
     </div>
+   <div id="lifeStyle">
+    <div>
+        <img src="https://m.media-amazon.com/images/G/01/2022/homepage6.13/COOP-TRIPTYCH-1-500x500.jpg" alt="">
+        <h3>New Balance Goes Green</h3>
+        <p>Meet the sneakers that meet their “green leaf standard” (aka they look good and are good for the environment).</p>
+        <button>SHOP ALL NEW BALANCE</button>
+    </div>
+    <div>
+        <img src="https://m.media-amazon.com/images/G/01/2022/homepage6.13/COOP-TRIPTYCH-2-500x500.jpg" alt="">
+        <h3>HOKA ST/ART Pack</h3>
+        <p>Introducing the ST/ART Pack. Art created for HOKA and Zappos by Sabrena Khadija.</p>
+        <button>SHOP HOKA ST/ART PACK & MORE</button>
+    </div>
+    <div>
+        <img src="https://m.media-amazon.com/images/G/01/2022/homepage6.13/COOP-TRIPTYCH-3-500x500.jpg" alt="">
+        <h3>Happy Feet: HOKA Speedgoat 5</h3>
+        <p>Along with HOKA, we’ve partnered with Outbound Collective to support their mission to build a vibrant, diverse, and expansive outdoor community.</p>
+        <button>SHOP HOKA SPEEDGOAT 5 & MORE</button>
+    </div>
+   </div>
 </body>
 </html>
