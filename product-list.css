@@ -284,8 +284,49 @@ a {
 /* Media Query */
 @media all and (min-width: 1025px) and (max-width: 1232px) {
   .main-content {
-    grid-template-columns: repeat(2, 16% 80%);
+    grid-template-columns: repeat(2, 20% 75%);
+    gap: 40px;
+  }
+  .leftside-filter-header {
+    margin-bottom: 15px;
+  }
+  .gender-dropdown > p {
+    color: #005b94;
+    margin-top: -5px;
+  }
+  .gender-dropdown-gap > p {
+    color: #005b94;
+    margin-top: -5px;
+  }
+  .no-border {
+    margin-bottom: 0px;
+  }
+  #product-type-input {
+    font: 400 12px Open Sans, sans-serif;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+  }
+  .sort-bar > div {
+    height: 25px;
+    width: 40px;
+    margin-right: 8px;
+    padding: 5px 12px;
+  }
+  .sort-bar > .select {
+    padding: 5px 30px 5px 5px;
+  }
+  .product-table {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    gap: 25px;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: repeat(2, 20% 80%);
     gap: 50px;
   }
   .leftside-filter-header {
@@ -317,16 +358,20 @@ a {
     padding: 5px 12px;
   }
   .sort-bar > .select {
-    padding: 5px 25px 5px 5px;
+    padding: 5px 30px 5px 8px;
   }
   .product-table {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
-
-@media screen and (max-width: 768px) {
+@media all and (min-width: 320px) and (max-width: 768px) {
+  .product-table {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media all and (max-width: 768px) {
   .leftside-filter {
     display: none;
   }
