@@ -11,9 +11,8 @@ let productList = [
     mrp: "118.00",
     rating: "2",
     favorite: "102",
-    type: "Women",
-    size: "XL",
-    length: "Short",
+    gender: "Women",
+    type: "Clothing",
     brand: "Angel Maternity",
     color: "Black",
   },
@@ -26,168 +25,147 @@ let productList = [
     mrp: "175.00",
     rating: "0",
     favorite: "14",
-    type: "Women",
-    size: "LG",
-    length: "Midi Length",
-    brand: "LAUREN Ralph Lauren",
+    gender: "Women",
+    type: "Clothing",
+    brand: "LAUREN",
     color: "Desert Rose",
+    tag: "New",
   },
   {
     img_url:
-      "https://m.media-amazon.com/images/I/71Lp0ifGgEL._AC_SR255,340_.jpg",
-    name: "LAUREN Ralph Lauren",
-    sub_name: "Crepe Off-the-Shoulder Dress",
-    price: "165.00",
+      "https://m.media-amazon.com/images/I/71-aZPklBqL._AC_SR255,340_.jpg",
+    name: "adidas by Stella McCartney",
+    sub_name: "Truepace Woven Trainingsuit Jacket HG2007",
+    price: "290.00",
+    mrp: "290.00",
     rating: "0",
-    favorite: "37",
-    type: "Women",
-    size: "XS",
-    length: "Midi Length",
-    brand: "LAUREN Ralph Lauren",
-    color: "Lighthouse Navy",
+    favorite: "1",
+    gender: "Women",
+    type: "Clothing",
+    brand: "adidas",
+    color: "Shock Yellow",
+    tag: "Style Room",
   },
   {
     img_url:
-      "https://m.media-amazon.com/images/I/71hZy3aeyZL._AC_SR255,340_.jpg",
-    name: "Betsy & Adam",
-    sub_name: "Crepe Off-the-Shoulder Dress",
-    price: "239.00",
+      "https://m.media-amazon.com/images/I/81xAAdEI1EL._AC_SR255,340_.jpg",
+    name: "Lilly Pulitzer",
+    sub_name: "Carrie Pullover",
+    price: "118.00",
+    mrp: "118.00",
+    rating: "0",
+    favorite: "0",
+    gender: "Women",
+    type: "Clothing",
+    brand: "Lilly Pulitzer",
+    color: "Bondi Blue",
+    tag: "Style New",
+  },
+  // men clothing
+  {
+    img_url:
+      "https://m.media-amazon.com/images/I/91K4coUfddL._AC_SR255,340_.jpg",
+    name: "Under Armour",
+    sub_name: "Carrie Pullover",
+    price: "17.50",
+    mrp: "25.00",
     rating: "4",
-    favorite: "124",
-    type: "Women",
-    size: "XXL",
-    length: "Knee Length",
-    brand: "Betsy & Adam",
-    color: "Navy/Silver",
+    favorite: "767",
+    gender: "Men",
+    type: "Clothing",
+    brand: "Under Armour",
+    color: "Black/Graphite",
+    tag: "New",
   },
   {
     img_url:
-      "https://m.media-amazon.com/images/I/51m-QQ3yieL._AC_SR255,340_.jpg",
+      "https://m.media-amazon.com/images/I/61Q3NhpgL+S._AC_SR255,340_.jpg",
+    name: "adidas Originals",
+    sub_name: "Trefoil Tee",
+    price: "13.84",
+    mrp: "30.00",
+    rating: "5",
+    favorite: "74",
+    gender: "Men",
+    type: "Clothing",
+    brand: "adidas",
+    color: "Black/White",
+    tag: "Style New",
   },
   {
     img_url:
-      "https://m.media-amazon.com/images/I/713GSRnRpfL._AC_SR255,340_.jpg",
+      "https://m.media-amazon.com/images/I/71iLknOpHWL._AC_SR255,340_.jpg",
+    name: "Polo Ralph Lauren",
+    sub_name: "Slim Fit w/ Wicking 3-Pack Crew Undershirts",
+    price: "31.88",
+    mrp: "42.50",
+    rating: "4",
+    favorite: "281",
+    gender: "Men",
+    type: "Clothing",
+    brand: "Polo Ralph Lauren",
+    color: "Black/RL2000 Red Pony Print",
+    tag: "New",
   },
   {
     img_url:
-      "https://m.media-amazon.com/images/I/91kXwmHjJoL._AC_SR255,340_.jpg",
+      "https://m.media-amazon.com/images/I/61CfjLHDC8L._AC_SR255,340_.jpg",
+    name: "Bulwark FR",
+    sub_name: "Midweight FR Dress Uniform Shirt, CAT 2",
+    price: "84.00",
+    mrp: "84.00",
+    rating: "5",
+    favorite: "79",
+    gender: "Men",
+    type: "Clothing",
+    brand: "Bulwark FR",
+    color: "Navy",
+    tag: "New",
   },
   {
     img_url:
-      "https://m.media-amazon.com/images/I/718CIto5XjL._AC_SR255,340_.jpg",
+      "https://m.media-amazon.com/images/I/81KHxhoX1GL._AC_SR255,340_.jpg",
+    name: "Lacoste",
+    sub_name: "L1212 Classic Pique Polo Shirt",
+    price: "57.99",
+    mrp: "98.00",
+    rating: "4",
+    favorite: "270",
+    gender: "Men",
+    type: "Clothing",
+    brand: "Lacoste",
+    color: "Bordeaux",
+    tag: "New",
+  },
+  // men shoes
+  {
+    img_url:
+      "https://m.media-amazon.com/images/I/71MJdm1b5yL._AC_SR255,340_.jpg",
+    name: "Alegria",
+    sub_name: "Flexer",
+    price: "149.95",
+    mrp: "149.95",
+    rating: "5",
+    favorite: "44",
+    gender: "Men",
+    type: "Shoes",
+    brand: "Alegria",
+    color: "White",
+    tag: "Low Stock",
   },
   {
     img_url:
-      "https://m.media-amazon.com/images/I/71ur5Ef2+3L._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/51X+XsaX-eL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/812hdRPzguL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/81ESnkOP1mL._AC_SR255,340_.jpg",
-  },
-  //Sneakers
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71ip9zuD9yL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71AnEFU5crL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/712ZyHv4zbL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/61IBu5oBZ5L._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71TYNPhTORL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/718+Q90UFvL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71jLUoo2wSL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71+7nhBeDzL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71y2vhy2CsL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/61mLQJ0b1TL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71ojddJCS3L._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/61imEXouapL._AC_SR255,340_.jpg",
-  },
-  //   Shirts & Tops
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/91lroZiNJML._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/81l87jK1sRL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/710AZWZ9a3L._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/81A-nFQdXhL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/91vW81gEI8L._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/91SD5-Yb5+L._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/714wQoJLbcL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/710yzJ9etZL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71xQm0HJEML._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/71ENg9fYKML._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/81kzDzuL8iL._AC_SR255,340_.jpg",
-  },
-  {
-    img_url:
-      "https://m.media-amazon.com/images/I/81q1RAj4BSL._AC_SR255,340_.jpg",
+      "https://m.media-amazon.com/images/I/71MJdm1b5yL._AC_SR255,340_.jpg",
+    name: "Bed Stu",
+    sub_name: "Lordmind",
+    price: "147.99",
+    mrp: "185.00",
+    rating: "0",
+    favorite: "5",
+    gender: "Men",
+    type: "Shoes",
+    brand: "Bed Stu",
+    color: "Teak Lux",
+    tag: "Low Stock",
   },
 ];
