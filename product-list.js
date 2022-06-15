@@ -15,6 +15,7 @@ let productList = [
     type: "Clothing",
     brand: "Angel Maternity",
     color: "Black",
+    tag: "New",
   },
   {
     img_url:
@@ -59,7 +60,7 @@ let productList = [
     type: "Clothing",
     brand: "Lilly Pulitzer",
     color: "Bondi Blue",
-    tag: "Style New",
+    tag: "Style Room",
   },
   // men clothing
   {
@@ -90,7 +91,7 @@ let productList = [
     type: "Clothing",
     brand: "adidas",
     color: "Black/White",
-    tag: "Style New",
+    tag: "Style Room",
   },
   {
     img_url:
@@ -155,7 +156,7 @@ let productList = [
   },
   {
     img_url:
-      "https://m.media-amazon.com/images/I/71MJdm1b5yL._AC_SR255,340_.jpg",
+      "https://m.media-amazon.com/images/I/81EDhlymhdL._AC_SR255,340_.jpg",
     name: "Bed Stu",
     sub_name: "Lordmind",
     price: "147.99",
@@ -168,8 +169,59 @@ let productList = [
     color: "Teak Lux",
     tag: "Low Stock",
   },
+  //women shoes
+  {
+    img_url:
+      "https://m.media-amazon.com/images/I/71qExJbDYkL._AC_SR255,340_.jpg",
+    name: "Crocs",
+    sub_name: "Classic Flip-Flop",
+    price: "29.9",
+    mrp: "35.00",
+    rating: "0",
+    favorite: "5",
+    gender: "Women",
+    type: "Shoes",
+    brand: "Crocs",
+    color: "White",
+    tag: "New",
+  },
 ];
 
+let table = document.querySelector(".product-table");
 productList.forEach(function (ele) {
-  console.log(ele.name);
+  let link = document.createElement("a");
+  link.setAttribute("href", "product-details.html");
+  let card = document.createElement("div");
+  card.setAttribute("class", "cards");
+  let tag = document.createElement("div");
+  tag.setAttribute("class", "tag");
+  let fav = document.createElement("div");
+  fav.setAttribute("class", "fav");
+  if (ele.tag == "Style Room") {
+    tag.setAttribute("class", "style-room");
+  } else if (ele.tag == "Low Stock") {
+    tag.setAttribute("class", "low-stock");
+  }
+  tag.innerText = ele.tag;
+  let main_img = document.createElement("img");
+  main_img.setAttribute("class", "main-img");
+  main_img.setAttribute("src", ele.img_url);
+  main_img.setAttribute("alt", ele.name);
+  let text_content = document.createElement("div");
+  text_content.setAttribute("class", "text-content");
+  let name = document.createElement("h4");
+  name.innerText = ele.name;
+  let sub_name = document.createElement("h5");
+  sub_name.setAttribute("class", "sub-name");
+  sub_name.innerText = ele.sub_name;
+  let price = document.createElement("p");
+  price.setAttribute("class", "price");
+  price.innerText = ele.price;
+  let rating = document.createElement("div");
+  rating.setAttribute("class", "rating");
+
+  text_content.append(name, sub_name, price, rating);
+  card.append(tag, main_img, text_content);
+  link.append(card);
+  table.append(link);
 });

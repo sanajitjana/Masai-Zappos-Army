@@ -262,12 +262,39 @@
   padding: 4px 6px;
   z-index: 0;
 }
+.cards > .style-room {
+  font-weight: 400;
+  color: #000;
+  background: #f5f5f5;
+  color: #1f1f1f;
+  line-height: 1.5;
+  font: 400 12px Open Sans, sans-serif;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 2px 6px;
+  z-index: 0;
+}
+.cards > .low-stock {
+  padding: 2px 6px;
+  z-index: 0;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: #1f1f1f;
+  padding: 2px 6px;
+  color: #ce144b;
+  background: #f5f5f5;
+  line-height: 1.5;
+  font: 400 12px Open Sans, sans-serif;
+}
 a {
   text-decoration: none;
 }
 .text-content .sub-name {
+  display: inline-block;
   color: #1f1f1f;
-  max-width: 100%;
+  max-width: 250px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
