@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp Page</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+        #container{
+            background-color:white;
+            width: 40%;
+            height:500px;
+            margin: auto;
+            
+            border: 1px solid red;
+            background-color:gray;
+           
+            
+        }
+     
+        input,button{
+            width: 95%;
+            font-size: 30px;
+            display: block;
+            margin: 5px;
+        }
+        .level{
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: 10px;
+            
+        }
+       h2{
+            text-align: center;
+            color:rgb(242, 199, 6);
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+        #sign{
+            color:white;
+            background-color: rgb(50, 116, 142);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+         <h2>CREATE ACCOUNT</h2>
+        <form >
+            <label class="level"> ENTER FULL NAME</label>
+            <br>
+            <input type="text" id="name" placeholder="Name">
+            <br>
+            <br>
+            <label class="level"> ENTER YOUR EMAIL ID</label>
+            <br>
+            <input type="text" id="email" placeholder="email">
+            <br>
+            <br>
+            <label class="level"> ENTER PASSWORD</label>
+            <br>
+            <input type="password" id="password" placeholder="Password">
+            <br>
+            <button id="sign">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    let form=document.querySelector("form")
+    let userData=JSON.parse(localStorage.getItem("userData"))||[];
+    form.addEventListener("submit",function(event){
+        event.preventDefault()
+
+        let data={
+               name:form.name.value,
+               email:form.email.value,
+               password:form.password.value
+
+        }
+        //console.log(data)
+
+        if(checkEmails(data.email)===true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData))
+        }else {
+            alert("Acount already exists");
+        }
+     
+    })
+  function checkEmails(email){
+    let filtered=userData.filter(function(element){
+        return email===element.email;
+    })
+    if(filtered.length>0){
+        return false
+    }else{
+        return true;
+    }
+  }
+
+
+</script>
