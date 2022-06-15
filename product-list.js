@@ -244,7 +244,7 @@ let productList = [
 ];
 
 let table = document.querySelector(".product-table");
-
+let specialSortValue = "All";
 displayData(productList);
 function displayData(data) {
   table.innerHTML = "";
@@ -339,14 +339,19 @@ function filterFunction() {
   let newArray = [...productList];
   let filteredArray = newArray.filter(function (item) {
     if (selectBox.value == "All") {
+      specialSortValueDisplay("All");
       return item;
     } else if (selectBox.value == "Customer Rating") {
+      specialSortValueDisplay("Rating: High to Low");
       return sortByRating(newArray);
     } else if (selectBox.value == "Price:-Low-to-High") {
+      specialSortValueDisplay("Price: Low to High");
       return sortByPriceLowToHight(newArray);
     } else if (selectBox.value == "Price:-High-to-Low") {
+      specialSortValueDisplay("Price: High to Low");
       return sortByPriceHighToLow(newArray);
     } else if (selectBox.value == item.tag) {
+      specialSortValueDisplay(item.tag);
       return item.tag;
     }
   });
@@ -379,6 +384,7 @@ allFilter.addEventListener("click", function (e) {
 function allFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (allFilter.innerText == "All") {
+      specialSortValueDisplay("All");
       return item;
     }
   });
@@ -393,6 +399,7 @@ womenFilter.addEventListener("click", function (e) {
 function womenFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (womenFilter.innerText == item.gender) {
+      specialSortValueDisplay(item.gender);
       return item.gender;
     }
   });
@@ -407,6 +414,7 @@ menFilter.addEventListener("click", function (e) {
 function menFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (menFilter.innerText == item.gender) {
+      specialSortValueDisplay(item.gender);
       return item.gender;
     }
   });
@@ -421,6 +429,7 @@ girlsFilter.addEventListener("click", function (e) {
 function girlsFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (girlsFilter.innerText == item.gender) {
+      specialSortValueDisplay(item.gender);
       return item.gender;
     }
   });
@@ -435,6 +444,7 @@ boysFilter.addEventListener("click", function (e) {
 function boysFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (boysFilter.innerText == item.gender) {
+      specialSortValueDisplay(item.gender);
       return item.gender;
     }
   });
@@ -449,6 +459,7 @@ clothingsAllFilter.addEventListener("click", function (e) {
 function clothingsAllFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (clothingsAllFilter.innerText == "All") {
+      specialSortValueDisplay("All");
       return item;
     }
   });
@@ -463,6 +474,7 @@ clothingsFilter.addEventListener("click", function (e) {
 function clothingsFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (clothingsFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -477,6 +489,7 @@ shoesFilter.addEventListener("click", function (e) {
 function shoesFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (shoesFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -491,6 +504,7 @@ bagsFilter.addEventListener("click", function (e) {
 function bagsFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (bagsFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -505,6 +519,7 @@ accessoriesFilter.addEventListener("click", function (e) {
 function accessoriesFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (accessoriesFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -519,6 +534,7 @@ jewelryFilter.addEventListener("click", function (e) {
 function jewelryFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (jewelryFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -533,6 +549,7 @@ eyewearFilter.addEventListener("click", function (e) {
 function eyewearFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (eyewearFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -547,6 +564,7 @@ homeFilter.addEventListener("click", function (e) {
 function homeFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (homeFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -561,6 +579,7 @@ watchesFilter.addEventListener("click", function (e) {
 function watchesFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (watchesFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -575,6 +594,7 @@ petShopFilter.addEventListener("click", function (e) {
 function petShopFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (petShopFilter.innerText == item.type) {
+      specialSortValueDisplay(item.type);
       return item.type;
     }
   });
@@ -589,6 +609,7 @@ allColorFilter.addEventListener("click", function (e) {
 function allColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (allColorFilter.innerText == "All") {
+      specialSortValueDisplay("All");
       return item;
     }
   });
@@ -603,6 +624,7 @@ redColorFilter.addEventListener("click", function (e) {
 function redColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (redColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -617,6 +639,7 @@ whiteColorFilter.addEventListener("click", function (e) {
 function whiteColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (whiteColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -631,6 +654,7 @@ blackColorFilter.addEventListener("click", function (e) {
 function blackColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (blackColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -645,6 +669,7 @@ greyColorFilter.addEventListener("click", function (e) {
 function greyColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (greyColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -659,6 +684,7 @@ blueColorFilter.addEventListener("click", function (e) {
 function blueColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (blueColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -673,6 +699,7 @@ greenColorFilter.addEventListener("click", function (e) {
 function greenColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (greenColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -687,6 +714,7 @@ pinkColorFilter.addEventListener("click", function (e) {
 function pinkColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (pinkColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -701,6 +729,7 @@ navyColorFilter.addEventListener("click", function (e) {
 function navyColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (navyColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -715,6 +744,7 @@ yellowColorFilter.addEventListener("click", function (e) {
 function yellowColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (yellowColorFilter.innerText == item.color) {
+      specialSortValueDisplay(item.color);
       return item.color;
     }
   });
@@ -729,6 +759,7 @@ priceAllFilter.addEventListener("click", function (e) {
 function priceAllFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (priceAllFilter.innerText == "All") {
+      specialSortValueDisplay("All");
       return item;
     }
   });
@@ -746,6 +777,7 @@ function under50PriceFilterFunction(data) {
       under50PriceFilter.innerText == "$50.00 and Under" &&
       item.price <= 50.0
     ) {
+      specialSortValueDisplay("$50.00 and Under");
       return item.price;
     }
   });
@@ -763,6 +795,7 @@ function HundredAndUnderPriceFilterFunction(data) {
       HundredAndUnderPriceFilter.innerText == "$100.00 and Under" &&
       item.price <= 100.0
     ) {
+      specialSortValueDisplay("$100.00 and Under");
       return item.price;
     }
   });
@@ -782,6 +815,7 @@ function twoHundredAndUnderPriceFilterFunction(data) {
       twoHundredAndUnderPriceFilter.innerText == "$200.00 and Under" &&
       item.price <= 200.0
     ) {
+      specialSortValueDisplay("$200.00 and Under");
       return item.price;
     }
   });
@@ -799,6 +833,7 @@ function twoHundredAndOverPriceFilterFunction(data) {
       twoHundredAndOverPriceFilter.innerText == "$200.00 and Over" &&
       item.price >= 200.0
     ) {
+      specialSortValueDisplay("$200.00 and Over");
       return item.price;
     }
   });
@@ -813,6 +848,7 @@ allBrandFilter.addEventListener("click", function (e) {
 function allBrandFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (allBrandFilter.innerText == "All") {
+      specialSortValueDisplay("All");
       return item.price;
     }
   });
@@ -827,6 +863,7 @@ underArmourBrandFilter.addEventListener("click", function (e) {
 function underArmourBrandFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (underArmourBrandFilter.innerText == item.brand) {
+      specialSortValueDisplay(item.brand);
       return item.brand;
     }
   });
@@ -841,6 +878,7 @@ adidasOriginalsBrandFilter.addEventListener("click", function (e) {
 function adidasOriginalsBrandFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (adidasOriginalsBrandFilter.innerText == item.brand) {
+      specialSortValueDisplay(item.brand);
       return item.brand;
     }
   });
@@ -855,6 +893,7 @@ poloRalphLaurenBrandFilter.addEventListener("click", function (e) {
 function poloRalphLaurenBrandFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (poloRalphLaurenBrandFilter.innerText == item.brand) {
+      specialSortValueDisplay(item.brand);
       return item.brand;
     }
   });
@@ -869,6 +908,7 @@ bulwarkFRBrandFilter.addEventListener("click", function (e) {
 function bulwarkFRBrandFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (bulwarkFRBrandFilter.innerText == item.brand) {
+      specialSortValueDisplay(item.brand);
       return item.brand;
     }
   });
@@ -883,8 +923,24 @@ lacosteBrandFilter.addEventListener("click", function (e) {
 function lacosteBrandFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (lacosteBrandFilter.innerText == item.brand) {
+      specialSortValueDisplay(item.brand);
       return item.brand;
     }
   });
   displayData(newArr);
+}
+
+//specialSortValueCancelFunc
+let cancleSpecialSortVal = document.querySelector(".select");
+cancleSpecialSortVal.addEventListener("click", specialSortValueDisplayFunc);
+function specialSortValueDisplayFunc() {
+  specialSortValueDisplay("All");
+  displayData(productList);
+}
+
+//specialSortValueDisplayFunc
+specialSortValueDisplay(specialSortValue);
+function specialSortValueDisplay(data) {
+  let specialSelect = document.querySelector(".select");
+  specialSelect.innerText = data;
 }

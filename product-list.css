@@ -184,9 +184,13 @@
   margin-bottom: 5px;
 }
 .sort-bar {
+  display: inline-block;
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 10px;
+  color: #1f1f1f;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .sort-bar > div {
   height: 25px;
