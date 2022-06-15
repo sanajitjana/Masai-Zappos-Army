@@ -186,6 +186,7 @@
 .sort-bar {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 10px;
 }
 .sort-bar > div {
   height: 25px;

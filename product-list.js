@@ -87,7 +87,7 @@ let productList = [
     favorite: "74",
     gender: "Men",
     type: "Clothings",
-    brand: "adidas",
+    brand: "adidas Originals",
     color: "Black",
     tag: "Style Room",
   },
@@ -716,6 +716,174 @@ function yellowColorFilterFunction(data) {
   let newArr = data.filter(function (item) {
     if (yellowColorFilter.innerText == item.color) {
       return item.color;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside PriceAllfilter
+let priceAllFilter = document.querySelector("#PriceAll");
+priceAllFilter.addEventListener("click", function (e) {
+  priceAllFilterFunction(productList);
+});
+function priceAllFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (priceAllFilter.innerText == "All") {
+      return item;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside FiftyAndUnderPriceAllfilter
+let under50PriceFilter = document.querySelector("#FiftyAndUnder");
+under50PriceFilter.addEventListener("click", function (e) {
+  under50PriceFilterFunction(productList);
+});
+function under50PriceFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (
+      under50PriceFilter.innerText == "$50.00 and Under" &&
+      item.price <= 50.0
+    ) {
+      return item.price;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside HundredAndUnderPriceAllfilter
+let HundredAndUnderPriceFilter = document.querySelector("#HundredAndUnder");
+HundredAndUnderPriceFilter.addEventListener("click", function (e) {
+  HundredAndUnderPriceFilterFunction(productList);
+});
+function HundredAndUnderPriceFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (
+      HundredAndUnderPriceFilter.innerText == "$100.00 and Under" &&
+      item.price <= 100.0
+    ) {
+      return item.price;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside TwoHundredAndUnderPriceAllfilter
+let twoHundredAndUnderPriceFilter = document.querySelector(
+  "#TwoHundredAndUnder"
+);
+twoHundredAndUnderPriceFilter.addEventListener("click", function (e) {
+  twoHundredAndUnderPriceFilterFunction(productList);
+});
+function twoHundredAndUnderPriceFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (
+      twoHundredAndUnderPriceFilter.innerText == "$200.00 and Under" &&
+      item.price <= 200.0
+    ) {
+      return item.price;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside TwoHundredAndOverPriceAllfilter
+let twoHundredAndOverPriceFilter = document.querySelector("#TwoHundredAndOver");
+twoHundredAndOverPriceFilter.addEventListener("click", function (e) {
+  twoHundredAndOverPriceFilterFunction(productList);
+});
+function twoHundredAndOverPriceFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (
+      twoHundredAndOverPriceFilter.innerText == "$200.00 and Over" &&
+      item.price >= 200.0
+    ) {
+      return item.price;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside AllBrandfilter
+let allBrandFilter = document.querySelector("#AllBrand");
+allBrandFilter.addEventListener("click", function (e) {
+  allBrandFilterFunction(productList);
+});
+function allBrandFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (allBrandFilter.innerText == "All") {
+      return item.price;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside UnderArmourBrandfilter
+let underArmourBrandFilter = document.querySelector("#UnderArmour");
+underArmourBrandFilter.addEventListener("click", function (e) {
+  underArmourBrandFilterFunction(productList);
+});
+function underArmourBrandFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (underArmourBrandFilter.innerText == item.brand) {
+      return item.brand;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside adidasOriginalsBrandfilter
+let adidasOriginalsBrandFilter = document.querySelector("#adidasOriginals");
+adidasOriginalsBrandFilter.addEventListener("click", function (e) {
+  adidasOriginalsBrandFilterFunction(productList);
+});
+function adidasOriginalsBrandFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (adidasOriginalsBrandFilter.innerText == item.brand) {
+      return item.brand;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside poloRalphLaurenBrandFilter
+let poloRalphLaurenBrandFilter = document.querySelector("#PoloRalphLauren");
+poloRalphLaurenBrandFilter.addEventListener("click", function (e) {
+  poloRalphLaurenBrandFilterFunction(productList);
+});
+function poloRalphLaurenBrandFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (poloRalphLaurenBrandFilter.innerText == item.brand) {
+      return item.brand;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside bulwarkFRBrandFilter
+let bulwarkFRBrandFilter = document.querySelector("#BulwarkFR");
+bulwarkFRBrandFilter.addEventListener("click", function (e) {
+  bulwarkFRBrandFilterFunction(productList);
+});
+function bulwarkFRBrandFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (bulwarkFRBrandFilter.innerText == item.brand) {
+      return item.brand;
+    }
+  });
+  displayData(newArr);
+}
+
+// leftside lacosteBrandFilter
+let lacosteBrandFilter = document.querySelector("#Lacoste");
+lacosteBrandFilter.addEventListener("click", function (e) {
+  lacosteBrandFilterFunction(productList);
+});
+function lacosteBrandFilterFunction(data) {
+  let newArr = data.filter(function (item) {
+    if (lacosteBrandFilter.innerText == item.brand) {
+      return item.brand;
     }
   });
   displayData(newArr);
