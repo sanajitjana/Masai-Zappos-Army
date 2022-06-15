@@ -37,6 +37,27 @@
 #sort-by {
   width: 65px;
 }
+#top-right-filter {
+  transition: all 0.3s ease 0s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  color: #000;
+  font: 400 16px Open Sans, sans-serif;
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  width: 175px;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  line-height: 36px;
+  padding: 3px 3px 3px 13px;
+  height: 42px;
+  display: inline-block;
+}
 .title {
   font-weight: 700;
   font-size: 28px;
@@ -216,13 +237,49 @@
   width: 20px;
   margin-left: -4px;
 }
-.rating {
+.rating-5 {
   background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
   background-repeat: no-repeat;
   width: 95px;
   height: 18px;
   background-position: -2px -252px;
   transform: scale(1.04);
+}
+.rating-4 {
+  display: inline-block;
+  background-position: -21px -252px;
+  background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
+  background-repeat: no-repeat;
+  width: 95px;
+  height: 18px;
+  transform: scale(1.04);
+}
+.rating-3 {
+  display: inline-block;
+  background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
+  background-repeat: no-repeat;
+  width: 95px;
+  height: 18px;
+  transform: scale(1.04);
+  background-position: -40px -252px;
+}
+.rating-2 {
+  display: inline-block;
+  background-position: -59px -252px;
+  background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
+  background-repeat: no-repeat;
+  width: 95px;
+  height: 18px;
+  transform: scale(1.04);
+}
+.rating-1 {
+  display: inline-block;
+  background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
+  background-repeat: no-repeat;
+  width: 95px;
+  height: 18px;
+  transform: scale(1.04);
+  background-position: -78px -252px;
 }
 .text-content > h4 {
   font-weight: 700;
@@ -306,9 +363,28 @@ a {
   color: #0076bd;
   text-decoration: underline;
 }
+.text-content .price-mrp {
+  margin-bottom: 2px;
+  color: #ce144b;
+  line-height: 1.7;
+  font: 400 14px Open Sans, sans-serif;
+}
 .text-content .price {
   margin-bottom: 2px;
+  line-height: 1.7;
+  font: 400 14px Open Sans, sans-serif;
   color: #035d59;
+}
+.text-content .mrp {
+  margin-bottom: 2px;
+  line-height: 1.7;
+  font: 400 12px Open Sans, sans-serif;
+  margin-left: 10px;
+  margin-top: 15px;
+  color: #707070;
+}
+.text-content .price-mrp-line {
+  display: flex;
 }
 .main-img {
   position: relative;
