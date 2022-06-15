@@ -208,6 +208,8 @@ function displayData(data) {
       tag.setAttribute("class", "style-room");
     } else if (ele.tag == "Low Stock") {
       tag.setAttribute("class", "low-stock");
+    } else if (ele.tag == "Best Seller") {
+      tag.setAttribute("class", "best-seller");
     }
 
     //fav
