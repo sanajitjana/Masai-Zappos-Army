@@ -164,10 +164,10 @@
 }
 .sort-bar {
   display: flex;
+  flex-wrap: wrap;
 }
 .sort-bar > div {
   height: 25px;
-  width: 60px;
   margin: 0;
   margin-right: 15px;
   display: flex;
@@ -175,7 +175,7 @@
   align-items: center;
   font: 700 14px Open Sans, sans-serif;
   text-decoration: none;
-  padding: 5px 5px;
+  padding: 5px 15px;
   position: relative;
   background: #fff;
   border: 1px solid #ddd;
@@ -190,7 +190,7 @@
   background: #e5f1f8;
   color: #0076bd;
   border: 1px solid transparent;
-  padding: 5px 15px 5px 0px;
+  padding: 5px 30px 5px 15px;
 }
 .sort-bar > .select::after {
   background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
@@ -309,12 +309,6 @@ a {
     margin-bottom: 10px;
     border-radius: 2px;
   }
-  .sort-bar > div {
-    height: 25px;
-    width: 40px;
-    margin-right: 8px;
-    padding: 5px 12px;
-  }
   .sort-bar > .select {
     padding: 5px 30px 5px 5px;
   }
@@ -351,28 +345,23 @@ a {
     margin-bottom: 10px;
     border-radius: 2px;
   }
-  .sort-bar > div {
-    height: 25px;
-    width: 40px;
-    margin-right: 8px;
-    padding: 5px 12px;
-  }
   .sort-bar > .select {
-    padding: 5px 30px 5px 8px;
+    padding: 5px 30px 5px 5px;
   }
-  .product-table {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 768px) {
   .product-table {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 @media all and (max-width: 768px) {
-  .leftside-filter {
+  .main-content {
+    grid-template-columns: repeat(1, 100%);
+    gap: 40px;
+  }
+  .leftside-filter,
+  #sort,
+  .item-found,
+  .sort-bar {
     display: none;
   }
 }

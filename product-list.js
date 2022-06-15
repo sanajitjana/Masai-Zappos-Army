@@ -169,3 +169,7 @@ let productList = [
     tag: "Low Stock",
   },
 ];
+
+productList.forEach(function (ele) {
+  console.log(ele.name);
+});
