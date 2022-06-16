@@ -1,9 +1,14 @@
 let form = document.querySelector("form");
 let loginArrayData = JSON.parse(localStorage.getItem("loginData")) || [];
 
+//fetch previous email for checking it already exits or not
+let emailObj = {};
+loginArrayData.forEach(function (ele) {
+  emailObj[ele.email] = 1;
+});
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-
   //   form validation
   if (form.name.value == "") {
     alert("Please enter a name");
@@ -13,10 +18,16 @@ form.addEventListener("submit", function (event) {
     alert("Please enter a password");
   } else if (form.re_password.value == "") {
     alert("Please enter re_password");
+  } else if (
+    form.password.value.length < 6 ||
+    form.re_password.value.length < 6
+  ) {
+    alert("Passwords must be at least 6 characters");
   } else if (form.password.value != form.re_password.value) {
     alert("Incorrect Re-enter password");
+  } else if (form.email.value in emailObj) {
+    alert("Email already exists");
   } else {
-    //data store in object
     let dataObj = {
       name: form.name.value,
       email: form.email.value,
