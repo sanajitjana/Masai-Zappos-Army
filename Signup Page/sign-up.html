@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://www.zappos.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Zappos Registration</title>
+    <link rel="stylesheet" href="sign-up.css" />
+  </head>
+  <body>
+    <div class="sign-in">
+      <img
+        id="zappos-logo"
+        src="https://images-na.ssl-images-amazon.com/images/G/01/zappos/melody/logo-blue-small._CB485919770_.svg"
+        alt="zappos logo"
+      />
+      <div id="container">
+        <h1>Create account</h1>
+        <form>
+          <label class="level">Your name</label>
+          <input type="text" id="name" required autofocus />
+          <label class="level">Email</label>
+          <input type="email" id="email" required />
+          <label class="level">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="At least 6 characters"
+            required
+          />
+          <p class="rule">Passwords must be at least 6 characters</p>
+          <label class="level">Re-enter password</label>
+          <input type="password" id="re_password" required />
+          <button id="sign">Create your Zappos account</button>
+        </form>
+        <p>
+          Don't have an email address or need additional help?
+          <br />
+          Don't worry! Give us a call at
+          <a href="tel:18009277671">(800) 927-7671</a>
+        </p>
+        <p>
+          Registering means you agree to the Zappos terms of use and privacy
+          policy
+        </p>
+        <div>
+          Already have an account?
+          <a id="sign-in-tag" href="sign-in.html">Sign-In</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="sign-up.js"></script>
+</html>
