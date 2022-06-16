@@ -298,7 +298,7 @@ nav .wrapper {
 .nav-links {
   margin-top: 10px;
 }
-.nav-links li a {
+.nav-links > li > a {
   font-family: "Open Sans", sans-serif;
   height: 50%;
   border: none;
@@ -401,4 +401,18 @@ nav .wrapper {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+header {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00567d;
+}
+ul li a {
+  color: #096b99;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+button {
+  border: transparent;
 }
