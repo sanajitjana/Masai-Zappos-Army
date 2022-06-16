@@ -15,12 +15,12 @@ home page -                index.html
 Kailash Chndra - signinSignupBranch
 ---------------------------------------------
 sign-in page -             sign-in.html
-sign-up page -             sugn-up.html
+sign-up page -             sign-up.html
 
 
 Sanajit Jana - productListBranch
 ---------------------------------------------
-product-list page -        products.html
+product-list page -        product-list.html
 
 
 Pavan Kalyan - productDetailsBranch
