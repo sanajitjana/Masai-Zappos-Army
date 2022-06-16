@@ -1,26 +1,27 @@
 * {
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-    font-family: 'Open Sans', sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 
 #shipping {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 #shipping .h1,
 #shipping .freeshippara {
-    width: 65%;
+  width: 65%;
 }
 
 #shipping .freeshippara a {
-    text-decoration: none;
-    color: #032c48;
+  text-decoration: none;
+  color: #032c48;
 }
+
 /* Reset defaults */
 * {
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
@@ -798,6 +799,31 @@ svg {
   opacity: .5;
 }
 
+#customerquestions {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 0em;
+
+}
+
+#customerquestions>div>h2 {
+  font-size: xx-large;
+}
+
+#customerquestions>div>.questionbutton {
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  border: 2px solid #023a54;
+  color: #023a54;
+  font-weight: bold;
+
+}
+
+#comment {
+  font-size: larger;
+}
+
 img,
 svg {
   max-width: 100%;
@@ -805,7 +831,7 @@ svg {
 }
 
 #customerviewed3 {
-  margin-top: -5em;
+  margin-top: 0em;
   height: auto;
 }
 
