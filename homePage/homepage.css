@@ -241,8 +241,6 @@ button:hover {
     height: 450px;
     width: 100%;
     margin-top: 50px;
-   
-
 
 }
 #trendingBrands>div{
@@ -276,6 +274,42 @@ button:hover {
 .brandsPic>p{
    text-align: center;
    font-size: 18px;
+}
+#afterPay {
+
+    height: 230px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#afterPay>img {
+    height: 100%;
+    width: 100%;
+}
+#lastBox{
+    
+    height: 550px;
+    width: 100%;
+    margin-top: 50px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:100%;
+    display: grid;
+    gap:15px
+}
+#lastBox>div{
+    
+}
+#lastBox>div>img{
+    height: 75%;
+    width: 100%;
+}
+#lastBox>div>h2{
+    margin-bottom: -8px;
+    text-align: center;
+}
+#lastBox>div>p{
+    margin-bottom: -5px;
+    text-align: center;
 }
 
 
