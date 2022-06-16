@@ -422,10 +422,14 @@ h5 {
   width: 96%;
   margin: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100%;
   display: grid;
   gap: 15px;
+}
+#lastBox > div {
+  cursor: pointer;
 }
 #lastBox > div > img {
   height: 75%;
@@ -434,8 +438,26 @@ h5 {
 #lastBox > div > h2 {
   margin-bottom: -8px;
   text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f1f1f;
 }
 #lastBox > div > p {
   margin-bottom: -5px;
   text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f1f1f;
+  margin-top: 30px;
+}
+#lastBox > div > h4 {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+}
+#lastBox > div > h4:hover {
+  color: #0076bd;
+  text-decoration: underline;
+  cursor: pointer;
 }
