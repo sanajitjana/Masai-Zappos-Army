@@ -59,6 +59,7 @@
     width: 93%;
     height:35px;
     font-size: 15px;
+    cursor: pointer;
    
    
     border-radius: 4px;
@@ -124,21 +125,23 @@
 </html>
 <script>
     let form=document.querySelector("form")
-    let userData=JSON.parse(localStorage.getItem("userData"))||[];
+    let userData=JSON.parse(localStorage.getItem("zapposData"))||[];
     form.addEventListener("submit",function(event){
         event.preventDefault()
 
         let data={
                name:form.name.value,
                email:form.email.value,
-               password:form.password.value
+               password:form.password.value,
+             repassword:form.password1.value,
+
 
         }
         //console.log(data)
 
         if(checkEmails(data.email)===true){
             userData.push(data);
-            localStorage.setItem("userData",JSON.stringify(userData))
+            localStorage.setItem("zapposData",JSON.stringify(userData))
         }else {
             alert("Acount already exists");
         }
