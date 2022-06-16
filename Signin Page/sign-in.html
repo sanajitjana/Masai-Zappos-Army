@@ -1,186 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-In Page</title>
-   <style>
-    img{
-        margin-left: 45%;
-    }
-    #container{
-        width: 30%;
-        border: 1px solid black;
-        margin: auto;
-        margin-top: 20px;
-        border-radius: 5px;
-        
-    }
-    h3{
-        margin-left: 20px;
-        
-        font-size: 32px;
-       
-        color: black;
-        font-weight: lighter;
-    }
-    form{
-        font-size: 20px;
-        font-weight: bold;
-        margin-left: 20px;
-        
-       
-    }
-  
-   #email{
-    width: 90%;
-    height: 29px;
-    border: 2.5px solid rgb(214, 210, 210);
-    border-radius: 4px;
-   }
-   #email:hover{
-    border: 2px solid rgb(11, 11, 72);
-   }
-   #password{
-    width: 90%;
-    height: 29px;
-    border: 2.5px solid rgb(214, 210, 210);
-    border-radius: 4px;
-   }
-   #password:hover{
-    border: 2px solid rgb(11, 11, 72);
-   }
-  
-   #sign{
-    width: 93%;
-    height:35px;
-    font-size: 15px;
-    
-    cursor: pointer;
-    border: 1px solid black;
-   
-   
-    border-radius: 4px;
-    color: white;
-    background-color:rgba(7, 34, 72, 0.859);
-   }
-  
-
-    p{
-      font-size:18px;  
-      font-weight:50;
-    }
-    form+p{
-       text-align: center;
-       color: gray;
-       font-size: 20px;
-       
-    }
-    a{
-        color: navy;
-    }
-   
-    #acc{
-        width: 90%;
-    height: 35px;
-    border: 2.5px solid rgb(7, 7, 39);
-    border-radius: 4px;
-    margin-left: 20px;
-    color: rgb(4, 4, 54);
-    padding: 0px 10px 0px 10px;
-    font-weight:550;
-    font-size: 17px;
-    background-color: white;
-    cursor: pointer;
-    } 
-
-   </style>
-
-</head>
-<body>
-    <img src="https://images-na.ssl-images-amazon.com/images/G/01/zappos/melody/logo-blue-small._CB485919770_.svg" alt="">
-
-    <div id="container">
-         <h3>Sign-In</h3>
-        <form >
-            
-            <label class="level">Email</label>
-            <br>
-            <input type="text" id="email" placeholder="">
-            <br>
-            <br>
-            <label class="level">Password</label>
-            <br>
-            <input type="password" id="password">
-            <br>
-            <br>
-           
-            <button id="sign" type="submit" >
-              Sign-In
-            </button>
-
-            <p>◽ Keep me signed in.Details  ▾</p>
-            
-
-
-           
-  
-            
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://www.zappos.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Zappos Sign-In</title>
+    <link rel="stylesheet" href="sign-in.css" />
+  </head>
+  <body>
+    <div id="sign-in">
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/G/01/zappos/melody/logo-blue-small._CB485919770_.svg"
+        alt=""
+      />
+      <div id="sign-in-container">
+        <h1>Sign-In</h1>
+        <form>
+          <label class="level">Email</label>
+          <input type="text" id="email" required autofocus/>
+          <label class="level">Password</label>
+          <input type="password" id="password" required />
+          <input type="submit" id="sign-in-btn" value="Submit"/>
         </form>
-           <p>New to Zappos?</p>
-           <br>
-           <button id="acc" >
-            <a href="signup.html">Create your Zappos account</a>
-            
-          </button>
-          <br>
-          <br>
-       
-          
-          </div>
-      </body>
-      </html>
-      <script>
-        let form=document.querySelector("form");
-        let datafromLS=JSON.parse(localStorage.getItem("zapposData"))||[];
-        form.addEventListener("submit",function(event){
-            event.preventDefault();
-            let data={
-                email:form.email.value,
-                password:form.password.value,
-            }
-            if (checkSignIn(data.email,data.password)===true){
-                localStorage.setItem("signIn",JSON.stringify(data));
-                alert("Sign In Successfull");
-                
-            }else{
-            alert("wrong Username Or password")
-            
-         }
-        })
-        
-
-
-        function checkSignIn(email,password){
-            let filtered=datafromLS.filter(function(element){
-                return element.email===email && element.password==password
-            })
-            if(filtered.length>0){
-                return true;
-            }else{
-                return false;
-            }
-        }
-      </script>
-            
-            
-
-            
-
-
-
-
-
-       
-        
+        <p id="check-box-para">
+          <input type="checkbox" id="check-box"/> Keep me signed in.
+          <span>Details</span> ▾
+        </p>
+        <p class="newto-zappos">New to Zappos?</p>
+        <br />
+        <a href="../Signup Page/sign-up.html">
+        <button id="create-zappos">
+          Create your Zappos account</a>
+        </button>
+      </a>
+        <br />
+        <br />
+      </div>
+    </div>
+  </body>
+  <script src="sign-in.js"></script>
+</html>
