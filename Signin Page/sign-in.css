@@ -133,7 +133,7 @@ a {
   color: #003953;
   font-weight: bold;
 }
-a:hover {
+span:hover {
   text-decoration: underline;
 }
 #sign-in-tag {
