@@ -1,10 +1,14 @@
 
         #nav{
-            border: 1px solid #ff0000;
+            
             height:220px;
             padding: 0px;
             margin: auto;
-        }#top{
+        }body{
+            margin:0;
+            padding: 0;
+        }
+        #top{
             
            
             height:18%;
@@ -47,6 +51,14 @@
             margin-left: 20px;
             justify-items: center;
             align-items: center;
+        }#search{
+            width: 73%;
+            
+            padding: 12px;
+          
+            border: 2px solid #DDDDDD;
+            border-right: none;
+            
         }
         #top>div{
             width:10%;
@@ -88,9 +100,13 @@
         
         }#searchAll{
             width:70%;
-            height:50%;
-            
-            border-color: rgb(223, 217, 217);
+            padding: 12px;
+            border:none;
+            background-color: white;
+            margin-left:-70%;
+            border: none;
+            /* border-left: none;
+            border-color: #DDDDDD; */
         }#but1{
             height: 50%;
             border: none;
@@ -126,7 +142,7 @@
         }#cart>img{
             width: 30%;
             height: 100%;
-        }#last{
+        /* }#last{
             
             height:22%;
             display: flex;
@@ -160,7 +176,7 @@
             width:60px
         }
         #last>select:last-child{
-            margin: 0px;
+            margin: 0px; */
         }
         #imgfire{
            margin-left: 6px;
@@ -196,24 +212,25 @@
         }#but1:hover{
             background-color: #3985b5;
         }nav{
-            background-color:floralwhite;
+            background-color:#F4F4F4;
             position: relative;
+            
             width: 100%;
-            height:90%;
-            z-index: 999;
+           
+            z-index: 999; 
             
             
             
         }
         nav .wrapper{
             
-            padding: 0,30px;
+            
             margin: auto;
             display: flex;
             align-items: center;
-            font-weight: 500px;
+           
             width: 100%;
-            border: 1px solid white;
+            
             justify-content: space-between;
             
 
@@ -223,31 +240,36 @@
             
         }.nav-links li{
             list-style: none;
+            font: 600 16px Open Sans,sans-serif;
+            color: #003953;
+            text-align: left;
+            line-height: 30px;
         
         }.nav-links li a{
             
             height: 50%;
             border: none;
            
-            font-size: 16px;
-            font-weight: 400;
+            
+            font-weight: 300;
+            font-size: 12px;
             margin: 6px;
             text-decoration: none;
             color: #003953;
         }.nav-links li a:hover{
-           background: #EFEFAF;
+           
             border-bottom: 2px solid #003953;
         }.nav-links.mega-links{
             
-            width: 200px;
+            width: 100px;
             top:100px;
             margin: auto;
-           
-            position: absolute;
+            
+            position: fixed;
             
         }.nav-links li:hover .new-box{
             top: 40px;
-            width: 95%;
+            width: 90%;
             position:absolute;
             opacity: 1;
             
@@ -259,11 +281,11 @@
             position: absolute;
             top:200px;
             opacity: 0;
-           
+            
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
             visibility: hidden;
             
-            width: 100%;
+            width: auto;
             left:0;
             
             padding: 25px 20px;
@@ -275,10 +297,11 @@
             display: flex;
             width: 100%;
             line-height: 30px;
-            font-weight: normal;
-            justify-content:space-evenly ;
-            text-align: left;
+            font-weight: 500;
+            justify-content:space-around ;
+            text-align: center;
         }.content .row img{
+            margin-left: 25%;
             width: 50%;
             height: 34%;
             display:block;
@@ -296,15 +319,16 @@
             
         }.row.mega-link li a{
             padding: 0 20px;
-            text-align: left;
+            text-align: center;
             
-            font-weight: normal;
+            
             
             
             display: block;
         } .content .brands img{
             width: 100%;
             height: 34%;
+           
             display:block;
             object-fit: cover;
         }.row.brands li a{
@@ -315,7 +339,5 @@
             margin-left: 470px;
         }#fireimg{
             width: 15px;
-            
         }
-    
-   
+            

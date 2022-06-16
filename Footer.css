@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 #foot>div:first-child{
     height:120px;
     
@@ -28,7 +32,7 @@ margin: 0 auto;
     border-radius: 5px;
     font-weight: 520;
 }#button{
-    background-color: rgb(2, 84, 117);
+    background-color: #003953;
     margin-left: 16px;
     color: white;
     text-align: center;
@@ -39,19 +43,19 @@ margin: 0 auto;
     font-weight: 600;
 }#middel{
     display: flex;
-    background: rgb(6, 74, 101);
+    background: #003953;
     box-sizing: border-box;
     justify-content: space-evenly;
 }
 #middel>div{
-    background: rgb(6, 74, 101);
+    background: #003953;
     
     width: 17%;
     padding: 8px;
     line-height: 25px;
     padding-left: 30px;
 }#middel>div h2{  
-    color:rgb(2, 84, 117);
+    color:#003953;
     color: white;
     font: 600 18px Open Sans,sans-serif;
 }a{
@@ -72,12 +76,12 @@ margin: 0 auto;
     color: white;
     padding: 15px;
     width: 100%;
-    background: rgb(7, 88, 120);
+    background: #144860;
 }#para>button{
     font: 700 14px/120% Open Sans,sans-serif;
     border-radius: 4px;
     padding: 12px 24px;
-    background: rgb(7, 88, 120);
+    background: #144860;
     cursor: pointer;
     
     color: white;
@@ -90,7 +94,7 @@ margin: 0 auto;
 }#foot>div:last-child{
     box-sizing: border-box;
     padding: 16px 32px;
-    background: rgb(7, 88, 120);
+    background: #003953;
     line-height: 1.5;
    font: 400 14px Open Sans,sans-serif;
     max-width: 1440px;
