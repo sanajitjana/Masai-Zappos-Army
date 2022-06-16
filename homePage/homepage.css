@@ -160,6 +160,7 @@
 #pride > img {
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 #new {
   height: 650px;
@@ -184,6 +185,7 @@
     rgb(64, 171, 216),
     rgba(129, 194, 214)
   );
+  cursor: pointer;
 }
 #new > div > div {
   height: 92%;
@@ -199,11 +201,12 @@
   border-radius: 15px;
   color: #000000;
   font-size: 18px;
+  cursor: default;
 }
 #new .new-para {
   max-width: 470px;
 }
-#new .below-btn {
+.below-btn {
   font: 700 14px/120% Open Sans, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
@@ -223,7 +226,7 @@
   border: 2px solid #1f1f1f;
   color: #1f1f1f;
 }
-#new .below-btn:hover {
+.below-btn:hover {
   background-color: #000000;
   color: white;
 }
@@ -237,16 +240,27 @@
   margin-top: 60px;
   display: flex;
 }
-#printLab > div:first-child {
+#printLab > .print-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   height: 100%;
   width: 33%;
+  margin: auto;
 }
-#printLab > div:last-child {
-  height: 100%;
-  width: 64%;
-  margin-left: 20px;
+#printLab h2 {
+  font-weight: 400;
+  max-width: 380px;
 }
-#printLab > div:last-child > img {
+#printLab .print-para {
+  font-size: 18px;
+  max-width: 430px;
+  margin-top: -5px;
+  margin-bottom: 0;
+}
+#printLab > .print-second > img {
   height: 100%;
   width: 100%;
 }
