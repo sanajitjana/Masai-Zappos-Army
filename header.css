@@ -80,6 +80,7 @@ body {
   align-items: center;
   height: 34px;
   transition: background-color 0.1s ease-in-out;
+  cursor: pointer;
 }
 #top > div:last-child {
   max-width: 120px;
@@ -91,6 +92,7 @@ body {
   transition: background-color 0.1s ease-in-out;
   border-top: none;
   border-bottom: none;
+  cursor: pointer;
 }
 #top-img-2 {
   max-width: 50px;
@@ -318,11 +320,10 @@ nav .wrapper {
   position: fixed;
 }
 .nav-links li:hover .new-box {
-  top: 40px;
+  top: 50px;
   width: 90%;
   position: absolute;
   opacity: 1;
-
   background-color: white;
   visibility: visible;
   transition: all 0.4s ease;
