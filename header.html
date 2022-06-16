@@ -69,19 +69,20 @@
           <button id="but1" type="submit">SEARCH</button>
         </div>
         <div>
-          <a aria-label="Go to my cart. Cart empty." class="h-z" href="/cart"
+          <a
+            aria-label="Go to my cart. Cart empty."
+            class="h-z"
+            href="cart.html"
             >My Cart</a
           >
         </div>
       </div>
-      <div id="last" class="">
+      <div id="last">
         <nav>
           <div class="wrapper">
             <ul class="nav-links">
               <li>
-                <a id="size" href="#"
-                  >New<i class="fa fa-sort-desc" aria-hidden="true"></i
-                ></a>
+                <a class="size first-menu" href="#">New</a>
                 <div class="new-box">
                   <div class="content">
                     <div class="row">
@@ -676,7 +677,7 @@
                 </div>
               </li>
               <li>
-                <a href="#">Sale</a>
+                <a class="size" href="#">Sale</a>
                 <div class="new-box">
                   <div class="content">
                     <div class="row">
@@ -763,13 +764,12 @@
                 </div>
               </li>
               <li>
-                <a class="size" href="#"
-                  ><img
-                    id="fireimg"
-                    src="data:image/png;base64,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"
-                    alt=""
-                  />
-                  Clothing</a
+                <a
+                  data-shyguy="nav <span style='line-height: 0;'>🔥</span> Clothing"
+                  class="size"
+                  aria-expanded="false"
+                  href="#"
+                  ><span style="line-height: 0">🔥</span> Clothing</a
                 >
                 <div class="new-box">
                   <div class="content">
@@ -867,15 +867,29 @@
                   </div>
                 </div>
               </li>
-              <li><a id="lastlogo" href="">Sign IN / Register</a></li>
+              <li>
+                <a class="special" id="lastlogo" href="">Sign In / Register</a>
+              </li>
             </ul>
           </div>
         </nav>
       </div>
       <div id="curser">
-        <a id="a1" href="">Father's Day is June 19! Shop Father's Day Gifts</a>
-        <button class="but"><</button>
-        <button clas="but">></button>
+        <a id="a1" href="#">Father's Day is June 19! Shop Father's Day Gifts</a>
+        <button class="but">
+          <i
+            class="fa fa-angle-left"
+            aria-hidden="true"
+            style="color: #717171"
+          ></i>
+        </button>
+        <button class="but">
+          <i
+            class="fa fa-angle-right"
+            aria-hidden="true"
+            style="color: #717171"
+          ></i>
+        </button>
       </div>
     </div>
   </body>
