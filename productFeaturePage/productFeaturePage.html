@@ -6,947 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>productFeaturePage</title>
-
-    <style>
-        /* Reset defaults */
-        * {
-            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-        }
-
-        body {
-            padding-left: 1em;
-            width: 80%;
-            margin: auto;
-        }
-
-        #shoeimagessection {
-            width: 100%;
-            height: 120vh;
-            display: flex;
-
-
-        }
-
-
-
-
-
-        #productthumbnails {
-            width: 8%;
-            height: auto;
-            margin-left: 0px;
-
-        }
-
-        .verticalSection {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-        }
-
-        .verticalSection>div {
-            width: 100%;
-            height: 100px;
-
-        }
-
-        .verticalSection>div>.vrtl {
-            width: 100%;
-            height: 80%;
-            border: 0px;
-
-        }
-
-        .vrtl>img {
-            margin: auto;
-        }
-
-        #productFeature {
-            width: 55%;
-            height: 100%;
-
-            margin-left: 1em;
-            /* background-color: #f5f5f5; */
-
-        }
-
-        #productFeature>div {
-            width: 100%;
-            height: 100%;
-            margin-top: 5em;
-        }
-
-        #productFeature>div>button {
-            width: 100%;
-            height: auto;
-            border: 0px;
-
-        }
-
-        #productFeature>div>button>img {
-            width: 100%;
-            height: auto;
-        }
-
-        #buypage {
-            margin-left: 1em;
-            overflow: hidden;
-        }
-
-        .differshoe {
-            display: grid;
-            grid-template-columns: repeat(5, auto);
-            grid-template-rows: repeat(1, 90px);
-            margin: auto;
-
-            gap: .5em;
-
-
-        }
-
-        .differshoe>div>img {
-            width: 100%;
-            height: 100%;
-            background-color: whitesmoke;
-
-        }
-
-        #sizepart {
-            display: flex;
-        }
-
-        fieldset {
-            border: 0px;
-            margin-top: .5em;
-        }
-
-        fieldset>legend>span {
-            font-size: larger;
-            font-weight: bold;
-        }
-
-        fieldset>div {
-            display: grid;
-            grid-template-columns: repeat(7, 70px);
-            grid-template-rows: repeat(2, 50px);
-            gap: .5em;
-        }
-
-        fieldset>div>div {
-            width: 100%;
-            height: 100%;
-            background-color: whitesmoke;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-
-        }
-
-        fieldset>div>div:hover {
-            width: 90%;
-            height: 90%;
-            background-color: whitesmoke;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* border: 1px solid green; */
-            border: 1px solid rgb(0, 89, 172);
-        }
-
-
-        .widthoption>p {
-            font-size: large;
-
-        }
-
-        .widthoption>.widthbutt {
-            width: 100%;
-            height: 50px;
-            display: flex;
-        }
-
-        .widthbutt>button {
-            border: 0px;
-            height: 100%;
-            width: 150px;
-            margin-right: .5em;
-            font-size: medium;
-            font-weight: bold;
-        }
-
-        .cart>button {
-            width: 100%;
-            height: 50px;
-            background-color: #a7e688;
-            color: #227560;
-            border: 0px;
-            margin-top: 1em;
-            font-weight: bold;
-            font-size: medium;
-            border-radius: 5px;
-        }
-
-        .cart>button:hover {
-            width: 100%;
-            height: 50px;
-            background-color: #b9f29d;
-            color: #195b4a;
-
-        }
-
-        .cantFinddSize {
-            margin-top: 1em;
-        }
-
-        #survey {
-            height: 70px;
-            display: flex;
-            justify-content: space-around;
-            margin-top: 1em;
-            border-top: 1px solid rgb(193, 190, 190);
-            border-bottom: 1px solid rgb(193, 190, 190);
-        }
-
-        #survey>div {
-            margin: auto;
-        }
-
-        .amazon {
-            text-align: center;
-            width: 100%;
-            height: 50px;
-        }
-
-        .amazon>img {
-            width: 170px;
-            height: 100%;
-            margin: auto;
-            margin-top: -5px;
-        }
-
-        .highlight {
-            width: 100%;
-            height: 50px;
-        }
-
-        .highlight>div {
-            width: 98%;
-            height: 5em;
-
-            display: flex;
-            justify-content: center;
-            background-color: whitesmoke;
-            margin: auto;
-
-        }
-
-        .highlight>div>h1 {
-
-            font-size: 600;
-            text-align: center;
-        }
-
-        .highlight>div>button {
-
-            height: 50%;
-            width: 2em;
-            margin: auto;
-            margin-left: 23em;
-            border: 0px;
-            background-color: whitesmoke;
-            cursor: pointer;
-        }
-
-        .productinfo {
-            width: 100%;
-            height: 50px;
-            margin-top: 3em;
-        }
-
-        .productinfo>div {
-            width: 98%;
-            height: 5em;
-
-            display: flex;
-            justify-content: space-between;
-            background-color: whitesmoke;
-
-        }
-
-        .productinfo>div>h1 {
-            margin-left: 1em;
-        }
-
-        .productinfo>div>button {
-
-            height: 50%;
-            width: 2em;
-            margin: auto;
-            margin-left: 23em;
-            border: 0px;
-            background-color: whitesmoke;
-            cursor: pointer;
-        }
-
-        img,
-        svg {
-            max-width: 100%;
-            display: block;
-        }
-
-        #customerviewed {
-            margin-top: 5em;
-            height: auto;
-        }
-
-        .media-container {
-            position: relative;
-            height: 100%;
-            display: flex;
-        }
-
-        .media-scroller,
-        .media-group {
-            display: grid;
-            gap: 1rem;
-            grid-auto-flow: column;
-        }
-
-        .media-scroller {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            grid-auto-columns: 100%;
-            padding: 0 3rem;
-            scroll-padding-inline: 3rem;
-        }
-
-        .media-scroller:first-of-type {
-            padding-left: 0;
-        }
-
-        .media-group {
-            grid-auto-columns: 1fr;
-            overflow: hidden;
-        }
-
-        .media-element {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            border-radius: 0.25rem;
-            overflow: hidden;
-
-
-        }
-
-        .media-element>img {
-            width: 100%;
-            height: 60%;
-            /* aspect-ratio: 16 / 9; */
-            object-fit: cover;
-        }
-
-        .media-element>h1 {
-            width: 100%;
-            margin-top: .5em;
-            font-weight: lighter;
-            font-size: medium;
-        }
-
-        .media-element>h2 {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            font-weight: 500px;
-            font-size: medium;
-        }
-
-        .media-element>p {
-            margin-top: 5px;
-            font-weight: lighter;
-            font-size: medium;
-            font-size: larger;
-            color: green;
-        }
-
-        .next,
-        .previous {
-            display: none;
-            align-items: center;
-            z-index: 10;
-            position: absolute;
-            width: 3rem;
-            padding: 1rem;
-            background: rgb(0 0 0 / 0);
-            opacity: 0;
-            transition: opacity .25s;
-        }
-
-        .previous {
-            left: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .next {
-            right: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .media-group:first-child :where(.next, .previous) {
-            display: flex;
-        }
-
-        :where(.next, .previous):hover {
-            background: rgb(0 0 0 / 0.3);
-        }
-
-        :where(.next, .previous)>svg {
-            transition: transform 75ms linear;
-            transform: scale(1);
-        }
-
-        :where(.next, .previous):hover>svg {
-            transform: scale(1.2);
-        }
-
-        .media-group:target :where(.next, .previous) {
-            display: flex;
-        }
-
-        .media-scroller:has(:target:not(:first-child)) .media-group:first-of-type .next {
-            display: none;
-        }
-
-        .navigation-indicators {
-            opacity: 0;
-            position: absolute;
-            display: flex;
-            gap: 3px;
-            top: -1rem;
-            right: 2rem;
-            transition: opacity .25s;
-        }
-
-        .navigation-indicators>* {
-            width: 1rem;
-            height: 2px;
-            background: white;
-            opacity: 0.5;
-            transition-delay: .5s;
-        }
-
-        .media-scroller:hover :where(.next, .previous),
-        .media-group:not(:target)~.navigation-indicators>*:nth-child(1),
-        .media-group:nth-child(1):target~.navigation-indicators>*:nth-child(1),
-        .media-group:nth-child(2):target~.navigation-indicators>*:nth-child(2),
-        .media-group:nth-child(3):target~.navigation-indicators>*:nth-child(3),
-        .media-group:nth-child(4):target~.navigation-indicators>*:nth-child(4),
-        .media-scroller:hover .navigation-indicators {
-            opacity: 1;
-        }
-
-        .media-group:not(:nth-child(1)):target~.navigation-indicators>*:nth-child(1) {
-            opacity: .5;
-        }
-
-        img,
-        svg {
-            max-width: 100%;
-            display: block;
-        }
-
-        #customerviewed1 {
-            margin-top: -5em;
-            height: auto;
-        }
-
-        .media-container1 {
-            position: relative;
-            height: 100%;
-            display: flex;
-        }
-
-        .media-scroller1,
-        .media-group1 {
-            display: grid;
-            gap: 1rem;
-            grid-auto-flow: column;
-        }
-
-        .media-scroller1 {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            grid-auto-columns: 100%;
-            padding: 0 3rem;
-            scroll-padding-inline: 3rem;
-        }
-
-        .media-scroller1:first-of-type {
-            padding-left: 0;
-        }
-
-        .media-group1 {
-            grid-auto-columns: 1fr;
-            overflow: hidden;
-        }
-
-        .media-element1 {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            border-radius: 0.25rem;
-            overflow: hidden;
-
-
-        }
-
-        .media-element1>img {
-            width: 100%;
-            height: 60%;
-            /* aspect-ratio: 16 / 9; */
-            object-fit: cover;
-        }
-
-        .media-element1>h1 {
-            width: 100%;
-            margin-top: .5em;
-            font-weight: lighter;
-            font-size: medium;
-        }
-
-        .media-element1>h2 {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            font-weight: 500px;
-            font-size: medium;
-        }
-
-        .media-element1>p {
-            margin-top: 5px;
-            font-weight: lighter;
-            font-size: medium;
-            font-size: larger;
-            color: green;
-        }
-
-        .next1,
-        .previous1 {
-            display: none;
-            align-items: center;
-            z-index: 10;
-            position: absolute;
-            width: 3rem;
-            padding: 1rem;
-            background: rgb(0 0 0 / 0);
-            opacity: 0;
-            transition: opacity .25s;
-        }
-
-        .previous1 {
-            left: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .next1 {
-            right: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .media-group1:first-child :where(.next1, .previous1) {
-            display: flex;
-        }
-
-        :where(.next1, .previous1):hover {
-            background: rgb(0 0 0 / 0.3);
-        }
-
-        :where(.next1, .previous1)>svg {
-            transition: transform 75ms linear;
-            transform: scale(1);
-        }
-
-        :where(.next1, .previous1):hover>svg {
-            transform: scale(1.2);
-        }
-
-        .media-group1:target :where(.next1, .previous1) {
-            display: flex;
-        }
-
-        .media-scroller1:has(:target:not(:first-child)) .media-group1:first-of-type .next1 {
-            display: none;
-        }
-
-        .navigation-indicators1 {
-            opacity: 0;
-            position: absolute;
-            display: flex;
-            gap: 3px;
-            top: -1rem;
-            right: 2rem;
-            transition: opacity .25s;
-        }
-
-        .navigation-indicators1>* {
-            width: 1rem;
-            height: 2px;
-            background: white;
-            opacity: 0.5;
-            transition-delay: .5s;
-        }
-
-        .media-scroller1:hover :where(.next1, .previous1),
-        .media-group1:not(:target)~.navigation-indicators1>*:nth-child(1),
-        .media-group1:nth-child(1):target~.navigation-indicators1>*:nth-child(1),
-        .media-group1:nth-child(2):target~.navigation-indicators1>*:nth-child(2),
-        .media-group1:nth-child(3):target~.navigation-indicators1>*:nth-child(3),
-        .media-group1:nth-child(4):target~.navigation-indicators1>*:nth-child(4),
-        .media-scroller1:hover .navigation-indicators1 {
-            opacity: 1;
-        }
-
-        .media-group1:not(:nth-child(1)):target~.navigation-indicators1>*:nth-child(1) {
-            opacity: .5;
-        }
-
-        img,
-        svg {
-            max-width: 100%;
-            display: block;
-        }
-
-        #customerviewed2 {
-            margin-top: -5em;
-            height: auto;
-        }
-
-        .media-container2 {
-            position: relative;
-            height: 100%;
-            display: flex;
-        }
-
-        .media-scroller2,
-        .media-group2 {
-            display: grid;
-            gap: 1rem;
-            grid-auto-flow: column;
-        }
-
-        .media-scroller2 {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            grid-auto-columns: 100%;
-            padding: 0 3rem;
-            scroll-padding-inline: 3rem;
-        }
-
-        .media-scroller2:first-of-type {
-            padding-left: 0;
-        }
-
-        .media-group2 {
-            grid-auto-columns: 1fr;
-            overflow: hidden;
-        }
-
-        .media-element2 {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            border-radius: 0.25rem;
-            overflow: hidden;
-
-
-        }
-
-        .media-element2>img {
-            width: 100%;
-            height: 60%;
-            /* aspect-ratio: 16 / 9; */
-            object-fit: cover;
-        }
-
-        .media-element2>h1 {
-            width: 100%;
-            margin-top: .5em;
-            font-weight: lighter;
-            font-size: medium;
-        }
-
-        .media-element2>h2 {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            font-weight: 500px;
-            font-size: medium;
-        }
-
-        .media-element2>p {
-            margin-top: 5px;
-            font-weight: lighter;
-            font-size: medium;
-            font-size: larger;
-            color: green;
-        }
-
-        .next2,
-        .previous2 {
-            display: none;
-            align-items: center;
-            z-index: 10;
-            position: absolute;
-            width: 3rem;
-            padding: 1rem;
-            background: rgb(0 0 0 / 0);
-            opacity: 0;
-            transition: opacity .25s;
-        }
-
-        .previous2 {
-            left: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .next2 {
-            right: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .media-group2:first-child :where(.next2, .previous2) {
-            display: flex;
-        }
-
-        :where(.next2, .previous2):hover {
-            background: rgb(0 0 0 / 0.3);
-        }
-
-        :where(.next2, .previous2)>svg {
-            transition: transform 75ms linear;
-            transform: scale(1);
-        }
-
-        :where(.next2, .previous2):hover>svg {
-            transform: scale(1.2);
-        }
-
-        .media-group2:target :where(.next2, .previous2) {
-            display: flex;
-        }
-
-        .media-scroller2:has(:target:not(:first-child)) .media-group2:first-of-type .next2 {
-            display: none;
-        }
-
-        .navigation-indicators2 {
-            opacity: 0;
-            position: absolute;
-            display: flex;
-            gap: 3px;
-            top: -1rem;
-            right: 2rem;
-            transition: opacity .25s;
-        }
-
-        .navigation-indicators2>* {
-            width: 1rem;
-            height: 2px;
-            background: white;
-            opacity: 0.5;
-            transition-delay: .5s;
-        }
-
-        .media-scroller2:hover :where(.next2, .previous2),
-        .media-group2:not(:target)~.navigation-indicators2>*:nth-child(1),
-        .media-group2:nth-child(1):target~.navigation-indicators2>*:nth-child(1),
-        .media-group2:nth-child(2):target~.navigation-indicators2>*:nth-child(2),
-        .media-group2:nth-child(3):target~.navigation-indicators2>*:nth-child(3),
-        .media-group2:nth-child(4):target~.navigation-indicators2>*:nth-child(4),
-        .media-scroller2:hover .navigation-indicators2 {
-            opacity: 1;
-        }
-
-        .media-group2:not(:nth-child(1)):target~.navigation-indicators2>*:nth-child(1) {
-            opacity: .5;
-        }
-
-        img,
-        svg {
-            max-width: 100%;
-            display: block;
-        }
-
-        #customerviewed3 {
-            margin-top: -5em;
-            height: auto;
-        }
-
-        .media-container3 {
-            position: relative;
-            height: 100%;
-            display: flex;
-        }
-
-        .media-scroller3,
-        .media-group3 {
-            display: grid;
-            gap: 1rem;
-            grid-auto-flow: column;
-        }
-
-        .media-scroller3 {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            grid-auto-columns: 100%;
-            padding: 0 3rem;
-            scroll-padding-inline: 3rem;
-        }
-
-        .media-scroller3:first-of-type {
-            padding-left: 0;
-        }
-
-        .media-group3 {
-            grid-auto-columns: 1fr;
-            overflow: hidden;
-        }
-
-        .media-element3 {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            border-radius: 0.25rem;
-            overflow: hidden;
-
-
-        }
-
-        .media-element3>img {
-            width: 100%;
-            height: 60%;
-            /* aspect-ratio: 16 / 9; */
-            object-fit: cover;
-        }
-
-        .media-element3>h1 {
-            width: 100%;
-            margin-top: .5em;
-            font-weight: lighter;
-            font-size: medium;
-        }
-
-        .media-element3>h2 {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            font-weight: 500px;
-            font-size: medium;
-        }
-
-        .media-element3>p {
-            margin-top: 5px;
-            font-weight: lighter;
-            font-size: medium;
-            font-size: larger;
-            color: green;
-        }
-
-        .next3,
-        .previous3 {
-            display: none;
-            align-items: center;
-            z-index: 10;
-            position: absolute;
-            width: 3rem;
-            padding: 1rem;
-            background: rgb(0 0 0 / 0);
-            opacity: 0;
-            transition: opacity .25s;
-        }
-
-        .previous3 {
-            left: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .next3 {
-            right: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .media-group3:first-child :where(.next3, .previous3) {
-            display: flex;
-        }
-
-        :where(.next3, .previous3):hover {
-            background: rgb(0 0 0 / 0.3);
-        }
-
-        :where(.next3, .previous3)>svg {
-            transition: transform 75ms linear;
-            transform: scale(1);
-        }
-
-        :where(.next3, .previous3):hover>svg {
-            transform: scale(1.2);
-        }
-
-        .media-group3:target :where(.next3, .previous3) {
-            display: flex;
-        }
-
-        .media-scroller3:has(:target:not(:first-child)) .media-group3:first-of-type .next3 {
-            display: none;
-        }
-
-        .navigation-indicators3 {
-            opacity: 0;
-            position: absolute;
-            display: flex;
-            gap: 3px;
-            top: -1rem;
-            right: 2rem;
-            transition: opacity .25s;
-        }
-
-        .navigation-indicators3>* {
-            width: 1rem;
-            height: 2px;
-            background: white;
-            opacity: 0.5;
-            transition-delay: .5s;
-        }
-
-        .media-scroller3:hover :where(.next3, .previous3),
-        .media-group3:not(:target)~.navigation-indicators3>*:nth-child(1),
-        .media-group3:nth-child(1):target~.navigation-indicators3>*:nth-child(1),
-        .media-group3:nth-child(2):target~.navigation-indicators3>*:nth-child(2),
-        .media-group3:nth-child(3):target~.navigation-indicators3>*:nth-child(3),
-        .media-group3:nth-child(4):target~.navigation-indicators3>*:nth-child(4),
-        .media-scroller3:hover .navigation-indicators3 {
-            opacity: 1;
-        }
-
-        .media-group3:not(:nth-child(1)):target~.navigation-indicators3>*:nth-child(1) {
-            opacity: .5;
-        }
-    </style>
+    <link rel="stylesheet" href="productFeaturePage.css">
 
 </head>
 
@@ -1599,7 +659,182 @@
             </symbol>
         </svg>
 
+        <div id="customerquestions">
+            <div>
+                <h2>Customer Questions</h2>
+                <button class="questionbutton">ASK A QUESTION</button>
+            </div>
+        </div>
 
+        <div id="comment">
+            <h2>Overall</h2>
+            <div>
+                <span>Reviewed at </span>
+                <span>HOKA ONE ONE</span>
+            </div>
+            <div>
+                <p>so i normally never post reviews, but these shoes are so comfortable i have to! i walk a lot and will
+                    be walking a lot for my job this summer, which is why i got them, and they did not disappoint. if
+                    you are on the edge about it, get them! feels like walking on clouds.</p>
+            </div>
+            <div>
+                <div>
+                    <p><span>Emilie</span>
+                        <span>,</span>
+                        <span>March 23, 2022</span>
+                    </p>
+                </div>
+                <div>
+                    <button>HELPFUL</button>
+                </div>
+                <div>
+                    <p> 8 found this review helpful.</p>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div id="comment">
+            <h2>Overall</h2>
+            <div>
+                <span>Reviewed at </span>
+                <span>HOKA ONE ONE</span>
+            </div>
+            <div>
+                <p>so i normally never post reviews, but these shoes are so comfortable i have to! i walk a lot and will
+                    be walking a lot for my job this summer, which is why i got them, and they did not disappoint. if
+                    you are on the edge about it, get them! feels like walking on clouds.</p>
+            </div>
+            <div>
+                <div>
+                    <p><span>Emilie</span>
+                        <span>,</span>
+                        <span>March 23, 2022</span>
+                    </p>
+                </div>
+                <div>
+                    <button>HELPFUL</button>
+                </div>
+                <div>
+                    <p> 8 found this review helpful.</p>
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="comment">
+            <h2>Overall</h2>
+            <div>
+                <span>Reviewed at </span>
+                <span>HOKA ONE ONE</span>
+            </div>
+            <div>
+                <p>so i normally never post reviews, but these shoes are so comfortable i have to! i walk a lot and will
+                    be walking a lot for my job this summer, which is why i got them, and they did not disappoint. if
+                    you are on the edge about it, get them! feels like walking on clouds.</p>
+            </div>
+            <div>
+                <div>
+                    <p><span>Emilie</span>
+                        <span>,</span>
+                        <span>March 23, 2022</span>
+                    </p>
+                </div>
+                <div>
+                    <button>HELPFUL</button>
+                </div>
+                <div>
+                    <p> 8 found this review helpful.</p>
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="comment">
+            <h2>Overall</h2>
+            <div>
+                <span>Reviewed at </span>
+                <span>HOKA ONE ONE</span>
+            </div>
+            <div>
+                <p>so i normally never post reviews, but these shoes are so comfortable i have to! i walk a lot and will
+                    be walking a lot for my job this summer, which is why i got them, and they did not disappoint. if
+                    you are on the edge about it, get them! feels like walking on clouds.</p>
+            </div>
+            <div>
+                <div>
+                    <p><span>Emilie</span>
+                        <span>,</span>
+                        <span>March 23, 2022</span>
+                    </p>
+                </div>
+                <div>
+                    <button>HELPFUL</button>
+                </div>
+                <div>
+                    <p> 8 found this review helpful.</p>
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="comment">
+            <h2>Overall</h2>
+            <div>
+                <span>Reviewed at </span>
+                <span>HOKA ONE ONE</span>
+            </div>
+            <div>
+                <p>so i normally never post reviews, but these shoes are so comfortable i have to! i walk a lot and will
+                    be walking a lot for my job this summer, which is why i got them, and they did not disappoint. if
+                    you are on the edge about it, get them! feels like walking on clouds.</p>
+            </div>
+            <div>
+                <div>
+                    <p><span>Emilie</span>
+                        <span>,</span>
+                        <span>March 23, 2022</span>
+                    </p>
+                </div>
+                <div>
+                    <button>HELPFUL</button>
+                </div>
+                <div>
+                    <p> 8 found this review helpful.</p>
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="comment">
+            <h2>Overall</h2>
+            <div>
+                <span>Reviewed at </span>
+                <span>HOKA ONE ONE</span>
+            </div>
+            <div>
+                <p>so i normally never post reviews, but these shoes are so comfortable i have to! i walk a lot and will
+                    be walking a lot for my job this summer, which is why i got them, and they did not disappoint. if
+                    you are on the edge about it, get them! feels like walking on clouds.</p>
+            </div>
+            <div>
+                <div>
+                    <p><span>Emilie</span>
+                        <span>,</span>
+                        <span>March 23, 2022</span>
+                    </p>
+                </div>
+                <div>
+                    <button>HELPFUL</button>
+                </div>
+                <div>
+                    <p> 8 found this review helpful.</p>
+                </div>
+            </div>
+
+            
+        </div>
         <div id="customerviewed3">
             <h1>Recommended For You</h1>
 
@@ -1759,6 +994,14 @@
                     d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
             </symbol>
         </svg>
+
+        <div id="shipping">
+            <h2>Free Shipping And Free Returns</h2>
+            <p>If, for any reason, you are unsatisfied with your purchase from Zappos.com LLC you may return it in its
+                original condition within 365 days for a refund. We'll even pay for return shipping!</p>
+            <a href="https://www.zappos.com/c/shipping-and-returns">Learn more about our free shipping and free returns
+                policy </a>
+        </div>
 
     </div>
 
