@@ -1,5 +1,5 @@
 let form = document.querySelector("form");
-let loginArrayData = JSON.parse(localStorage.getItem("loginData")) || [];
+let loginArrayData = JSON.parse(localStorage.getItem("signupData")) || [];
 
 //fetch previous email for checking it already exits or not
 let emailObj = {};
@@ -34,9 +34,9 @@ form.addEventListener("submit", function (event) {
       password: form.password.value,
       re_password: form.re_password.value,
     };
-    //store all loginData to LS
+    //store all signupData to LS
     loginArrayData.push(dataObj);
-    localStorage.setItem("loginData", JSON.stringify(loginArrayData));
+    localStorage.setItem("signupData", JSON.stringify(loginArrayData));
 
     //clear form after submit
     form.name.value = "";
@@ -44,8 +44,5 @@ form.addEventListener("submit", function (event) {
     form.password.value = "";
     form.re_password.value = "";
     alert("Welcome! Signup successful");
-
-    // store loginAuth to LocalStorage
-    localStorage.setItem("currentLogin", "true");
   }
 });

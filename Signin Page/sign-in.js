@@ -1,26 +1,33 @@
 let form = document.querySelector("form");
-let datafromLS = JSON.parse(localStorage.getItem("zapposData")) || [];
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  let data = {
-    email: form.email.value,
-    password: form.password.value,
-  };
-  if (checkSignIn(data.email, data.password) === true) {
-    localStorage.setItem("signIn", JSON.stringify(data));
-    alert("Sign In Successfull");
-  } else {
-    alert("wrong Username Or password");
-  }
+let loginData = JSON.parse(localStorage.getItem("signupData")) || [];
+
+//fetch signupData for validation
+let loginObj = {};
+loginData.forEach(function (ele) {
+  loginObj[ele.email] = ele.password;
 });
 
-function checkSignIn(email, password) {
-  let filtered = datafromLS.filter(function (element) {
-    return element.email === email && element.password == password;
-  });
-  if (filtered.length > 0) {
-    return true;
+form.addEventListener("submit", loginFunction);
+function loginFunction(event) {
+  event.preventDefault();
+  if (form.email.value == "") {
+    alert("Please enter a email");
+  } else if (form.password.value == "") {
+    alert("Please enter a password");
+  } else if (
+    form.email.value in loginObj &&
+    form.password.value == loginObj[form.email.value]
+  ) {
+    alert("Welcome! Sign-In successful");
+    window.location.href = "../index.html";
+
+    //form clear after submit
+    form.email.value = "";
+    form.password.value = "";
+
+    // store loginAuth to LocalStorage
+    localStorage.setItem("currentLogin", "true");
   } else {
-    return false;
+    alert("Please enter a correct details");
   }
 }
