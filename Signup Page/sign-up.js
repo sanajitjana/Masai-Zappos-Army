@@ -23,6 +23,7 @@ form.addEventListener("submit", function (event) {
       password: form.password.value,
       re_password: form.re_password.value,
     };
+    //store all loginData to LS
     loginArrayData.push(dataObj);
     localStorage.setItem("loginData", JSON.stringify(loginArrayData));
 
