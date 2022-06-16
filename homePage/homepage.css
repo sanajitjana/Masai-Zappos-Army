@@ -82,33 +82,39 @@
 .product-row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: 270px;
   gap: 15px;
+  margin-top: 30px;
 }
 .productPic {
   height: 100%;
   width: 100%;
 }
 .productPic > div {
-  height: 80%;
-  width: 100%;
+  width: fit-content;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .productPic > div > img {
-  height: 40%;
-  width: 85%;
+  width: 90%;
 }
 .productPic > button {
-  margin-top: 10px;
-  margin-left: 30px;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
   border: white;
   background-color: white;
+  font-size: 14px;
+  font-weight: 600;
 }
-button:hover {
-  color: blue;
-  text-decoration: underline;
+.productPic > a:hover {
+  cursor: pointer;
+  color: #0076bd;
+  cursor: pointer;
 }
 .piccc {
   height: 95%;
