@@ -2,20 +2,28 @@ body {
   margin: 0;
   padding: 0;
 }
+#foot {
+  width: 100%;
+  background-color: #032c48;
+}
 #foot > div:first-child {
   height: 120px;
-
-  padding: 10px 32px;
-  background-color: #032c48;
-
+  width: 94%;
   font: 400 14px Open Sans, sans-serif;
-  max-width: 1380px;
-  /* color: #fff; */
   margin: auto;
+  padding-top: 10px;
 }
 h2 {
   color: white;
-  margin-top: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.below-h2 {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 #foot > div:last-child {
   height: 550px;
@@ -29,32 +37,51 @@ h2 {
   font: 400 16px Open Sans, sans-serif;
   padding: 12px 15px;
   width: 200px;
-
   border-radius: 5px;
   font-weight: 520;
 }
 #button {
-  background-color: #003953;
-  margin-left: 16px;
-  color: white;
-  text-align: center;
-  width: 280px;
+  font: 700 14px/120% Open Sans, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
   padding: 12px 24px;
-  border: 2px solid white;
-  border-radius: 5px;
-  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  color: #003953;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-left: 16px;
+  max-width: 50%;
+}
+#button:before {
+  background-position: -70px -190px;
+  content: "";
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  margin-right: 8px;
 }
 #middel {
   display: flex;
-  max-width: 1440px;
+  width: 100%;
   background: #003953;
   box-sizing: border-box;
   justify-content: space-around;
   margin: auto;
+  margin-top: 25px;
+  padding-bottom: 30px;
 }
 #middel > div {
   background: #003953;
-
   width: 17%;
   padding: 8px;
   line-height: 30px;
@@ -82,23 +109,38 @@ a:hover {
 }
 #para {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  font: 400 14px Open Sans, sans-serif;
   color: white;
-  padding: 15px;
-  width: 100%;
+  padding: 10px 15px;
   background: #144860;
+  width: 100%;
+  margin-top: 10px;
+}
+#para > h2 {
+  font: 600 18px Open Sans, sans-serif;
+}
+#para > p {
+  font: 400 14px Open Sans, sans-serif;
+  line-height: 20px;
 }
 #para > button {
   font: 700 14px/120% Open Sans, sans-serif;
+  text-transform: uppercase;
   border-radius: 4px;
   padding: 12px 24px;
-  background: #144860;
   cursor: pointer;
-
-  color: white;
-  text-align: left;
-
-  border: 2px solid white;
+  touch-action: manipulation;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  color: #003953;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-bottom: 0;
 }
 #para > button:hover {
   background-color: white;
@@ -110,26 +152,31 @@ a:hover {
   background: #003953;
   line-height: 1.5;
   font: 400 14px Open Sans, sans-serif;
-  max-width: 1440px;
+  max-width: 100%;
   margin: auto;
   border: 2px solid #032c48;
   height: 100px;
   color: #fff;
 }
-@media all and (min-width: 240px) and (max-width: 800px) {
+.social-icon {
+  color: white;
+  font-size: 29px;
+  cursor: pointer;
+}
+
+.social-icon i {
+  margin-right: 7px;
+}
+@media all and (min-width: 320px) and (max-width: 650px) {
   #middel {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    justify-content: space-evenly;
-    justify-items: center;
-    margin: auto;
-
-    margin: auto;
+    padding: 20px;
   }
   #middel > div {
-    padding: 0%;
-    margin: 0%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   #mail {
     width: auto;
@@ -138,7 +185,55 @@ a:hover {
   #button {
     width: auto;
   }
-  #foot > div:first-child {
-    height: auto;
+  #para {
+    width: 90%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 622px) {
+  #middel {
+    margin-top: 40px;
+  }
+  #para {
+    width: 90%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 530px) {
+  #middel {
+    margin-top: 75px;
+  }
+  #button {
+    margin-top: 10px;
+    margin-left: 0px;
+    max-width: 100%;
+  }
+  #para {
+    width: 90%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 414px) {
+  #mail {
+    width: 91%;
+  }
+  #button {
+    margin-top: 10px;
+    margin-left: 0px;
+    max-width: 100%;
+    width: 100%;
+  }
+  #middel {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+  #middel > div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #para {
+    width: 90%;
   }
 }
