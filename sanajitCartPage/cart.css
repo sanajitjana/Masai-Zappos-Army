@@ -490,3 +490,30 @@ h5 {
   top: calc(50% - 6px);
   position: absolute;
 }
+
+@media all and (min-width: 320px) and (max-width: 1024px) {
+  .popular-categories,
+  #popularItem {
+    display: none;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 650px) {
+  #shipping-privacy {
+    display: none;
+  }
+  #cart-table {
+    width: 96%;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .item-table {
+    width: 100%;
+  }
+  #cart-table .checkout-table {
+    width: 100%;
+  }
+  .table-action {
+    margin-right: 0px;
+  }
+}
