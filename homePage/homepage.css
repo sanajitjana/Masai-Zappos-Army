@@ -121,6 +121,7 @@
   text-decoration: underline;
 }
 #lifeStyle {
+  height: 500px;
   width: 98%;
   margin: auto;
   margin-top: 50px;
@@ -523,6 +524,7 @@ h5 {
 }
 @media all and (min-width: 50px) and (max-width: 650px) {
   #lifeStyle {
+    height: 1600px;
     margin-top: 50px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 400px;
@@ -535,6 +537,8 @@ h5 {
     text-align: center;
     cursor: pointer;
   }
+ 
+  
   .popular-categories {
     height: 400px;
     width: 94%;
