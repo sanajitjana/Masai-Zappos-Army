@@ -271,7 +271,7 @@ fieldset > div > div {
   color: #0076bd;
 }
 #survey {
-  width: 45%;
+  width: 50%;
   margin: auto;
   height: 60px;
   display: flex;
@@ -890,6 +890,11 @@ svg {
     margin-top: 50px;
   }
 }
+@media all and (min-width: 320px) and (max-width: 1125px) {
+  #survey {
+    width: 65%;
+  }
+}
 
 @media all and (min-width: 320px) and (max-width: 1025px) {
   #productthumbnails {
@@ -898,26 +903,49 @@ svg {
   #shoeimagessection {
     flex-direction: column;
   }
+  #buypage .pro-name,
+  h3 {
+    text-align: center;
+  }
 }
 @media all and (min-width: 320px) and (max-width: 900px) {
   #caurosel {
     display: none;
   }
-}
-@media screen and (max-width: 750px) {
   #survey {
+    width: 75%;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 768px) {
+  #survey {
+    display: none;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 750px) {
+  #survey,
+  #back-to-pre {
     display: none;
   }
   hr {
     display: none;
   }
+  .top-bar p {
+    flex-wrap: wrap;
+  }
 }
-@media screen and (min-width: 820px) {
-  fieldset > div {
-    height: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-
-    gap: 0.5em;
+fieldset > div {
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 0.5em;
+}
+@media all and (min-width: 320px) and (max-width: 473px) {
+  .cantFinddSize {
+    margin-top: 50px;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 344px) {
+  .cantFinddSize {
+    margin-top: 80px;
   }
 }
