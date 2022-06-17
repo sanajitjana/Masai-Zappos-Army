@@ -8,6 +8,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 #top {
   width: 95%;
@@ -57,6 +58,7 @@ body {
   justify-items: center;
   align-items: center;
 }
+
 #search {
   width: 71%;
   padding: 12px;
@@ -127,6 +129,7 @@ body {
   font-size: 16px;
   margin: auto 0px auto auto;
 }
+
 #searchAll {
   width: 55%;
   padding: 12px;
@@ -410,4 +413,109 @@ ul li a {
 }
 button {
   border: transparent;
+}
+
+#bar {
+  display: none;
+}
+#user {
+  display: none;
+}
+#clogo {
+  display: none;
+}
+@media all and (min-width: 240px) and (max-width: 800px) {
+  body {
+    width: 100%;
+  }
+  #clogo {
+    display: block;
+    margin: auto 5% auto 0px;
+  }
+  #user {
+    display: block;
+    margin: auto 5% auto auto;
+
+    cursor: pointer;
+  }
+  #bar {
+    display: block;
+    margin-left: 5%;
+    width: 10px;
+    cursor: pointer;
+  }
+  #p1 {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  #search {
+    margin-top: 2%;
+    width: 90%;
+    border-right: 2px solid #dddddd;
+    height: 12%;
+    cursor: pointer;
+  }
+  #img1,
+  #top-img-2 {
+    height: 100%;
+  }
+  #second {
+    height: 18%;
+    width: auto;
+  }
+  #main {
+    display: inline;
+  }
+  .h-z {
+    display: none;
+  }
+  #main > div:first-child {
+    width: 100%;
+    display: flex;
+
+    height: 7%;
+  }
+  #main > div:nth-child(2) {
+    width: auto;
+  }
+  #img2 {
+    width: 12%;
+    margin-left: 20px;
+    margin-top: -10px;
+  }
+
+  #curser {
+    height: 12%;
+    width: auto;
+    margin-top: -2%;
+  }
+  #searchAll {
+    width: 80%;
+
+    margin-left: -80%;
+    margin-top: 2%;
+    border: none;
+
+    border-radius: 0;
+  }
+  #but1 {
+    padding: 14px;
+    border-right: 2px solid #05384f;
+    margin-top: 2%;
+    border-radius: 0px 4px 4px 0px;
+
+    width: 20%;
+    font-weight: bold;
+  }
+  .but {
+    height: 0%;
+    background: none;
+    position: relative;
+    margin-top: -5%;
+  }
+  #top > div {
+    width: 20%;
+  }
 }
