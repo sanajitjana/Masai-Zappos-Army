@@ -481,7 +481,7 @@ h5 {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 360px);
   display: grid;
-  gap: 9px;
+  gap: 12px;
 }
 #footWare > div:last-child > div {
   
@@ -491,8 +491,18 @@ h5 {
   height: 80%;
   width: 100%;
 }
+#footware>div:first-child>h2{
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+ 
+}
+#footware>div:first-child>button{
+  font-family:"Open Sans", sans-serif;
+  font-weight: 600px;
+  padding: 50px;
+}
 .footwareimg > div {
-  border: 1px solid rgb(244, 247, 239);
+  border: 1px solid rgb(209, 211, 205);
   height: 70%;
   width: 100%;
   justify-content: center;
@@ -505,10 +515,21 @@ h5 {
   width: 95%;
 }
 
-.footwareimg>h3{
-  margin-bottom: -25px;
-  margin-top: 0px;
+
+.footwareimg > h3 {
+  margin-bottom: -15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3a3a3a;
 }
-.footwareimg>h4{
-  margin-bottom: 0px;
+.footwareimg > h4 {
+  margin-bottom: -20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3d3d3d;
+}
+h5 {
+  color: #045e96;
+  font-size: 14px;
+  font-weight: 400;
 }
