@@ -168,9 +168,11 @@ function myfun() {
   let x = document.querySelector("div>.clickimg");
   if (x.style.display === "none") {
     x.style.display = "block";
-    document.querySelector(".productinfo").style.marginTop = "5em";
+    x.style.backgroundColor="#f4f4f4"
+    document.querySelector(".highlight").style.marginBottom = "10em";
   } else {
     x.style.display = "none";
+    document.querySelector(".highlight").style.marginBottom = "4em";
   }
 }
 
@@ -359,5 +361,3 @@ function customerviewed3(recommendedArr) {
     id33.insertBefore(parenttag3, id33.firstChild);
   }
 }
-
-
