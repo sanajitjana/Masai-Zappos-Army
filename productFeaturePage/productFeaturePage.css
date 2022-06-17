@@ -154,9 +154,10 @@ fieldset>legend>span {
 }
 
 fieldset>div {
+
   display: grid;
-  grid-template-columns: repeat(7, 50px);
-  grid-template-rows: repeat(auto, 50px);
+  grid-template-columns: repeat(auto-fit, minmax(100px, .5fr));
+  /* grid-template-rows: repeat(auto, 50px); */
   gap: 1em;
 }
 
@@ -411,7 +412,7 @@ svg {
 }
 
 .media-element {
-  width: auto;
+  width: 1fr;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -426,6 +427,7 @@ svg {
   width: auto;
   height: auto;
   /* aspect-ratio: 16 / 9; */
+  margin: auto;
   object-fit: cover;
 }
 
@@ -585,10 +587,12 @@ svg {
 }
 
 .media-element1>img {
-  width: 100%;
-  height: 60%;
+  width: auto;
+  height: auto;
+  margin: auto;
   /* aspect-ratio: 16 / 9; */
   object-fit: cover;
+
 }
 
 .media-element1>h1 {
@@ -747,8 +751,9 @@ svg {
 }
 
 .media-element2>img {
-  width: 100%;
-  height: 60%;
+  width: auto;
+  height: auto;
+  margin: auto;
   /* aspect-ratio: 16 / 9; */
   object-fit: cover;
 }
@@ -942,8 +947,9 @@ svg {
 }
 
 .media-element3>img {
-  width: 100%;
-  height: 60%;
+  width: auto;
+  height: auto;
+  margin: auto;
   /* aspect-ratio: 16 / 9; */
   object-fit: cover;
 }
@@ -1215,9 +1221,10 @@ svg {
   }
 
   fieldset>div {
+    height: 100px;
     display: grid;
-    grid-template-columns: repeat(14, 50px);
-    grid-template-rows: repeat(auto, 50px);
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+
     gap: .5em;
   }
 
@@ -1464,8 +1471,9 @@ svg {
   }
 
   .media-element>img {
-    width: 100%;
-    height: 60%;
+    width: auto;
+    height: auto;
+    margin: auto;
     /* aspect-ratio: 16 / 9; */
     object-fit: cover;
   }
@@ -1632,8 +1640,9 @@ svg {
   }
 
   .media-element1>img {
-    width: 100%;
-    height: 60%;
+    width: auto;
+    height: auto;
+    margin: auto;
     /* aspect-ratio: 16 / 9; */
     object-fit: cover;
   }
@@ -1801,8 +1810,9 @@ svg {
   }
 
   .media-element2>img {
-    width: 100%;
-    height: 60%;
+    width: auto;
+    height: auto;
+    margin: auto;
     /* aspect-ratio: 16 / 9; */
     object-fit: cover;
   }
@@ -1996,8 +2006,9 @@ svg {
   }
 
   .media-element3>img {
-    width: 100%;
-    height: 60%;
+    width: auto;
+    height: auto;
+    margin: auto;
     /* aspect-ratio: 16 / 9; */
     object-fit: cover;
   }
@@ -2136,5 +2147,25 @@ svg {
 
   #comment>div>span, #comment>div>p, #comment>div>div>p, #comment>div>div>button {
     font-size: medium;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #survey {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  fieldset>div {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+
+    gap: .5em;
   }
 }
