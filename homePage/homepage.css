@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .homepage-container {
   width: 96%;
   margin: auto;
@@ -5,7 +9,6 @@
   color: #000000;
 }
 .banner {
-  height: 600px;
   width: 100%;
   position: relative;
 }
@@ -29,6 +32,24 @@
   font-size: 24px;
   color: #000000;
   line-height: 32px;
+}
+.floting-on-img-below {
+  display: inline-block;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 10px;
+  border-color: #000000;
+  width: 100%;
+}
+.floting-on-img-below > h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+  line-height: 32px;
+  text-align: center;
 }
 .find-pick {
   font-weight: 400;
@@ -121,8 +142,7 @@
   text-decoration: underline;
 }
 #lifeStyle {
-  height: 500px;
-  width: 98%;
+  width: 100%;
   margin: auto;
   margin-top: 50px;
   display: flex;
@@ -266,7 +286,6 @@
   width: 100%;
 }
 #popularItem {
-  /* height: 500px; */
   width: 94%;
   margin: auto;
   margin-top: 50px;
@@ -415,7 +434,6 @@ h5 {
   height: 230px;
   width: 100%;
   margin-top: 100px;
-  
 }
 #afterPay > img {
   height: 100%;
@@ -458,6 +476,8 @@ h5 {
   font-weight: 700;
   display: block;
   text-align: center;
+  text-decoration: underline;
+  color: #003953;
 }
 #lastBox > div > h4:hover {
   color: #0076bd;
@@ -466,7 +486,8 @@ h5 {
 }
 #footWare {
   height: 700px;
-  width: 100%;
+  width: 94%;
+  margin: auto;
   display: flex;
 }
 #footWare > div:first-child {
@@ -482,8 +503,6 @@ h5 {
   display: grid;
   gap: 12px;
 }
-
-
 #footWare > div:first-child > img {
   height: 80%;
   width: 100%;
@@ -509,7 +528,6 @@ h5 {
   height: 40%;
   width: 95%;
 }
-
 .footwareimg > h3 {
   margin-bottom: -15px;
   font-size: 14px;
@@ -522,7 +540,50 @@ h5 {
   font-weight: 600;
   color: #3d3d3d;
 }
-@media all and (min-width: 50px) and (max-width: 650px) {
+.floting-on-img-below {
+  display: none;
+}
+@media all and (min-width: 320px) and (max-width: 1440px) {
+  .homepage-container {
+    width: 100%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 950px) {
+  .popular-categories,
+  #popularItem {
+    display: none;
+  }
+  #shopPrep {
+    margin-top: 50px;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 650px) {
+  #pride {
+    display: none;
+  }
+  #new {
+    margin-top: 250px;
+  }
+  #shopPrep > .shopPrep-second {
+    display: none;
+  }
+  #trendingBrands {
+    margin-top: -350px;
+  }
+  .floting-on-img {
+    display: none;
+  }
+  .floting-on-img-below {
+    display: block;
+  }
+  #printLab {
+    flex-direction: column;
+  }
+  #printLab > .print-first {
+    width: 90%;
+    margin: auto;
+  }
   #lifeStyle {
     height: 1600px;
     margin-top: 50px;
@@ -537,8 +598,6 @@ h5 {
     text-align: center;
     cursor: pointer;
   }
- 
-  
   .popular-categories {
     height: 400px;
     width: 94%;
@@ -548,66 +607,57 @@ h5 {
   .popular-categories > h1 {
     font-family: "Open Sans", sans-serif;
     font-size: 24px;
-   
     font-weight: 400;
   }
   .product-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 15px;
     margin-top: 30px;
   }
   #new {
     height: 950px;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(1,400px);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 400px);
     display: grid;
   }
   #popularItem > div {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,400px);
+    grid-template-rows: repeat(2, 400px);
     display: grid;
-    
   }
   #shopPrep {
-    
     justify-content: space-between;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2,400px);
+    grid-template-rows: repeat(2, 400px);
     display: grid;
   }
   #shopPrep > .shopPrep-second {
-    
     margin-left: 30%;
   }
-
   .shop-para {
     margin-bottom: 16px;
     color: inherit;
     width: 100%;
   }
   #trendingBrands > div {
-    
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,50%);
+    grid-template-rows: repeat(2, 50%);
     display: grid;
     gap: 15px;
   }
   #lastBox {
-   
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 30%;
-    
   }
   #footWare {
     height: 2000px;
     width: 100%;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(2,500px);
-    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 500px);
+    display: grid;
     row-gap: 350px;
-   
   }
   #footWare > div:first-child {
     height: 170%;
@@ -623,9 +673,4 @@ h5 {
     display: grid;
     gap: 12px;
   }
-  
-  
- 
-  
-  
 }
