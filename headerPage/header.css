@@ -13,7 +13,6 @@ body {
 #top {
   width: 95%;
   margin: auto;
-
   height: 34px;
   display: flex;
 }
@@ -41,7 +40,6 @@ body {
 }
 #main > div:nth-child(2) {
   width: 60%;
-
   display: flex;
   margin-left: 20px;
   justify-items: center;
@@ -424,7 +422,34 @@ button {
 #clogo {
   display: none;
 }
-@media all and (min-width: 240px) and (max-width: 800px) {
+@media all and (min-width: 320px) and (max-width: 1440px) {
+  #top {
+    width: 100%;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 800px) {
+  #img2 {
+    width: 71px !important;
+    margin-top: 0 !important;
+  }
+  .fa-circle-user:before,
+  .fa-user-circle:before {
+    content: "\f2bd";
+    margin-right: -20px;
+  }
+  #main > div:nth-child(2) {
+    width: 100% !important;
+    display: flex;
+    margin-left: 0px;
+    justify-items: center;
+    align-items: center;
+  }
+  #but1 {
+    border-radius: 0px !important;
+  }
+  #curser > button:nth-child(3) {
+    background-color: transparent;
+  }
   body {
     width: 100%;
   }
@@ -520,5 +545,10 @@ button {
   }
   #top > div {
     width: 20%;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 650px) {
+  .but {
+    display: none;
   }
 }
