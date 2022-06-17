@@ -413,7 +413,8 @@ h5 {
 #afterPay {
   height: 230px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 100px;
+  
 }
 #afterPay > img {
   height: 100%;
@@ -463,18 +464,15 @@ h5 {
   cursor: pointer;
 }
 #footWare {
-  
   height: 700px;
   width: 100%;
   display: flex;
 }
 #footWare > div:first-child {
-  
   height: 100%;
   width: 32%;
 }
 #footWare > div:last-child {
-  
   height: 100%;
   width: 75%;
   margin-left: 8px;
@@ -484,20 +482,18 @@ h5 {
   gap: 12px;
 }
 #footWare > div:last-child > div {
-  
 }
 
 #footWare > div:first-child > img {
   height: 80%;
   width: 100%;
 }
-#footware>div:first-child>h2{
+#footware > div:first-child > h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
- 
 }
-#footware>div:first-child>button{
-  font-family:"Open Sans", sans-serif;
+#footware > div:first-child > button {
+  font-family: "Open Sans", sans-serif;
   font-weight: 600px;
   padding: 50px;
 }
@@ -508,13 +504,11 @@ h5 {
   justify-content: center;
   align-items: center;
   display: flex;
-
 }
 .footwareimg > div > img {
   height: 40%;
   width: 95%;
 }
-
 
 .footwareimg > h3 {
   margin-bottom: -15px;
@@ -528,8 +522,80 @@ h5 {
   font-weight: 600;
   color: #3d3d3d;
 }
-h5 {
-  color: #045e96;
-  font-size: 14px;
-  font-weight: 400;
+@media all and (min-width: 50px) and (max-width: 650px) {
+  #lifeStyle {
+    margin-top: 50px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 400px;
+    display: grid;
+    justify-content: space-evenly;
+  }
+  #lifeStyle > div {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+  .popular-categories {
+    height: 400px;
+    width: 94%;
+    margin: auto;
+    margin-top: 70px;
+  }
+  .popular-categories > h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+   
+    font-weight: 400;
+  }
+  .product-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 30px;
+  }
+  #new {
+    height: 950px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,400px);
+    display: grid;
+  }
+  #popularItem > div {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,400px);
+    display: grid;
+    
+  }
+  #shopPrep {
+    
+    justify-content: space-between;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2,400px);
+    display: grid;
+  }
+  #shopPrep > .shopPrep-second {
+    
+    margin-left: 30%;
+  }
+
+  .shop-para {
+    margin-bottom: 16px;
+    color: inherit;
+    width: 100%;
+  }
+  #trendingBrands > div {
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,50%);
+    display: grid;
+    gap: 15px;
+  }
+  #lastBox {
+   
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 30%;
+    
+  }
+  
 }
