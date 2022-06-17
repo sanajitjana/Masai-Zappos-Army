@@ -10,7 +10,6 @@ body {
 .top-bar {
   box-sizing: border-box;
   color: #1f1f1f;
-  /* line-height: 1.5; */
   height: 32px;
   font: 400 14px Open Sans, sans-serif;
   display: flex;
@@ -54,6 +53,7 @@ body {
   font-size: 14px;
   font-weight: 700;
   color: #003953;
+  margin-top: 30px;
 }
 #shipping-privacy h3:before {
   background-image: url(https://m.media-amazon.com/images/G/01/zappos/melody/melody-sprite.2021.09.16._TTH_.svg);
@@ -77,7 +77,7 @@ body {
   background-color: #f5f5f5;
   width: 100%;
   display: flex;
-  padding: 10px;
+  padding: 15px 20px;
 }
 .free-shipping > .below-img-text {
   margin-left: 20px;
@@ -112,7 +112,7 @@ body {
   background-color: #f5f5f5;
   width: 100%;
   display: flex;
-  padding: 10px;
+  padding: 15px 20px;
 }
 .privacy-policy > .below-img-text {
   margin-left: 20px;
@@ -142,10 +142,20 @@ body {
 .below-img-text a:hover {
   color: #0076bd;
 }
+.table-heading {
+  width: 94%;
+  margin: auto;
+  margin-top: 40px;
+}
+.table-heading h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: #1f1f1f;
+}
 #cart-table {
   width: 94%;
   margin: auto;
-  margin-top: 50px;
   height: 400px;
   display: flex;
   gap: 15px;
@@ -153,6 +163,7 @@ body {
 .item-table {
   width: 70%;
   border: 1px solid #ddd;
+  height: fit-content;
 }
 .table-top {
   height: 50px;
@@ -161,7 +172,7 @@ body {
   margin-top: 0px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 20px;
+  padding: 0px 30px;
 }
 .table-top p {
   font-family: "Open Sans", sans-serif;
@@ -172,6 +183,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  height: 200px;
 }
 .leftside {
   display: flex;
@@ -180,14 +192,160 @@ body {
   display: block;
 }
 .table-action {
-  margin-right: 30px;
+  margin-right: 50px;
 }
-.table-img img {
+.leftside img {
+  margin: 15px;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.leftside > div {
   width: 100%;
+}
+.leftside > div h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #003953;
+}
+.leftside > div h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: -15px;
+}
+.leftside > div h3 + p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -5px;
+}
+.leftside > div p + p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -15px;
+}
+.rightside {
+  width: 130px;
+}
+.rightside h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 16px;
+  color: #ce144b;
+  margin-top: 20px;
+}
+.rightside h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #707070;
+  margin-top: -10px;
+  text-decoration: line-through;
+}
+.rightside select {
+  transition: all 0.3s ease 0s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  font: 400 16px Open Sans, sans-serif;
+  padding: 8px 38px 8px 12px;
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 40px;
+}
+.rightside a {
+  color: #003953;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.rightside a:hover {
+  color: #0076bd;
 }
 #cart-table .checkout-table {
   background-color: #f5f5f5;
   width: 30%;
   border: 1px solid #ddd;
-  height: 200px;
+  height: 150px;
+  padding: 10px;
+}
+.checkout-table button {
+  color: #035d59;
+  font: 700 14px/120% Open Sans, sans-serif;
+  border: 2px solid #a7e688;
+  border-radius: 4px;
+  padding: 12px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background: #a7e688;
+  width: 100%;
+  min-width: 205px;
+}
+.checkout-table > button:hover {
+  background-color: #c3f4aa;
+  border-color: #c3f4aa;
+}
+.checkout-table > button::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+.checkout-table > p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #1f1f1f;
+}
+.checkout-table > h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+.checkout-table > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+.checkout-table h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #1f1f1f;
+  font-weight: 600;
+}
+.checkout-table > .chekbox-below {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: #707070;
+}
+.checkout-table > .chekbox-below a {
+  color: #003953;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+.checkout-table > .chekbox-below a:hover {
+  color: #0076bd;
 }
