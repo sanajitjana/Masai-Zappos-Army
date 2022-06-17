@@ -481,8 +481,7 @@ h5 {
   display: grid;
   gap: 12px;
 }
-#footWare > div:last-child > div {
-}
+
 
 #footWare > div:first-child > img {
   height: 80%;
@@ -597,5 +596,32 @@ h5 {
     grid-template-rows: 30%;
     
   }
+  #footWare {
+    height: 2000px;
+    width: 100%;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,500px);
+    display:grid;
+    row-gap: 350px;
+   
+  }
+  #footWare > div:first-child {
+    height: 170%;
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  #footWare > div:last-child {
+    height: 300%;
+    width: 100%;
+    margin-left: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 300px);
+    display: grid;
+    gap: 12px;
+  }
+  
+  
+ 
+  
   
 }
