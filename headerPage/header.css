@@ -430,11 +430,13 @@ button {
   }
   #clogo {
     display: block;
-    margin: auto 5% auto 0px;
+    margin: -4px 5% auto 0px;
+    font-size: 25px;
   }
   #user {
     display: block;
-    margin: auto 5% auto auto;
+    margin: -4px 5% auto auto;
+    font-size: 25px;
 
     cursor: pointer;
   }
@@ -443,6 +445,7 @@ button {
     margin-left: 5%;
     width: 10px;
     cursor: pointer;
+    font-size: 25px;
   }
   #p1 {
     display: none;
@@ -482,7 +485,7 @@ button {
   }
   #img2 {
     width: 12%;
-    margin-left: 20px;
+    margin-left: 25px;
     margin-top: -10px;
   }
 
