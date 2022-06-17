@@ -93,26 +93,12 @@ let recommendedArr = [
   },
 ];
 
-// recpage(recommendedArr);
-// function recpage(elem) {
-//   let div1 = document.createElement("div");
-//   let image = document.createElement("img");
-//   image.src = "https://pixabay.com/images/search/nature/";
-//   let append1 = div1.append(image);
-// }
-// document.querySelector(".Recommondedflex").append(append1);
-
-// customerviwed products
-// customerviewed(recommendedArr);
-
 customerviewed(recommendedArr);
 function customerviewed(recommendedArr) {
   let id1 = document.getElementById("1");
   let id1a = id1.querySelector("a");
   let id2 = document.getElementById("2");
   let id3 = document.getElementById("3");
-  // let id3 = document.querySelector("#3");
-  // let id4 = document.querySelector("#4");
 
   for (let i = 0; i < 5; i++) {
     let parenttag = document.createElement("div");
@@ -168,7 +154,7 @@ function myfun() {
   let x = document.querySelector("div>.clickimg");
   if (x.style.display === "none") {
     x.style.display = "block";
-    x.style.backgroundColor="#f4f4f4"
+    x.style.backgroundColor = "#f4f4f4";
     document.querySelector(".highlight").style.marginBottom = "10em";
   } else {
     x.style.display = "none";
@@ -191,8 +177,6 @@ function customerviewed1(recommendedArr) {
 
   let id21 = document.getElementById("21");
   let id31 = document.getElementById("31");
-  // let id3 = document.querySelector("#3");
-  // let id4 = document.querySelector("#4");
 
   for (let i = 0; i < 5; i++) {
     let parenttag1 = document.createElement("div");
@@ -250,8 +234,6 @@ function customerviewed2(recommendedArr) {
 
   let id22 = document.getElementById("22");
   let id32 = document.getElementById("32");
-  // let id3 = document.querySelector("#3");
-  // let id4 = document.querySelector("#4");
 
   for (let i = recommendedArr.length - 1; i >= 10; i--) {
     let parenttag2 = document.createElement("div");
@@ -309,8 +291,6 @@ function customerviewed3(recommendedArr) {
 
   let id23 = document.getElementById("23");
   let id33 = document.getElementById("33");
-  // let id3 = document.querySelector("#3");
-  // let id4 = document.querySelector("#4");
 
   for (let i = recommendedArr.length - 1; i >= 10; i--) {
     let parenttag3 = document.createElement("div");
