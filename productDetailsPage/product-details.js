@@ -336,9 +336,51 @@ function customerviewed3(recommendedArr) {
   }
 }
 
+let itemFromLS = JSON.parse(localStorage.getItem("productDetailsItem")) || [];
+
+//Add to Cart button click
 let addToBtn = document.querySelector(".cart");
-console.log(addToBtn);
 addToBtn.addEventListener("click", goToCart);
 function goToCart() {
+  addToCart(itemFromLS);
   window.location.href = "../cartPage/cart.html";
+}
+
+// add to cart function
+function addToCart(itemFromLS) {
+  let preItems = [...itemFromLS];
+  console.log(preItems);
+  let addToCartItems = JSON.parse(localStorage.getItem("addToCartItems")) || [];
+  let totalItems = preItems.concat(addToCartItems);
+  localStorage.setItem("addToCartItems", JSON.stringify(totalItems));
+}
+
+//product display
+productDisplay(itemFromLS);
+function productDisplay(itemFromLS) {
+  // display main img
+  let main_img = document.querySelector("#main-img");
+  main_img.setAttribute("src", itemFromLS[0].img_url);
+  main_img.setAttribute("alt", itemFromLS[0].name);
+
+  // display name
+  let name = document.querySelector(".pro-name");
+  name.innerText = itemFromLS[0].name;
+
+  //display subname
+  let sub_name = document.querySelector(".sub-name");
+  sub_name.innerText = itemFromLS[0].sub_name;
+
+  //display price
+  let price = document.querySelector(".price");
+  let dataPrice = itemFromLS[0].price;
+  dataPrice = dataPrice.split(".");
+  let fst = dataPrice[0];
+  let snd = dataPrice[1];
+  price.innerHTML = `<span>$</span>${fst}<span>.${snd}</span>`;
+
+  //display color
+  let color = document.querySelector(".pro-color");
+  let dataColor = itemFromLS[0].color;
+  color.innerHTML = `<span>Color:</span> ${dataColor}`;
 }
