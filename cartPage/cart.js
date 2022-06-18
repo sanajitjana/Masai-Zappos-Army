@@ -1,91 +1,96 @@
-let data = JSON.parse(localStorage.getItem("cdata")) || []; //enter local storage array inside get item and go bellow
-display(data);
-let pr = 0;
-count = 0;
-displayr(data, pr, count);
+//fetch cartData from LS
+let cartData = JSON.parse(localStorage.getItem("addToCartItems")) || [];
+let tbody = document.querySelector(".tbody");
 
-function display(cdata) {
-  let mdiv = document.querySelector("#mdiv");
-  cdata.forEach(function (el) {
-    let mdiv = document.querySelector("#mdiv");
+dataDisplay(cartData);
+function dataDisplay(data) {
+  data.forEach(function (item) {
+    let row = document.createElement("div");
+    row.className = "trow";
+
+    let leftside = document.createElement("div");
+    leftside.className = "leftside";
+
+    let img = document.createElement("img");
+    img.setAttribute("src", item.img_url);
+
     let div = document.createElement("div");
-    let ldiv = document.createElement("div");
-    ldiv.setAttribute("id", "ldiv");
-    let rdiv = document.createElement("div");
-    rdiv.setAttribute("id", "rdiv");
-    let img1 = document.createElement("img");
-    img1.src = el.img_url;
-    let bname = document.createElement("p");
-    bname.innerText = el.brand;
-    let subname = document.createElement("p");
-    subname.innerText = el.sub_name;
+    let h4 = document.createElement("h4");
+    h4.innerText = item.name;
+
+    let h3 = document.createElement("h3");
+    h3.innerText = item.sub_name;
+
     let color = document.createElement("p");
-    color.innerText = "color= " + el.color;
-    ldiv.append(bname, subname, color);
-    let price = document.createElement("h2");
-    price.innerText = "$" + el.price;
-    price.style.color = "#035d59";
-    let delet = document.createElement("button");
-    delet.innerText = "REMOVE";
-    delet.setAttribute("id", "removebutton");
-    delet.addEventListener("click", function () {
-      delcart(el);
-    });
-    let selct = document.createElement("select");
-    selct.addEventListener("change", function () {
-      selfunc(el);
-    });
-    // selct.setAttribute("id","dropdown")
-    selct.style.marginLeft = "3.5em";
-    selct.style.marginBottom = "1em";
-    let op0 = document.createElement("option");
-    op0.innerText = "REMOVE";
-    op0.value = "del";
-    let op1 = document.createElement("option");
-    op1.innerText = 1;
-    op1.value = 1;
-    op1.selected = "selected";
-    let op2 = document.createElement("option");
-    op2.innerText = 2;
-    op2.value = 2;
-    let op3 = document.createElement("option");
-    op3.innerText = 3;
-    op3.value = 3;
-    selct.append(op0, op1, op2, op3);
-    selct.style.display = "block";
-    rdiv.append(price, selct, delet);
-    div.append(img1, ldiv, rdiv);
-    mdiv.append(div);
+    color.innerText = item.color;
+
+    let size = document.createElement("p");
+    size.innerText = "item.size";
+
+    div.append(h4, h3, color), size;
+    leftside.append(img, div);
+
+    let rightside = document.createElement("div");
+    rightside.className = "rightside";
+    let table_acc = document.createElement("div");
+    table_acc.className = "table-action";
+
+    let h1 = document.createElement("h1");
+    h1.innerText = item.price;
+
+    let mrp = document.createElement("h3");
+    mrp.innerText = item.mrp;
+
+    let selectTag = document.createElement("select");
+
+    let option2 = document.createElement("option");
+    option2.innerText = "1";
+    option2.value = "1";
+
+    let option3 = document.createElement("option");
+    option3.innerText = "2";
+    option3.value = "2";
+
+    let option4 = document.createElement("option");
+    option4.innerText = "3";
+    option4.value = "3";
+
+    let option5 = document.createElement("option");
+    option5.innerText = "4";
+    option5.value = "4";
+
+    let option6 = document.createElement("option");
+    option6.innerText = "5";
+    option6.value = "5";
+
+    let option7 = document.createElement("option");
+    option7.innerText = "6";
+    option7.value = "6";
+
+    let option8 = document.createElement("option");
+    option8.innerText = "7";
+    option8.value = "7";
+    selectTag.append(
+      option2,
+      option3,
+      option4,
+      option5,
+      option6,
+      option7,
+      option8
+    );
+    let anqarTarg = document.createElement("a");
+    anqarTarg.innerText = "Remove";
+    table_acc.append(h1, mrp, selectTag, anqarTarg);
+    rightside.append(table_acc);
+    row.append(leftside, rightside);
+    tbody.append(row);
+
+    console.log(row);
   });
 }
 
-function delcart(el) {
-  let filtered = data.filter(function (elem) {
-    return elem.name != el.name;
-  });
-  localStorage.setItem("cdata", JSON.stringify(filtered)); // do same changes here
-  window.location.reload();
-  display(filtered);
-}
-
-function displayr(data, pr, count) {
-  for (k = 0; k < data.length; k++) {
-    pr = pr + Number(data[k].price);
-    count++;
-  }
-}
-
-function selfunc(el) {
-  let x = event.target.value;
-  if (x === "del") {
-    delcart(el);
-  } else {
-    let count = +x;
-    let pr = +el.price * (count - 1);
-    displayr(data, pr, count);
-  }
-}
-
+//check out button click
 document.querySelector(".chek-btn").addEventListener("click", goToCheckout);
 function goToCheckout() {
   window.location.href = "../checkoutPage/checkout.html";

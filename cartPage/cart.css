@@ -8,6 +8,7 @@ body {
   color: #1f1f1f;
   margin-top: 28px;
 }
+
 .top-bar {
   box-sizing: border-box;
   color: #1f1f1f;
@@ -165,6 +166,7 @@ body {
   width: 70%;
   border: 1px solid #ddd;
   height: fit-content;
+  margin-bottom: 50px;
 }
 .table-top {
   height: 50px;
