@@ -19,35 +19,64 @@
     <div id="header"></div>
     <div id="checkout">
       <div id="left">
-        <div class="form">
+        <div class="form-class">
           <h3>Shipping Address</h3>
           <p>Full Name</p>
-          <input type="text" placeholder="First and last name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="First and last name"
+            required
+          />
           <p>Address</p>
           <input
             type="text"
-            placeholder="Street address, company name, c/o                       "
+            id="address"
+            placeholder="Street address, company name, c/o"
+            required
           />
           <p>Phone Number</p>
-          <input type="text" placeholder="Including area code" />
+          <input
+            type="number"
+            id="phone"
+            placeholder="Including area code"
+            required
+          />
           <h3>Payment Details</h3>
           <div class="form bottom">
             <p>Name on Card</p>
-            <input type="text" placeholder="Enter name on card" />
+            <input
+              type="text"
+              id="nameoncard"
+              placeholder="Enter name on card"
+              required
+            />
             <p>Card Number</p>
-            <input type="number" placeholder="Enter card Number" />
+            <input
+              type="number"
+              id="cardnumber"
+              placeholder="Enter card Number"
+              required
+            />
             <div class="display">
               <div>
                 <p>Expiry Date</p>
-                <input type="month" placeholder="MM/YY" />
+                <input
+                  type="month"
+                  id="expirydate"
+                  placeholder="MM/YY"
+                  required
+                />
               </div>
               <div>
                 <p>CVV</p>
-                <input type="number" placeholder="cvv" />
+                <input type="number" id="cvv" placeholder="cvv" required />
               </div>
             </div>
             <div class="div">
-              <button class="payment-btn">Place your order</button>
+              <button id="form-submit" class="payment-btn">
+                Place your order
+              </button>
             </div>
           </div>
         </div>
@@ -79,7 +108,7 @@
         </div>
         <div class="div3">
           <h3>Apply Gift Card or Promo Code</h3>
-          <input type="text" placeholder="Enter Code" />
+          <input type="text" id="cupon-code" placeholder="Enter Code" />
           <button id="cupon-btn" class="payment-btn">Apply</button>
         </div>
         <p class="discount">
