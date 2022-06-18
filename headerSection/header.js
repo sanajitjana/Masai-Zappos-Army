@@ -46,7 +46,7 @@ if (currentLogin) {
     if (confirm(text) == true) {
       localStorage.removeItem("currentLogin");
       localStorage.removeItem("currentUserName");
-      window.location.href = "../signinPage/sign-in.html";
+      window.location.href = "../index.html";
     } else {
       window.location.href = cURL;
     }
