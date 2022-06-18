@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Checkout | Zappos.com</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <div id="checkout">
+      <div id="left">
+        <div class="form">
+          <h3>Shipping Address</h3>
+          <p>Full Name</p>
+          <input type="text" placeholder="First and last name" />
+          <p>Address</p>
+          <input
+            type="text"
+            placeholder="Street address, company name, c/o                       "
+          />
+          <p>Phone Number</p>
+          <input type="text" placeholder="Including area code" />
+          <h3>Payment Details</h3>
+          <div class="form bottom">
+            <p>Name on Card</p>
+            <input type="text" placeholder="First and last " />
+            <p>Card Number</p>
+            <input type="number" placeholder="Enter card Number" />
+            <div class="display">
+              <div>
+                <p>Expiry Date</p>
+                <input type="month" placeholder="MM/YY" />
+              </div>
+              <div>
+                <p>CVV</p>
+                <input type="number" placeholder="CVV" />
+              </div>
+            </div>
+            <div class="div">
+              <button class="payment-btn">Place your order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div class="div2">
+          <h3>Order Summary (2 Items)</h3>
+          <div class="divide subtotal">
+            <h3>Subtotal:</h3>
+            <h3>$139.98</h3>
+          </div>
+          <div class="shipping divide">
+            <p>Shipping</p>
+            <p>Free</p>
+          </div>
+          <div class="total divide">
+            <p>Total before tax:</p>
+            <p>$139.98</p>
+          </div>
+          <div class="estimated divide">
+            <p>Estimated tax to be collected</p>
+            <p>$0.00</p>
+          </div>
+          <hr class="order-top" />
+          <div class="divide">
+            <h3>Order Total</h3>
+            <h3>$139.98</h3>
+          </div>
+        </div>
+        <div class="div3">
+          <h3>Apply Gift Card or Promo Code</h3>
+          <input type="text" placeholder="Enter Code" />
+          <button class="payment-btn">Apply</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
