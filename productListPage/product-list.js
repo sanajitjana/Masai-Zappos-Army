@@ -1111,13 +1111,23 @@ let productList = [
 
 let table = document.querySelector(".product-table");
 let specialSortValue = "All";
+let productDetailsItem = [];
 displayData(productList);
 function displayData(data) {
   table.innerHTML = "";
-  data.forEach(function (ele) {
+  data.forEach(function (ele, index) {
     //a tag
     let link = document.createElement("a");
     link.setAttribute("href", "../productDetailsPage/product-details.html");
+
+    //store item for next page
+    link.addEventListener("click", function (event) {
+      productDetailsItem.push(ele);
+      localStorage.setItem(
+        "productDetailsItem",
+        JSON.stringify(productDetailsItem)
+      );
+    });
 
     //card
     let card = document.createElement("div");
