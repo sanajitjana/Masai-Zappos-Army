@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="shortcut icon"
+      href="https://www.zappos.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>check out </title>
+    <style>
+        #container{
+            
+            height: 550px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            
+        }
+        .shiping-payment{
+           
+            height: 100%;
+            width: 60%;
+
+        }
+        .shiping-payment>div:first-child{
+            
+            height: 30%;
+            width: 100%;
+
+        }
+        .shiping-payment>div:last-child{
+           
+            height: 70%;
+            width: 100%;
+
+        }
+        .address{
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            height: 45%;
+            width: 95%;
+            display: flex;
+            justify-content:space-around;
+            
+           
+
+        }
+        .address>div>p{
+            margin: 5px;
+        }
+        .address-input>input{
+            width: 170%;
+            border: 1px;
+            padding: 4px;
+            margin-left: -30px;
+            
+        }
+        
+        .below-btn {
+          font: 700 14px/120% Open Sans, sans-serif;
+         text-transform: uppercase;
+         text-decoration: none;
+         border-radius: 4px;
+         padding: 12px 10px 12px 10px;
+          cursor: pointer;
+         touch-action: manipulation;
+         text-align: center;
+         transition: all 0.3s ease 0s;
+         -webkit-user-select: none;
+         -ms-user-select: none;
+         -moz-user-select: none;
+         -o-user-select: none;
+         user-select: none;
+         color: #003953;
+         background: transparent;
+         border: 2px solid #1f1f1f;
+         color: #1f1f1f;
+         margin-left: 100px;
+         
+        }
+        .below-btn:hover {
+          background-color: #3104f8;
+         color: white;
+        }
+        .payment-method{
+           
+            height: 13%;
+            width:100%;
+           
+        }
+        .details{
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            height: 55%;
+            width:90%;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        button{
+            margin-left:70px;
+            margin-top:10px
+        }
+        .details>input{
+            width: 90%;
+            padding: 10px;
+            
+        }
+        select{
+            width: 46.5%;
+            padding: 10px;
+        }
+        .pay-method{
+            
+            justify-content: flex-start;
+            background-color: #3104f8;
+            color: white;
+            padding: 12px ;
+            
+            
+        }
+        .pay-method:hover{
+            background-color: #4f9ce4;
+        }
+        .place-order{
+            border:1px solid rgb(24, 2, 2);
+            height: 100%;
+            width: 40%;
+
+        }
+        .place-order>div:first-child{
+            background-color: #f5f5f5;
+            height: 60%;
+            width: 95%;
+            margin-left: 15px;
+            padding-top: 10px;
+            /* text-align: center; */
+            
+        }
+        .place-order>div:first-child>div{
+            background-color: #f5f5f5;
+            height: 10%;
+            width: 80%;
+            border: 1px solid black;
+           text-align: center;
+            margin:auto;
+            padding-top: 5px;
+        }
+        .place-order>div:first-child>p{
+            padding-left:3%;
+            width: 430px;
+            
+        }
+        .place-order>div:first-child>h2{
+            padding-left:3%;
+            /* width: 430px; */
+            margin: 0px;
+            
+        }
+        .place-order>div:first-child>h3{
+            padding-left:3%;
+            
+            margin: 0px;
+        }
+
+        .place-order>div:nth-child(2){
+            background-color: #f5f5f5;
+            height: 15%;
+            width: 95%;
+            margin-left: 15px;
+            margin-top: 8px;
+
+        }
+        .place-order>div:last-child{
+            background-color: #f5f5f5;
+            height: 15%;
+            width: 95%;
+            margin-left: 15px;
+            margin-top: 8px;
+            
+
+        }
+        .pic-gift{
+            display: flex;
+        }
+        .pic-gift>img{
+          width: 10%;
+          height: 50%;
+          padding-top: 5%;
+          
+
+      }
+        
+    </style>
+</head>
+<body>
+   
+    <div id="container">
+        <div class="shiping-payment">
+            <div>
+                <h2>1. Shipping Address</h2>
+                <div class="address">
+                    <div class="address-input">
+                        <input type="text" placeholder="Name">
+                        <br>
+                        
+                        <input type="text" name="" id="" placeholder="Address:Flat no,Area,Disstrict">
+                        <br>
+                        <input type="text" name="" id="" placeholder="state ,pincode">
+                    </div>
+                    <p class="below-btn">CHANGING SHIPPING ADDRESS</p>
+                    
+                </div>
+            </div>
+            <div>
+                <h2>2 Payment Method</h2>
+                <div class="payment-method">
+                    <button>credit card</button>
+                    <!-- <button>amazon pay</button> -->
+                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg width='85' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h85v20H0z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M37.098 14.5c-2.07 1.544-5.07 2.366-7.654 2.366-3.62 0-6.881-1.354-9.349-3.608-.193-.177-.02-.418.212-.281 2.662 1.566 5.955 2.51 9.355 2.51 2.294 0 4.815-.481 7.135-1.477.35-.15.644.233.3.49z' fill='%23F79C34'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M37.96 13.505c-.266-.343-1.75-.163-2.418-.082-.202.025-.233-.154-.051-.283 1.185-.842 3.126-.599 3.352-.317.227.284-.06 2.253-1.17 3.192-.171.144-.334.067-.258-.123.25-.631.81-2.044.544-2.387z' fill='%23F79C34'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M35.589 7.195v-.818a.2.2 0 01.205-.207h3.623c.116 0 .21.085.21.206v.701c-.002.118-.1.272-.273.515l-1.877 2.71c.696-.015 1.433.09 2.066.45.143.081.181.201.193.32v.872c0 .12-.13.259-.267.187-1.116-.591-2.596-.656-3.83.007-.125.068-.257-.07-.257-.19v-.83c0-.132.003-.36.135-.561L37.692 7.4h-1.894a.203.203 0 01-.21-.206zM22.37 12.302h-1.103a.208.208 0 01-.197-.188V6.39c0-.114.096-.206.214-.206h1.026a.208.208 0 01.2.192v.747h.022c.267-.722.771-1.06 1.45-1.06.69 0 1.122.338 1.43 1.06.268-.722.875-1.06 1.524-1.06.463 0 .967.193 1.276.627.35.482.278 1.18.278 1.794l-.001 3.612a.209.209 0 01-.213.205h-1.1a.208.208 0 01-.199-.205V9.063c0-.24.02-.843-.031-1.071-.082-.386-.33-.494-.648-.494a.732.732 0 00-.659.469c-.113.29-.103.77-.103 1.096v3.034a.209.209 0 01-.212.205h-1.101a.208.208 0 01-.198-.205l-.002-3.034c0-.638.103-1.577-.679-1.577-.792 0-.761.915-.761 1.577v3.034a.209.209 0 01-.213.205zm20.385-5.07c-.813 0-.864 1.12-.864 1.819 0 .698-.01 2.192.854 2.192.854 0 .895-1.204.895-1.939 0-.482-.02-1.06-.165-1.517-.123-.398-.37-.554-.72-.554zm-.01-1.168c1.636 0 2.52 1.422 2.52 3.228 0 1.746-.977 3.13-2.52 3.13-1.606 0-2.48-1.42-2.48-3.19 0-1.783.885-3.167 2.48-3.167zm4.643 6.238H46.29a.208.208 0 01-.197-.205l-.002-5.725a.21.21 0 01.212-.187h1.022a.21.21 0 01.196.16v.876h.021c.309-.783.74-1.157 1.502-1.157.494 0 .978.181 1.287.675.288.458.288 1.228.288 1.782v3.601a.21.21 0 01-.212.18h-1.105a.209.209 0 01-.196-.18V9.015c0-.626.072-1.542-.69-1.542-.267 0-.514.181-.637.458-.155.35-.176.699-.176 1.084v3.082a.212.212 0 01-.214.205zm-13.578-.014a.226.226 0 01-.26.026c-.366-.308-.432-.45-.632-.743-.605.623-1.033.81-1.817.81-.928 0-1.65-.579-1.65-1.737 0-.906.485-1.521 1.175-1.823.598-.265 1.434-.313 2.073-.386V8.29c0-.266.02-.579-.134-.808-.134-.206-.392-.29-.619-.29-.42 0-.794.218-.886.67-.02.1-.091.2-.191.205l-1.069-.117c-.09-.021-.19-.094-.164-.234.242-1.292 1.384-1.695 2.421-1.706h.082c.531.006 1.21.154 1.622.554.537.507.485 1.183.485 1.92v1.736c0 .523.215.752.416 1.034.07.101.086.222-.003.296-.226.191-.626.542-.846.74l-.003-.002zm-1.11-2.718c0 .434.01.796-.207 1.182-.175.314-.454.507-.763.507-.423 0-.67-.326-.67-.809 0-.95.842-1.122 1.64-1.122v.242zM19.36 12.288a.226.226 0 01-.26.026c-.367-.308-.433-.45-.632-.743-.606.623-1.034.81-1.818.81-.928 0-1.65-.579-1.65-1.737 0-.906.484-1.521 1.176-1.823.598-.265 1.433-.313 2.072-.386V8.29c0-.266.021-.579-.134-.808-.134-.206-.392-.29-.618-.29-.42 0-.795.218-.886.67-.02.1-.092.2-.192.205L15.35 7.95c-.09-.021-.191-.094-.165-.234.242-1.292 1.384-1.695 2.422-1.706h.081c.532.006 1.21.154 1.623.554.536.507.484 1.183.484 1.92v1.736c0 .523.215.752.416 1.034.07.101.087.222-.003.296-.225.191-.626.542-.845.74l-.003-.002zM18.248 9.57c0 .434.01.796-.206 1.182-.175.314-.454.507-.763.507-.423 0-.67-.326-.67-.809 0-.95.842-1.122 1.64-1.122v.242zm47.44 4.785v-.42c0-.12.059-.202.182-.195.23.033.556.066.787.018.303-.063.52-.28.647-.577.18-.418.3-.755.376-.976L65.386 6.46c-.038-.097-.05-.278.143-.278h.802c.153 0 .215.098.249.194l1.663 4.668 1.587-4.668c.032-.096.097-.194.249-.194h.756c.191 0 .18.18.143.278l-2.275 5.926c-.295.788-.687 2.045-1.57 2.263-.443.117-1.002.075-1.33-.064-.083-.042-.114-.155-.114-.229zm-1.069-2.403a.194.194 0 01-.193.195h-.565a.221.221 0 01-.221-.195l-.057-.39c-.26.223-.579.419-.925.555-.665.261-1.431.304-2.08-.1-.47-.291-.72-.861-.72-1.45 0-.454.139-.906.446-1.233.41-.448 1.005-.668 1.723-.668.434 0 1.054.052 1.505.201v-.783c0-.796-.331-1.141-1.205-1.141-.668 0-1.18.102-1.89.326-.114.004-.181-.084-.181-.19V6.63c0-.107.09-.21.188-.242.508-.224 1.228-.363 1.993-.389.997 0 2.182.228 2.182 1.779v4.173zm-1.087-1.143V9.627c-.379-.105-1.007-.149-1.25-.149-.384 0-.804.092-1.024.331-.164.175-.238.427-.238.67 0 .315.108.63.359.786.292.2.745.176 1.17.054.409-.118.793-.325.983-.51zM56.283 6.96c1.255 0 1.596.997 1.596 2.14.007.77-.133 1.456-.527 1.85-.295.294-.625.374-1.12.374-.442 0-1.023-.233-1.457-.557V7.5c.452-.35 1.028-.54 1.508-.54zm-1.7 7.6h-.758a.194.194 0 01-.192-.195v-7.98c0-.107.086-.195.192-.195h.58c.122 0 .205.09.22.194l.062.418c.542-.487 1.241-.8 1.907-.8 1.865 0 2.479 1.555 2.479 3.171 0 1.73-.939 3.119-2.525 3.119-.668 0-1.293-.25-1.773-.683v2.756a.194.194 0 01-.192.194z' fill='%23333E47'/%3E%3C/svg%3E" alt="">
+                    
+                    <button>PayPal</button>
+                    <button>afterPay</button>
+                </div>
+                <div class="details">
+                    <input type="text" placeholder="Name on Card">
+                    <br>
+                    <br>
+                    <input type="text" name="" id="" placeholder="Card Number">
+                    <br>
+                    <br>
+                    <select name="" id="month">
+                        <option value="">Month</option>
+                        <option value="">01-Jan</option>
+                        <option value="">02-Feb</option>
+                    </select>
+                    <select name="" id="year">
+                        <option value="">Year</option>
+                        <option value="">2022</option>
+                        <option value="">2023</option>
+                    </select>
+                    
+                    <p class="below-btn pay-method">ADD THIS PAYMENT METHOD</p>
+                </div>
+            </div>
+        </div>
+        <div class="place-order">
+            <div>
+                <div>PLACE YOUR ORDER</div>
+                <p>By placing your order, you agree to zappos.com’s <span style="text-decoration: underline;">privacy notice </span> and <span  style="text-decoration: underline">conditions of use</span> .</p>
+                <h2>Order Summary (1 item)</h2>
+                <p>Sub-total  <span style="color:transparent;">uuuuoooooooooouuuuuuuuuuuuuuu</span>    $139.95</p>
+                <p>Shipping  <span style="color:transparent;">uuuuoooooooooouuuuuuuuuuuuuuu</span>       Free</p>
+                <p>Total before tax <span style="color:transparent;">uuuuooooooooopouuuuuuuuu</span>   $139.95</p>
+                <p>Estimated tax to be collected:* <span style="color:transparent;">uuuuppuuuuuu</span>   $11.55</p>
+                    <hr>
+                <h3>Order Total: <span style="color:transparent;">uuuuooooooooopppppu</span>  $151.50</h3>
+
+            </div>
+            <div>
+                <h3 style="text-align:center; padding-top:25px; font-size: 30px;">Apply Gift Card or Promo Code</h3>
+            </div>
+            <div class="pic-gift">
+                
+             <img src="data:image/jpeg;base64,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" alt="">
+                
+               
+                <h3  style="text-align:center; padding-top:15px; padding-left: 80px;">Add a FREE Gift Message
+               <br>
+                   <span style="font-size:20px"> Includes a FREE Gift Receipt</span></h3>
+               <
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+   
+</script>
