@@ -9,10 +9,18 @@
       href="https://www.zappos.com/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="/cartPage/cart.css" />
     <title>My Cart | Zappos.com</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("../headerSection/header.html");
+        $("#footer").load("../footerSection/footer.html");
+      });
+    </script>
   </head>
   <body>
+    <div id="header"></div>
     <div id="cart-page">
       <div class="top-bar">
         <p>
@@ -415,6 +423,7 @@
         </div>
       </div>
     </div>
+    <div id="footer"></div>
   </body>
-  <script src="cart.js"></script>
+  <script src="/cartPage/cart.js"></script>
 </html>

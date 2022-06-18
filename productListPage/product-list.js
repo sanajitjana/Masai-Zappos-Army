@@ -1117,7 +1117,7 @@ function displayData(data) {
   data.forEach(function (ele) {
     //a tag
     let link = document.createElement("a");
-    link.setAttribute("href", "product-details.html");
+    link.setAttribute("href", "../productDetailsPage/product-details.html");
 
     //card
     let card = document.createElement("div");

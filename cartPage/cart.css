@@ -6,6 +6,7 @@ body {
 #cart-page {
   font-family: Family "Open Sans", sans-serif;
   color: #1f1f1f;
+  margin-top: 28px;
 }
 .top-bar {
   box-sizing: border-box;

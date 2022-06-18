@@ -304,9 +304,7 @@ function customerviewed3(recommendedArr) {
     Name3.innerText = recommendedArr[i].itemName;
     let price3 = document.createElement("p");
     price3.innerText = recommendedArr[i].itemPrice;
-
     parenttag3.append(image3, brand3, Name3, price3);
-    id13.insertBefore(parenttag3, id13.firstChild);
   }
   for (let i = 9; i >= 5; i--) {
     let parenttag3 = document.createElement("div");
@@ -320,9 +318,7 @@ function customerviewed3(recommendedArr) {
     Name3.innerText = recommendedArr[i].itemName;
     let price3 = document.createElement("p");
     price3.innerText = recommendedArr[i].itemPrice;
-
     parenttag3.append(image3, brand3, Name3, price3);
-    id23.insertBefore(parenttag3, id23.firstChild);
   }
   for (let i = 4; i >= 0; i--) {
     let parenttag3 = document.createElement("div");
@@ -336,8 +332,13 @@ function customerviewed3(recommendedArr) {
     Name3.innerText = recommendedArr[i].itemName;
     let price3 = document.createElement("p");
     price3.innerText = recommendedArr[i].itemPrice;
-
     parenttag3.append(image3, brand3, Name3, price3);
-    id33.insertBefore(parenttag3, id33.firstChild);
   }
+}
+
+let addToBtn = document.querySelector(".cart");
+console.log(addToBtn);
+addToBtn.addEventListener("click", goToCart);
+function goToCart() {
+  window.location.href = "../cartPage/cart.html";
 }

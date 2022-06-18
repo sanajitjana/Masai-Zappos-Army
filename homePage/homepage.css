@@ -11,6 +11,7 @@ body {
 .banner {
   width: 100%;
   position: relative;
+  margin-top: 28px;
 }
 .floting-on-img {
   display: inline-block;
@@ -548,6 +549,12 @@ h5 {
     width: 100%;
     margin: auto;
   }
+  .shop-para {
+    flex-wrap: wrap;
+  }
+  .banner {
+    width: 100%;
+  }
 }
 @media all and (min-width: 320px) and (max-width: 950px) {
   .popular-categories,
@@ -556,6 +563,7 @@ h5 {
   }
   #shopPrep {
     margin-top: 50px;
+    flex-direction: column;
   }
 }
 @media all and (min-width: 320px) and (max-width: 650px) {

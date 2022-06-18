@@ -10,13 +10,21 @@
       type="image/x-icon"
     />
     <title>Crocs Kids Classic Clog (Little Kid/Big Kid) | Zappos.com</title>
-    <link rel="stylesheet" href="product-details.css" />
+    <link rel="stylesheet" href="/productDetailsPage/product-details.css" />
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("../headerSection/header.html");
+        $("#footer").load("../footerSection/footer.html");
+      });
+    </script>
   </head>
   <body>
+    <div id="header"></div>
     <div class="top-bar">
       <p>
         Check out to earn Zappos VIP points worth up to&nbsp;
@@ -379,5 +387,6 @@
       </svg>
     </div>
   </body>
-  <script src="product-details.js"></script>
+  <div id="footer"></div>
+  <script src="/productDetailsPage/product-details.js"></script>
 </html>

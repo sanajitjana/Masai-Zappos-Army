@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Shoes, Sneakers, Boots, & Clothing + FREE SHIPPING | Zappos.com
+    </title>
     <link
       rel="shortcut icon"
       href="https://www.zappos.com/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="homepage.css" />
-    <title>
-      Shoes, Sneakers, Boots, & Clothing + FREE SHIPPING | Zappos.com
-    </title>
+    <link rel="stylesheet" href="/homePage/homepage.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("headerSection/header.html");
+        $("#footer").load("footerSection/footer.html");
+      });
+    </script>
   </head>
   <body>
+    <div id="header"></div>
     <div class="homepage-container">
       <div class="banner">
         <div class="floting-on-img">
@@ -673,5 +681,7 @@
         </div>
       </div>
     </div>
+    <div id="footer"></div>
   </body>
+  <script src="/homePage/homepage.js"></script>
 </html>

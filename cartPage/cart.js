@@ -1,4 +1,4 @@
-let data = JSON.parse(localStorage.getItem("cdata")); //enter local storage array inside get item and go bellow
+let data = JSON.parse(localStorage.getItem("cdata")) || []; //enter local storage array inside get item and go bellow
 display(data);
 let pr = 0;
 count = 0;
@@ -6,9 +6,6 @@ displayr(data, pr, count);
 
 function display(cdata) {
   let mdiv = document.querySelector("#mdiv");
-  mdiv.innerHTML = "";
-  // mdiv.createElement("p").innerText="item"
-  // mdiv.createElement("p").innerText="price/quantity"
   cdata.forEach(function (el) {
     let mdiv = document.querySelector("#mdiv");
     let div = document.createElement("div");
@@ -76,12 +73,6 @@ function displayr(data, pr, count) {
     pr = pr + Number(data[k].price);
     count++;
   }
-  document.querySelector("#h1item").innerText =
-    "Cart Summary " + count + " items";
-  document.querySelector("#genitem").innerText =
-    "Subtotal (" + count + " items)";
-  document.querySelector("#genitm").innerText = "$" + pr;
-  // console.log(pr)
 }
 
 function selfunc(el) {
@@ -93,4 +84,9 @@ function selfunc(el) {
     let pr = +el.price * (count - 1);
     displayr(data, pr, count);
   }
+}
+
+document.querySelector(".chek-btn").addEventListener("click", goToCheckout);
+function goToCheckout() {
+  window.location.href = "../checkoutPage/checkout.html";
 }
