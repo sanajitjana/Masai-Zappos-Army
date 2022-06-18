@@ -54,7 +54,7 @@ if (currentLogin) {
 }
 
 //cart item count
-let cartItems = JSON.parse(localStorage.getItem("cartItem")) || [];
+let cartItems = JSON.parse(localStorage.getItem("addToCartItems")) || [];
 let cartCount = cartItems.length;
 
 //cart button

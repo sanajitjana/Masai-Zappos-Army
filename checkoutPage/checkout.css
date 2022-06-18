@@ -101,6 +101,31 @@ body {
   font: 400 14px Open Sans, sans-serif;
   margin-top: -5px;
 }
+.discount {
+  font: 400 14px Open Sans, sans-serif;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 10px 0px;
+  color: green;
+}
+.color-red {
+  color: red;
+  cursor: pointer;
+  font: 400 14px Open Sans, sans-serif;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 10px 0px;
+}
+.color-red:hover {
+  border: 1px solid red;
+}
+.color-green {
+  color: red !important;
+  border: none !important;
+  cursor: default !important;
+}
 .divide {
   display: flex;
   justify-content: space-between;

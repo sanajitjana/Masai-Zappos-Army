@@ -159,7 +159,7 @@ document.querySelector(".chek-btn").addEventListener("click", function () {
   let oldPrice = finalPrice.innerText;
   oldPrice = oldPrice.split("$");
   let val = oldPrice[1];
-  localStorage.setItem("totalQuantity", totalQuantity);
+  localStorage.setItem("totalQuantity", totalQuantity) || "0";
   localStorage.setItem("totalCartPrice", val);
   window.location.href = "../checkoutPage/checkout.html";
 });

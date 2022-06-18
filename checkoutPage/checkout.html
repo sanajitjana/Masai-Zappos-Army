@@ -54,37 +54,40 @@
       </div>
       <div id="right">
         <div class="div2">
-          <h3>Order Summary (2 Items)</h3>
+          <h3 class="order-summary">Order Summary (2 Items)</h3>
           <div class="divide subtotal">
             <h3>Subtotal:</h3>
-            <h3>$139.98</h3>
+            <h3 class="subtotalPrice">$139.98</h3>
           </div>
           <div class="shipping divide">
             <p>Shipping</p>
             <p>Free</p>
           </div>
           <div class="total divide">
-            <p>Total before tax:</p>
-            <p>$139.98</p>
+            <p>Total tax</p>
+            <p class="before-tax">$0.00</p>
           </div>
           <div class="estimated divide">
-            <p>Estimated tax to be collected</p>
+            <p>Cupon Discount</p>
             <p>$0.00</p>
           </div>
           <hr class="order-top" />
           <div class="divide">
             <h3>Order Total</h3>
-            <h3>$139.98</h3>
+            <h3 class="order-total">$139.98</h3>
           </div>
         </div>
         <div class="div3">
           <h3>Apply Gift Card or Promo Code</h3>
           <input type="text" placeholder="Enter Code" />
-          <button class="payment-btn">Apply</button>
+          <button id="cupon-btn" class="payment-btn">Apply</button>
         </div>
+        <p class="discount">
+          *Apply <b>masai30</b> for 30% flat discount on total
+        </p>
       </div>
     </div>
     <div id="footer"></div>
   </body>
-  <script src="/checkoutPage/checkout.js"></script>
+  <script src="../checkoutPage/checkout.js"></script>
 </html>
