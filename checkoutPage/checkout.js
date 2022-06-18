@@ -1,18 +1,26 @@
+//fetch all data from LS
 let totalItems = localStorage.getItem("totalQuantity") || "0";
+let forsubtotal = localStorage.getItem("totalCartPrice");
 let totalPrice =
   localStorage.getItem("totalCartPriceWithCupon") ||
   localStorage.getItem("totalCartPrice");
+let discountamountLS = localStorage.getItem("discountAmount") || "0.00";
 
+//display order summary
 displayAll(totalItems, totalPrice);
 function displayAll(totalItems, totalPrice) {
   let subtotalText = document.querySelector(".subtotalPrice");
   let orderTotal = document.querySelector(".order-total");
   let order_summary = document.querySelector(".order-summary");
+  let cupon_discount = document.querySelector(".cupon-discount");
   order_summary.innerText = `Order Summary (${totalItems} Items)`;
-  subtotalText.innerText = `$${totalPrice}`;
+  subtotalText.innerText = `$${forsubtotal}`;
   orderTotal.innerText = `$${totalPrice}`;
+  cupon_discount.innerText = `$${discountamountLS}`;
 }
 
+//check cuponcode
+let discountamount = 0;
 let checkCupon = localStorage.getItem("cuponApply");
 document.querySelector("#cupon-btn").addEventListener("click", function (e) {
   let cuponVal = document.querySelector("#cupon-code");
@@ -22,7 +30,9 @@ document.querySelector("#cupon-btn").addEventListener("click", function (e) {
     alert("Please enter the cupon");
   } else if (cuponVal.value == "masai30") {
     totalPrice = (totalPrice * 0.7).toFixed(2);
+    discountamount = (forsubtotal - totalPrice).toFixed(2);
     localStorage.setItem("cuponApply", "true");
+    localStorage.setItem("discountAmount", discountamount);
     localStorage.setItem("totalCartPriceWithCupon", totalPrice);
     window.location.reload();
   } else {
@@ -39,6 +49,7 @@ if (checkCupon) {
 document.querySelector(".discount").addEventListener("click", function (e) {
   localStorage.removeItem("cuponApply");
   localStorage.removeItem("totalCartPriceWithCupon");
+  localStorage.removeItem("discountAmount");
   window.location.reload();
 });
 
@@ -80,7 +91,12 @@ document.querySelector("#form-submit").addEventListener("click", function (e) {
     };
     Orders.push(myObj);
     localStorage.setItem("orders", JSON.stringify(Orders));
-    alert("You have successfully orders your items");
+    alert(
+      username.value +
+        ", your " +
+        `$${totalPrice}` +
+        " worth of order is received. You will send you the boxses soon!"
+    );
 
     // clearform
     document.querySelector("#name").value = "";
@@ -91,8 +107,13 @@ document.querySelector("#form-submit").addEventListener("click", function (e) {
     document.querySelector("#expirydate").value = "";
     document.querySelector("#cvv").value = "";
 
-    // clear cartData
+    // clear LS Data
     localStorage.removeItem("addToCartItems");
+    localStorage.removeItem("totalCartPrice");
+    localStorage.removeItem("cuponApply");
+    localStorage.removeItem("totalCartPriceWithCupon");
+    localStorage.removeItem("totalQuantity");
+    localStorage.removeItem("discountAmount");
     window.location.href = "../index.html";
   }
 });
