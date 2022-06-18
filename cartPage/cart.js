@@ -45,6 +45,7 @@ function dataDisplay(data) {
 
     // totalQuantity
     let totalQTBtn = document.createElement("button");
+    totalQTBtn.className = "btn-minddle";
     let qty = 1;
     totalQuantity += qty;
     totalQTBtn.innerText = qty;
@@ -60,6 +61,7 @@ function dataDisplay(data) {
 
     //inc function
     let incBtn = document.createElement("button");
+    incBtn.className = "inc-btn";
     incBtn.innerText = "+";
     incBtn.addEventListener("click", function () {
       qty++;
@@ -76,6 +78,7 @@ function dataDisplay(data) {
 
     //dec function
     let decBtn = document.createElement("button");
+    decBtn.className = "dec-btn";
     decBtn.innerText = "-";
     decBtn.addEventListener("click", function () {
       if (qty > 1) {
