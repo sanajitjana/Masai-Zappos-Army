@@ -8,6 +8,7 @@ img {
   display: block;
   margin: auto;
   margin-top: 15px;
+  cursor: pointer;
 }
 #sign-in-container {
   display: block;

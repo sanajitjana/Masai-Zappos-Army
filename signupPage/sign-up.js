@@ -46,3 +46,9 @@ form.addEventListener("submit", function (event) {
     alert("Welcome! Signup successful");
   }
 });
+
+document
+  .querySelector("#zappos-logo")
+  .addEventListener("click", function (event) {
+    window.location.href = "../index.html";
+  });

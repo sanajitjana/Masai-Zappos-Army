@@ -1,96 +1,165 @@
-let data = JSON.parse(localStorage.getItem("cdata")); //enter local storage array inside get item and go bellow
-display(data);
-let pr = 0;
-count = 0;
-displayr(data, pr, count);
+//fetch cartData from LS
+let cartData = JSON.parse(localStorage.getItem("addToCartItems")) || [];
+let tbody = document.querySelector(".tbody");
 
-function display(cdata) {
-  let mdiv = document.querySelector("#mdiv");
-  mdiv.innerHTML = "";
-  // mdiv.createElement("p").innerText="item"
-  // mdiv.createElement("p").innerText="price/quantity"
-  cdata.forEach(function (el) {
-    let mdiv = document.querySelector("#mdiv");
+let totalQuantity = 0;
+let totalPrice = 0;
+let sPrice = 0;
+
+dataDisplay(cartData);
+function dataDisplay(data) {
+  data.forEach(function (item, index, array) {
+    let row = document.createElement("div");
+    row.className = "trow";
+
+    let leftside = document.createElement("div");
+    leftside.className = "leftside";
+
+    let img = document.createElement("img");
+    img.setAttribute("src", item.img_url);
+
     let div = document.createElement("div");
-    let ldiv = document.createElement("div");
-    ldiv.setAttribute("id", "ldiv");
-    let rdiv = document.createElement("div");
-    rdiv.setAttribute("id", "rdiv");
-    let img1 = document.createElement("img");
-    img1.src = el.img_url;
-    let bname = document.createElement("p");
-    bname.innerText = el.brand;
-    let subname = document.createElement("p");
-    subname.innerText = el.sub_name;
+    let h4 = document.createElement("h4");
+    h4.innerText = item.name;
+
+    let h3 = document.createElement("h3");
+    h3.innerText = item.sub_name;
+
     let color = document.createElement("p");
-    color.innerText = "color= " + el.color;
-    ldiv.append(bname, subname, color);
-    let price = document.createElement("h2");
-    price.innerText = "$" + el.price;
-    price.style.color = "#035d59";
-    let delet = document.createElement("button");
-    delet.innerText = "REMOVE";
-    delet.setAttribute("id", "removebutton");
-    delet.addEventListener("click", function () {
-      delcart(el);
+    color.innerText = `Color: ${item.color}`;
+
+    let size = document.createElement("p");
+    size.innerText = "item.size";
+
+    div.append(h4, h3, color), size;
+    leftside.append(img, div);
+
+    let rightside = document.createElement("div");
+    rightside.className = "rightside";
+    let table_acc = document.createElement("div");
+    table_acc.className = "table-action";
+
+    //price
+    let mrp = document.createElement("h3");
+    mrp.innerText = `(${item.price} each)`;
+
+    // totalQuantity
+    let totalQTBtn = document.createElement("button");
+    let qty = 1;
+    totalQuantity += qty;
+    totalQTBtn.innerText = qty;
+
+    //totalAmount
+    let h1 = document.createElement("h1");
+    let total = (item.price * qty).toFixed(2);
+    totalPrice += +total;
+    h1.innerText = `$${total}`;
+    h1.className = "row-total";
+
+    let actionDiv = document.createElement("div");
+
+    //inc function
+    let incBtn = document.createElement("button");
+    incBtn.innerText = "+";
+    incBtn.addEventListener("click", function () {
+      qty++;
+      if (qty >= 1) {
+        totalQTBtn.innerText = qty;
+        totalQuantity += 1;
+        sPrice = item.price;
+        total = (item.price * qty).toFixed(2);
+        h1.innerText = `$${total}`;
+        displayTotalQuantity();
+        increaseDisplayTotalPrice(sPrice);
+      }
     });
-    let selct = document.createElement("select");
-    selct.addEventListener("change", function () {
-      selfunc(el);
+
+    //dec function
+    let decBtn = document.createElement("button");
+    decBtn.innerText = "-";
+    decBtn.addEventListener("click", function () {
+      if (qty > 1) {
+        qty--;
+        totalQuantity -= 1;
+        totalQTBtn.innerText = qty;
+        sPrice = item.price;
+        total = (item.price * qty).toFixed(2);
+        h1.innerText = `$${total}`;
+        displayTotalQuantity();
+        decreaseDisplayTotalPrice(sPrice);
+      } else {
+        alert("Carts need minimul one item");
+      }
     });
-    // selct.setAttribute("id","dropdown")
-    selct.style.marginLeft = "3.5em";
-    selct.style.marginBottom = "1em";
-    let op0 = document.createElement("option");
-    op0.innerText = "REMOVE";
-    op0.value = "del";
-    let op1 = document.createElement("option");
-    op1.innerText = 1;
-    op1.value = 1;
-    op1.selected = "selected";
-    let op2 = document.createElement("option");
-    op2.innerText = 2;
-    op2.value = 2;
-    let op3 = document.createElement("option");
-    op3.innerText = 3;
-    op3.value = 3;
-    selct.append(op0, op1, op2, op3);
-    selct.style.display = "block";
-    rdiv.append(price, selct, delet);
-    div.append(img1, ldiv, rdiv);
-    mdiv.append(div);
+
+    actionDiv.append(incBtn, totalQTBtn, decBtn);
+
+    let anqarTarg = document.createElement("a");
+    anqarTarg.innerText = "Remove";
+    anqarTarg.addEventListener("click", function () {
+      deleteFunc(item, index, array);
+    });
+
+    table_acc.append(h1, mrp, actionDiv, anqarTarg);
+    rightside.append(table_acc);
+    row.append(leftside, rightside);
+    tbody.append(row);
   });
 }
 
-function delcart(el) {
-  let filtered = data.filter(function (elem) {
-    return elem.name != el.name;
-  });
-  localStorage.setItem("cdata", JSON.stringify(filtered)); // do same changes here
+//delete item
+function deleteFunc(item, index, array) {
+  array.splice(index, 1);
+  localStorage.setItem("addToCartItems", JSON.stringify(array));
   window.location.reload();
-  display(filtered);
 }
 
-function displayr(data, pr, count) {
-  for (k = 0; k < data.length; k++) {
-    pr = pr + Number(data[k].price);
-    count++;
-  }
-  document.querySelector("#h1item").innerText =
-    "Cart Summary " + count + " items";
-  document.querySelector("#genitem").innerText =
-    "Subtotal (" + count + " items)";
-  document.querySelector("#genitm").innerText = "$" + pr;
-  // console.log(pr)
+//total quantity
+let h3TotalQt = document.querySelector(".totQt");
+let totQty = document.querySelector(".totQty");
+let smTQ = document.querySelector(".smTQ");
+function displayTotalQuantity() {
+  h3TotalQt.innerText = `${totalQuantity} item in My Cart`;
+  totQty.innerText = `Cart Summary (${totalQuantity} Items)`;
+  smTQ.innerText = `Subtotal (${totalQuantity} items)`;
+}
+displayTotalQuantity();
+
+//total price
+let h3TotalPrice = document.querySelector(".page-total");
+function displayTotalPrice() {
+  totalPrice = totalPrice.toFixed(2);
+  h3TotalPrice.innerText = `$${totalPrice}`;
+}
+displayTotalPrice();
+
+//total price after increase
+function increaseDisplayTotalPrice(sPrice) {
+  let h3TotalPrice = document.querySelector(".page-total");
+  let oldPrice = h3TotalPrice.innerText;
+  oldPrice = oldPrice.split("$");
+  let val = oldPrice[1];
+  let newVal = (+val + +sPrice).toFixed(2);
+  h3TotalPrice.innerText = `$${newVal}`;
 }
 
-function selfunc(el) {
-  let x = event.target.value;
-  if (x === "del") {
-    delcart(el);
-  } else {
-    let count = +x;
-    let pr = +el.price * (count - 1);
-    displayr(data, pr, count);
-  }
+//total price aftre decrease
+function decreaseDisplayTotalPrice(sPrice) {
+  let h3TotalPrice = document.querySelector(".page-total");
+  let oldPrice = h3TotalPrice.innerText;
+  oldPrice = oldPrice.split("$");
+  let val = oldPrice[1];
+  let newVal = (+val - +sPrice).toFixed(2);
+  h3TotalPrice.innerText = `$${newVal}`;
 }
+
+//check out button click
+document.querySelector(".chek-btn").addEventListener("click", function () {
+  let finalPrice = document.querySelector(".page-total");
+  let oldPrice = finalPrice.innerText;
+  oldPrice = oldPrice.split("$");
+  let val = oldPrice[1];
+  localStorage.setItem("totalQuantity", totalQuantity) || "0";
+  localStorage.setItem("totalCartPrice", val);
+  window.location.href = "../checkoutPage/checkout.html";
+});

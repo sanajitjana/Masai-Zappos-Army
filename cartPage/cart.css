@@ -6,7 +6,9 @@ body {
 #cart-page {
   font-family: Family "Open Sans", sans-serif;
   color: #1f1f1f;
+  margin-top: 28px;
 }
+
 .top-bar {
   box-sizing: border-box;
   color: #1f1f1f;
@@ -164,6 +166,7 @@ body {
   width: 70%;
   border: 1px solid #ddd;
   height: fit-content;
+  margin-bottom: 50px;
 }
 .table-top {
   height: 50px;
@@ -246,7 +249,6 @@ body {
   font-size: 12px;
   color: #707070;
   margin-top: -10px;
-  text-decoration: line-through;
 }
 .rightside select {
   transition: all 0.3s ease 0s;

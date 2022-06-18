@@ -10,9 +10,17 @@
       href="https://www.zappos.com/favicon.ico"
     />
     <title>Women's Boots + FREE SHIPPING | Shoes | Zappos.com</title>
-    <link rel="stylesheet" href="product-list.css" />
+    <link rel="stylesheet" href="/productListPage/product-list.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("../headerSection/header.html");
+        $("#footer").load("../footerSection/footer.html");
+      });
+    </script>
   </head>
   <body>
+    <div id="header"></div>
     <div class="container">
       <div class="title-row">
         <h1 class="title">Your Search Results</h1>
@@ -119,7 +127,6 @@
           <!-- Above Sort Bar on product table -->
           <div class="sort-bar">
             <div class="select">All</div>
-            <div class="sort-bar-clothes">Clothings</div>
             <div class="sort-bar-white">White</div>
             <div class="sort-bar-boyes">Boys</div>
             <div class="sort-bar-shoes">Shoes</div>
@@ -131,6 +138,7 @@
             <div class="sort-bar-black">Black</div>
             <div class="sort-bar-blue">Blue</div>
             <div class="sort-bar-girls">Girls</div>
+            <div class="sort-bar-clothes">Clothings</div>
           </div>
 
           <!-- product table -->
@@ -138,6 +146,7 @@
         </div>
       </div>
     </div>
+    <div id="footer"></div>
   </body>
-  <script src="product-list.js"></script>
+  <script src="/productListPage/product-list.js"></script>
 </html>

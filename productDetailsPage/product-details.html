@@ -10,13 +10,21 @@
       type="image/x-icon"
     />
     <title>Crocs Kids Classic Clog (Little Kid/Big Kid) | Zappos.com</title>
-    <link rel="stylesheet" href="product-details.css" />
+    <link rel="stylesheet" href="/productDetailsPage/product-details.css" />
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("../headerSection/header.html");
+        $("#footer").load("../footerSection/footer.html");
+      });
+    </script>
   </head>
   <body>
+    <div id="header"></div>
     <div class="top-bar">
       <p>
         Check out to earn Zappos VIP points worth up to&nbsp;
@@ -81,20 +89,17 @@
       </div>
       <div id="productFeature">
         <div>
-          <img
-            src="https://m.media-amazon.com/images/I/61-b5zeROCL._AC_SR920,736_.jpg"
-            alt=""
-          />
+          <img id="main-img" />
         </div>
       </div>
       <div id="buypage">
-        <h1 class="pro-name">Crocs Kids</h1>
-        <h3>Classic Clog (Little Kid/Big Kid)</h3>
-        <h1 class="price"><span>$</span>39<span>.95</span></h1>
+        <h1 class="pro-name">Default Name</h1>
+        <h3 class="sub-name">Default sub-name for product</h3>
+        <h1 class="price"></h1>
         <p>or 4 interest-free payments of $9.99 with</p>
         <p>SHIPS FREE</p>
         <div class="color">
-          <p><span>Color:</span> Pure Water</p>
+          <p class="pro-color"></p>
         </div>
         <div class="differshoe">
           <div>
@@ -379,5 +384,6 @@
       </svg>
     </div>
   </body>
-  <script src="product-details.js"></script>
+  <div id="footer"></div>
+  <script src="/productDetailsPage/product-details.js"></script>
 </html>
