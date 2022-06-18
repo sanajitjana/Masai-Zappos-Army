@@ -8,6 +8,7 @@
   display: block;
   margin: auto;
   margin-top: 15px;
+  cursor: pointer;
 }
 #container {
   display: block;

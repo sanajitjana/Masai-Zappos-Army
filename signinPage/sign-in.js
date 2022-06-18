@@ -38,3 +38,7 @@ function loginFunction(event) {
     alert("Please enter correct details");
   }
 }
+
+document.querySelector("#logo").addEventListener("click", function (event) {
+  window.location.href = "../index.html";
+});
