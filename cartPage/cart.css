@@ -249,7 +249,6 @@ body {
   font-size: 12px;
   color: #707070;
   margin-top: -10px;
-  text-decoration: line-through;
 }
 .rightside select {
   transition: all 0.3s ease 0s;

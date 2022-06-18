@@ -2,9 +2,13 @@
 let cartData = JSON.parse(localStorage.getItem("addToCartItems")) || [];
 let tbody = document.querySelector(".tbody");
 
+let totalQuantity = 0;
+let totalPrice = 0;
+let sPrice = 0;
+
 dataDisplay(cartData);
 function dataDisplay(data) {
-  data.forEach(function (item) {
+  data.forEach(function (item, index, array) {
     let row = document.createElement("div");
     row.className = "trow";
 
@@ -22,7 +26,7 @@ function dataDisplay(data) {
     h3.innerText = item.sub_name;
 
     let color = document.createElement("p");
-    color.innerText = item.color;
+    color.innerText = `Color: ${item.color}`;
 
     let size = document.createElement("p");
     size.innerText = "item.size";
@@ -35,63 +39,127 @@ function dataDisplay(data) {
     let table_acc = document.createElement("div");
     table_acc.className = "table-action";
 
-    let h1 = document.createElement("h1");
-    h1.innerText = item.price;
-
+    //price
     let mrp = document.createElement("h3");
-    mrp.innerText = item.mrp;
+    mrp.innerText = `(${item.price} each)`;
 
-    let selectTag = document.createElement("select");
+    // totalQuantity
+    let totalQTBtn = document.createElement("button");
+    let qty = 1;
+    totalQuantity += qty;
+    totalQTBtn.innerText = qty;
 
-    let option2 = document.createElement("option");
-    option2.innerText = "1";
-    option2.value = "1";
+    //totalAmount
+    let h1 = document.createElement("h1");
+    let total = (item.price * qty).toFixed(2);
+    totalPrice += +total;
+    h1.innerText = `$${total}`;
+    h1.className = "row-total";
 
-    let option3 = document.createElement("option");
-    option3.innerText = "2";
-    option3.value = "2";
+    let actionDiv = document.createElement("div");
 
-    let option4 = document.createElement("option");
-    option4.innerText = "3";
-    option4.value = "3";
+    //inc function
+    let incBtn = document.createElement("button");
+    incBtn.innerText = "+";
+    incBtn.addEventListener("click", function () {
+      qty++;
+      if (qty >= 1) {
+        totalQTBtn.innerText = qty;
+        totalQuantity += 1;
+        sPrice = item.price;
+        total = (item.price * qty).toFixed(2);
+        h1.innerText = `$${total}`;
+        displayTotalQuantity();
+        increaseDisplayTotalPrice(sPrice);
+      }
+    });
 
-    let option5 = document.createElement("option");
-    option5.innerText = "4";
-    option5.value = "4";
+    //dec function
+    let decBtn = document.createElement("button");
+    decBtn.innerText = "-";
+    decBtn.addEventListener("click", function () {
+      if (qty > 1) {
+        qty--;
+        totalQuantity -= 1;
+        totalQTBtn.innerText = qty;
+        sPrice = item.price;
+        total = (item.price * qty).toFixed(2);
+        h1.innerText = `$${total}`;
+        displayTotalQuantity();
+        decreaseDisplayTotalPrice(sPrice);
+      } else {
+        alert("Carts need minimul one item");
+      }
+    });
 
-    let option6 = document.createElement("option");
-    option6.innerText = "5";
-    option6.value = "5";
+    actionDiv.append(incBtn, totalQTBtn, decBtn);
 
-    let option7 = document.createElement("option");
-    option7.innerText = "6";
-    option7.value = "6";
-
-    let option8 = document.createElement("option");
-    option8.innerText = "7";
-    option8.value = "7";
-    selectTag.append(
-      option2,
-      option3,
-      option4,
-      option5,
-      option6,
-      option7,
-      option8
-    );
     let anqarTarg = document.createElement("a");
     anqarTarg.innerText = "Remove";
-    table_acc.append(h1, mrp, selectTag, anqarTarg);
+    anqarTarg.addEventListener("click", function () {
+      deleteFunc(item, index, array);
+    });
+
+    table_acc.append(h1, mrp, actionDiv, anqarTarg);
     rightside.append(table_acc);
     row.append(leftside, rightside);
     tbody.append(row);
-
-    console.log(row);
   });
 }
 
-//check out button click
-document.querySelector(".chek-btn").addEventListener("click", goToCheckout);
-function goToCheckout() {
-  window.location.href = "../checkoutPage/checkout.html";
+//delete item
+function deleteFunc(item, index, array) {
+  array.splice(index, 1);
+  localStorage.setItem("addToCartItems", JSON.stringify(array));
+  window.location.reload();
 }
+
+//total quantity
+let h3TotalQt = document.querySelector(".totQt");
+let totQty = document.querySelector(".totQty");
+let smTQ = document.querySelector(".smTQ");
+function displayTotalQuantity() {
+  h3TotalQt.innerText = `${totalQuantity} item in My Cart`;
+  totQty.innerText = `Cart Summary (${totalQuantity} Items)`;
+  smTQ.innerText = `Subtotal (${totalQuantity} items)`;
+}
+displayTotalQuantity();
+
+//total price
+let h3TotalPrice = document.querySelector(".page-total");
+function displayTotalPrice() {
+  totalPrice = totalPrice.toFixed(2);
+  h3TotalPrice.innerText = `$${totalPrice}`;
+}
+displayTotalPrice();
+
+//total price after increase
+function increaseDisplayTotalPrice(sPrice) {
+  let h3TotalPrice = document.querySelector(".page-total");
+  let oldPrice = h3TotalPrice.innerText;
+  oldPrice = oldPrice.split("$");
+  let val = oldPrice[1];
+  let newVal = (+val + +sPrice).toFixed(2);
+  h3TotalPrice.innerText = `$${newVal}`;
+}
+
+//total price aftre decrease
+function decreaseDisplayTotalPrice(sPrice) {
+  let h3TotalPrice = document.querySelector(".page-total");
+  let oldPrice = h3TotalPrice.innerText;
+  oldPrice = oldPrice.split("$");
+  let val = oldPrice[1];
+  let newVal = (+val - +sPrice).toFixed(2);
+  h3TotalPrice.innerText = `$${newVal}`;
+}
+
+//check out button click
+document.querySelector(".chek-btn").addEventListener("click", function () {
+  let finalPrice = document.querySelector(".page-total");
+  let oldPrice = finalPrice.innerText;
+  oldPrice = oldPrice.split("$");
+  let val = oldPrice[1];
+  localStorage.setItem("totalQuantity", totalQuantity);
+  localStorage.setItem("totalCartPrice", val);
+  window.location.href = "../checkoutPage/checkout.html";
+});
